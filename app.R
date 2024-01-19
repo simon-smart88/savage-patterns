@@ -1,22 +1,33 @@
 library(shiny)
 library(htmltools)
 library(glue)
+library(colourpicker)
+library(shinyjqui)
+source("gradientInput.R")
 
 ui <- fluidPage(
-  sidebarPanel(
-  numericInput("space", "space between", value = 10),
-  numericInput("radius", "radius", value = 30),
-  numericInput("reps", "reps", value = 25),
-  numericInput("breath", "change in radius", value = 20),
-  numericInput("speed", "animation speed", value = 30),
-  numericInput("stroke", "stroke width", value = 0.5, step = 0.1),
-  downloadButton("download")
-  ),
-  mainPanel(uiOutput("svgout"))
-
+        sidebarPanel(
+            numericInput("space", "space between", value = 10),
+            numericInput("radius", "radius", value = 30),
+            numericInput("reps", "reps", value = 25),
+            numericInput("breath", "change in radius", value = 20),
+            numericInput("speed", "animation speed", value = 30),
+            numericInput("stroke", "stroke width", value = 0.5, step = 0.1),
+            gradientInputUI("cols"),
+            downloadButton("download"),
+            tableOutput("result")
+        ),
+        mainPanel(
+            uiOutput("svgout")
+            )
 )
 
 server <- function(input, output, session){
+
+  gradient <- callModule(gradientInput, "cols", init_cols = c(10, 50, 70))
+  output$result <- renderTable(gradient$result())
+  #create colour gradient from result
+  #sample from gradient depending on reps
 
   svg_circle <- function(x, space, speed, radius, breath, stroke){
     breath <- breath/100

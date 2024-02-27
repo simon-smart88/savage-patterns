@@ -26,17 +26,18 @@ ui <- fluidPage(
 )
 
 server <- function(input, output, session){
-  
+
   observeEvent(input$random, {
-    updateSliderInput(session, "radius", value = runif(1, 10, 50))
-    updateSliderInput(session, "bulge", value = runif(1, 0.1, 100))
-    updateSliderInput(session, "reps", value = as.integer(1 + (2 * runif(1, 5, 22))))
-    updateSliderInput(session, "space", value = runif(1, 1, 30))
-    updateSliderInput(session, "breath", value = runif(1, 10, 30))
-    updateSliderInput(session, "speed", value = runif(1, 5, 60))
-    updateSliderInput(session, "stroke", value = runif(1, 0.1, 1))
+    updateSliderInput(session, "radius", value = 9 + sample.int(41, size = 1))
+    updateSliderInput(session, "bulge", value = sample.int(100, size = 1))
+    updateSliderInput(session, "reps", value = 1 + sample.int(22, size = 1) * 2)
+    updateSliderInput(session, "space", value = sample.int(30, size = 1))
+    updateSliderInput(session, "breath", value = 9 + sample.int(21, size = 1))
+    updateSliderInput(session, "speed", value = 4 + sample.int(56, size = 1))
+    updateSliderInput(session, "stroke", value = sample.int(10, size = 1)/10)
   })
-  
+
+
 
   gradient <- callModule(gradientInput, "cols", init_cols = c(10, 50, 70))
   #create colour gradient from result
@@ -46,7 +47,7 @@ server <- function(input, output, session){
   svg_circle <- function(x, space, speed, radius, breath, stroke, colours, reps, bulge){
     breath <- breath/100
     n_cols <- length(gradient$result()$col)
-    radius_bulge <- (x[3]/reps*2) * (bulge/100)
+    radius_bulge <- (x[3]/reps*2) * (bulge/10)
     tags$circle(id = glue("circle_{x[3]}"),
                 cx = radius+(x[1]*space),
                 cy = radius+(x[2]*space),
@@ -54,9 +55,9 @@ server <- function(input, output, session){
                 `stroke-width` = glue("{stroke}px"),
                 # animate the radius
                 tags$animate(attributeName = "r",
-                             values = glue("{(radius*(1-breath))*radius_bulge};
-                                            {(radius*(1+breath))*radius_bulge};
-                                            {(radius*(1-breath))*radius_bulge}"),
+                             values = glue("{(radius*(1-breath))+radius_bulge};
+                                            {(radius*(1+breath))+radius_bulge};
+                                            {(radius*(1-breath))+radius_bulge}"),
                              dur = glue("{speed}s"),
                              repeatCount = "indefinite"),
                 #animate the colours using a negative offset of the bulge as 'begin' to create the range in colours
@@ -74,10 +75,10 @@ server <- function(input, output, session){
 
   # generate the pattern
   svg_pattern <- reactive({
-  
-  #view port to crop borders  
+
+  #view port to crop borders
   top_corner <- input$radius*(1+(input$breath/100)) + input$radius
-  bottom_corner <- (input$radius+(input$reps * input$space)) - (top_corner + input$radius + input$space) 
+  bottom_corner <- (top_corner+(input$reps * input$space)) - (top_corner + input$radius + input$space)
 
   #create a matrix of sequences
   reps <- input$reps
@@ -91,7 +92,7 @@ server <- function(input, output, session){
                          c(rep(seq(1:high_half),each=reps), rev(rep(seq(low_half:1), each=reps)))), #111,222,111
                      nrow = reps^2, byrow = F)
 
-  
+
   #apply the svg_circle function to the matrix
   elements <- apply(elements, 1, svg_circle,
                     space = input$space,
@@ -103,8 +104,15 @@ server <- function(input, output, session){
                     colours = gradient$result()$col,
                     bulge = input$bulge)
 
+
   #create the final svg
-  tagList(tags$svg(viewbox = glue("{top_corner} {top_corner} {bottom_corner} {bottom_corner}"), elements))
+  tagList(tags$svg(xmlns = "http://www.w3.org/2000/svg",
+                   `xmlns:xlink`="http://www.w3.org/1999/xlink",
+                   version="1.1",
+                   viewBox = glue("{top_corner} {top_corner} {bottom_corner} {bottom_corner}"),
+                   #viewbox = glue("0 0 1000 1000"),
+                   height="100%",
+                   elements))
   })
 
   #send to UI
@@ -117,7 +125,13 @@ server <- function(input, output, session){
       "your.svg"
     },
     content = function(file){
-      write(as.character(tags$html(tags$body(svg_pattern()))), file)
+      temp <- as.character(svg_pattern())
+
+      # temp <- gsub('version=',
+      #              'xmlns:xlink="http://www.w3.org/1999/xlink" version=',
+      #              temp)
+      # browser()
+      write(temp, file)
     }
   )
 

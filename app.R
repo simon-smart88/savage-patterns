@@ -104,7 +104,7 @@ server <- function(input, output, session){
                     bulge = input$bulge)
 
   #create the final svg
-  tagList(tags$svg(viewbox = glue("{top_corner} {top_corner} {bottom_corner} {bottom_corner}"), elements))
+  tagList(tags$svg(viewbox = glue("{top_corner} {top_corner} {bottom_corner} {bottom_corner}"),(xmlns="http://www.w3.org/2000/svg") elements))
   })
 
   #send to UI

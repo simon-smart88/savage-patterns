@@ -4,20 +4,14 @@ library(glue)
 library(colourpicker)
 library(shinyjqui)
 source("gradientInput.R")
+source("ring_module.R")
 
 ui <- fluidPage(
-  title = "Savage",
+  #title = "Savage patterns",
+  titlePanel("Savage patterns"),
         sidebarPanel(width = c(4,8),
-            sliderInput("radius", "Radius", value = 30, step = 1, min = 10, max = 50),
-            sliderInput("bulge", "Radius bulge", value = 10, step = 0.1, min = 0.1, max = 100),
-            sliderInput("reps", "Repetitions", value = 25, step = 2, min = 11, max = 45),
-            sliderInput("space", "Space between circles", value = 10, step = 1, min = 1, max = 30),
-            sliderInput("breath", "Change in radius", value = 20, step = 1, min = 10, max = 30),
-            sliderInput("speed", "Animation duration", value = 30, step = 1, min = 5, max = 60),
-            sliderInput("stroke", "Line thickness", value = 0.5, step = 0.05, min = 0.1, max = 1),
-            tags$label("Colours"),
-            gradientInputUI("cols"),
-            actionButton("random", "Randomise"),
+            selectInput("module", "Pattern", choices = c("Ring" = "ring", "Square" = "square")),
+            conditionalPanel("input.module == 'ring'", ring_module_ui("ring_module")),
             downloadButton("download")
         ),
         mainPanel(
@@ -27,97 +21,13 @@ ui <- fluidPage(
 
 server <- function(input, output, session){
 
-  observeEvent(input$random, {
-    updateSliderInput(session, "radius", value = 9 + sample.int(41, size = 1))
-    updateSliderInput(session, "bulge", value = sample.int(100, size = 1))
-    updateSliderInput(session, "reps", value = 1 + sample.int(22, size = 1) * 2)
-    updateSliderInput(session, "space", value = sample.int(30, size = 1))
-    updateSliderInput(session, "breath", value = 9 + sample.int(21, size = 1))
-    updateSliderInput(session, "speed", value = 4 + sample.int(56, size = 1))
-    updateSliderInput(session, "stroke", value = sample.int(10, size = 1)/10)
-  })
+  patterns <- reactiveValues()
 
-
-
-  gradient <- callModule(gradientInput, "cols", init_cols = c(10, 50, 70))
-  #create colour gradient from result
-  #sample from gradient depending on reps
-
-  #function to generate svg circle
-  svg_circle <- function(x, space, speed, radius, breath, stroke, colours, reps, bulge){
-    breath <- breath/100
-    n_cols <- length(gradient$result()$col)
-    radius_bulge <- (x[3]/reps*2) * (bulge/10)
-    tags$circle(id = glue("circle_{x[3]}"),
-                cx = radius+(x[1]*space),
-                cy = radius+(x[2]*space),
-                fill = "none",
-                `stroke-width` = glue("{stroke}px"),
-                # animate the radius
-                tags$animate(attributeName = "r",
-                             values = glue("{(radius*(1-breath))+radius_bulge};
-                                            {(radius*(1+breath))+radius_bulge};
-                                            {(radius*(1-breath))+radius_bulge}"),
-                             dur = glue("{speed}s"),
-                             repeatCount = "indefinite"),
-                #animate the colours using a negative offset of the bulge as 'begin' to create the range in colours
-                tags$animate(attributeName = "stroke",
-                            values = paste(c(gradient$result()$col,rev(gradient$result()$col[1:n_cols - 1])), collapse = ";"),
-                            dur = glue("{speed}s"),
-                            repeatCount = "indefinite",
-                            begin = glue("{-(speed/reps)*x[3]}s"))
-                )
-  }
-  # shinyjs::html()
-  # shinyjs::
-
-  # c(rep(seq(1:high_half),each=reps), rev(rep(seq(low_half:1), each=reps)))
-
-  # generate the pattern
-  svg_pattern <- reactive({
-
-  #view port to crop borders
-  top_corner <- input$radius*(1+(input$breath/100)) + input$radius
-  bottom_corner <- (top_corner+(input$reps * input$space)) - (top_corner + input$radius + input$space)
-
-  #create a matrix of sequences
-  reps <- input$reps
-  low_half <- (reps-1)/2
-  high_half <- (reps+1)/2
-  elements <- matrix(c(#column and row indices
-                       rep(seq(1:reps),reps), # 123,123,123
-                       rep(seq(1:reps),each=reps), # 111,222,333
-                       #produces the bulge with higher values at the centre of the matrix
-                       rep(c(0:low_half, (low_half-1):0), reps) + #01210
-                         c(rep(seq(1:high_half),each=reps), rev(rep(seq(low_half:1), each=reps)))), #111,222,111
-                     nrow = reps^2, byrow = F)
-
-
-  #apply the svg_circle function to the matrix
-  elements <- apply(elements, 1, svg_circle,
-                    space = input$space,
-                    speed = input$speed,
-                    radius = input$radius,
-                    breath = input$breath,
-                    stroke = input$stroke,
-                    reps = input$reps,
-                    colours = gradient$result()$col,
-                    bulge = input$bulge)
-
-
-  #create the final svg
-  tagList(tags$svg(xmlns = "http://www.w3.org/2000/svg",
-                   `xmlns:xlink`="http://www.w3.org/1999/xlink",
-                   version="1.1",
-                   viewBox = glue("{top_corner} {top_corner} {bottom_corner} {bottom_corner}"),
-                   #viewbox = glue("0 0 1000 1000"),
-                   height="100%",
-                   elements))
-  })
+  ring_module_server("ring_module", patterns)
 
   #send to UI
   output$svgout <- renderUI({
-    svg_pattern()
+    patterns[[input$module]]
   })
 
   output$download <- downloadHandler(
@@ -125,13 +35,8 @@ server <- function(input, output, session){
       "your.svg"
     },
     content = function(file){
-      temp <- as.character(svg_pattern())
 
-      # temp <- gsub('version=',
-      #              'xmlns:xlink="http://www.w3.org/1999/xlink" version=',
-      #              temp)
-      # browser()
-      write(temp, file)
+      write(as.character(patterns[[input$module]]), file)
     }
   )
 

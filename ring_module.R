@@ -1,4 +1,4 @@
-circle_module_ui <- function(id){
+ring_module_ui <- function(id){
   ns <- shiny::NS(id)
   tagList(
   sliderInput(ns("radius"), "Radius", value = 30, step = 1, min = 10, max = 50),
@@ -10,12 +10,20 @@ circle_module_ui <- function(id){
   sliderInput(ns("stroke"), "Line thickness", value = 0.5, step = 0.05, min = 0.1, max = 1),
   tags$label("Colours"),
   gradientInputUI(ns("cols")),
-  actionButton(ns("random"), "Randomise")
+  actionButton(ns("random"), "Randomise"),
+  actionButton(ns("update"), "Update")
   )
 }
 
-circle_module_server <- function(id, patterns){
+ring_module_server <- function(id, patterns){
   moduleServer(id, function(input, output, session) {
+
+  observeEvent(input$update, {
+        tags$script(HTML(
+      "circle_15.style.fill = 'skyblue';"
+    ))
+  })
+
 
     observeEvent(input$random, {
       updateSliderInput(session, "radius", value = 9 + sample.int(41, size = 1))
@@ -96,7 +104,7 @@ circle_module_server <- function(id, patterns){
                        height="100%",
                        elements))
     })
-    observe(patterns$circle <- svg_pattern())
+    observe(patterns$ring <- svg_pattern())
 
   }
 )}

@@ -32,19 +32,31 @@ square_module_server <- function(id, patterns){
                        version="1.1",
                        viewBox = glue("0 0 100 100"),
                        height="100%",
-                       tags$rect(id = "ab",
+                       tags$style("
+                                .clr {animation: col 3s linear infinite;}
+
+                                @keyframes col {
+                                0% {fill: #186A91}
+                                25% {fill: #B4E2E1}
+                                50% {fill: #ECC950}
+                                75% {fill: #B4E2E1}
+                                100% {fill: #186A91}
+                                }
+                       "),
+                      #  tags$style("
+                      # .clr {attributeName: 'width';
+                      #       values: '40;80;40';
+                      #       repeatCount: 'indefinite';}
+                      #  "),
+                       tags$rect(class="clr",
                                  x = 10,
                                  y = 10,
                                  height = 50,
+                                 width = 30,
                                  `stroke-width` = 2,
-                                 fill = 'red',
-                                 stroke='black',
-                                 tags$animate(id = "anim",
-                                              attributeName = "width",
-                                              values = "40; 80; 40",
-                                              dur = "10s",
-                                              repeatCount = "indefinite")
-                                 )))
+                                 # fill = 'red',
+                                 stroke='black')
+                       ))
     })
     observe(patterns$square <- svg_pattern())
 

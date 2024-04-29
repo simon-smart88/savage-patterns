@@ -19,7 +19,7 @@ ui <- fluidPage(
   #title = "Savage patterns",
   titlePanel("Savage patterns"),
         sidebarPanel(width = c(4,8),
-            selectInput("module", "Pattern", choices = c("Square" = "square", "Ring" = "ring")),
+            selectInput("module", "Pattern", choices = c("Square" = "square", "Ring" = "ring"), selected = "ring"),
             conditionalPanel("input.module == 'ring'", ring_module_ui("ring_module")),
             conditionalPanel("input.module == 'square'", square_module_ui("square_module")),
             downloadButton("download"),

@@ -8,8 +8,10 @@ ring_module_ui <- function(id){
   sliderInput(ns("breath"), "Change in radius", value = 20, step = 1, min = 10, max = 30),
   sliderInput(ns("speed"), "Animation duration", value = 30, step = 1, min = 5, max = 60),
   sliderInput(ns("stroke"), "Line thickness", value = 0.5, step = 0.05, min = 0.1, max = 1),
-  tags$label("Colours"),
-  gradientInputUI(ns("cols")),
+  uiOutput(ns("colour_picker")),
+  selectInput(ns("hue"), "Hue", c("random", "red", "orange", "yellow",
+                                  "green", "blue", "purple", "pink", "monochrome")),
+  selectInput(ns("lumin"), "Luminosity", c("random", "light", "bright", "dark")),
   actionButton(ns("random"), "Randomise"),
   actionButton(ns("update"), "Update")
   )
@@ -17,6 +19,20 @@ ring_module_ui <- function(id){
 
 ring_module_server <- function(id, patterns){
   moduleServer(id, function(input, output, session) {
+
+    init_cols <- reactive({
+      randomcoloR::randomColor(count = 3, hue = input$hue, luminosity = input$lumin)
+    })
+
+    output$colour_picker <- renderUI({
+      n_cols <- 3
+      ids <- session$ns(paste0("colour_", 1:n_cols))
+      tagList(
+        tags$label("Pick colours"),
+        lapply(seq_along(ids), function(i) {colourpicker::colourInput(
+          ids[i], "", value = init_cols()[i],
+          showColour = "background", closeOnClick = TRUE)}))
+    })
 
     observeEvent(input$random, {
       updateSliderInput(session, "radius", value = 9 + sample.int(41, size = 1))
@@ -28,15 +44,26 @@ ring_module_server <- function(id, patterns){
       updateSliderInput(session, "stroke", value = sample.int(10, size = 1)/10)
     })
 
-    observeEvent(input$update, {
+    observe({
+      req(length(input_colours()) > 0)
+      colours <- input_colours()
       shinyjs::runjs(glue("
-       document.querySelector(':root').style.setProperty('--colour_1', 'red');"))
+      document.getElementById('pattern').style.setProperty('--colour_1', '{input$colour_1}');
+      document.getElementById('pattern').style.setProperty('--colour_2', '{input$colour_2}');
+      document.getElementById('pattern').style.setProperty('--colour_3', '{input$colour_3}');"))
     })
 
 
-    gradient <- callModule(gradientInput, "cols", init_cols = c(10, 50, 70))
-    #create colour gradient from result
-    #sample from gradient depending on reps
+
+    input_colours <- reactive({
+      n_cols <- 3
+      ids <- paste0("colour_", 1:n_cols)
+      c(lapply(seq_along(ids), function(i) {input[[ids[i]]]}))
+    })
+
+    # gradient <- callModule(gradientInput, "cols", init_cols = c(10, 50, 70))
+    # #create colour gradient from result
+    # #sample from gradient depending on reps
 
     #function to generate svg circle
     svg_circle <- function(x, space, speed, radius, breath, stroke, reps, bulge){
@@ -72,7 +99,7 @@ ring_module_server <- function(id, patterns){
 
     # generate the pattern
     svg_pattern <- reactive({
-      req(length(gradient$result()$col) > 0)
+      req(length(input_colours) > 0)
       #view port to crop borders
       top_corner <- 2 * input$radius
       #top_corner <- input$radius+ ((input$radius*(1+input$breath))+input$bulge)
@@ -103,7 +130,8 @@ ring_module_server <- function(id, patterns){
       elements_sub <- element_mat[unique(element_mat[,3]),]
       css_delay_result <- paste(apply(elements_sub, 1, css_delay, speed = input$speed, reps = input$reps), collapse= ' ')
 
-      colours <- gradient$result()$col
+      #colours <- gradient$result()$col
+      colours <- isolate(input_colours())
       n_cols <- length(colours)
       col_vars <- glue("--colour_{1:n_cols}")
 
@@ -118,7 +146,8 @@ ring_module_server <- function(id, patterns){
                        `xmlns:xlink`="http://www.w3.org/1999/xlink",
                        version="1.1",
                        viewBox = glue("{top_corner} {top_corner} {bottom_corner} {bottom_corner}"),
-                       height="100%",
+                       height = "100%",
+                       id = "pattern",
                        tags$style(paste0("
                                 :root{",
                                 css_colour_var_result

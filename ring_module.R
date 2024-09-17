@@ -53,7 +53,10 @@ ring_module_server <- function(id, patterns){
       document.getElementById('pattern').style.setProperty('--colour_3', '{input$colour_3}');"))
     })
 
-
+    observe({
+      shinyjs::runjs(glue("
+      document.getElementById('pattern').style.setProperty('--stroke', '{input$stroke}');"))
+    })
 
     input_colours <- reactive({
       n_cols <- 3
@@ -72,7 +75,7 @@ ring_module_server <- function(id, patterns){
       tags$circle(class = glue("circle_{x[3]}"),
                   cx = radius+(x[1]*space),
                   cy = radius+(x[2]*space),
-                  `stroke-width` = glue("{stroke}px"),
+                  # `stroke-width` = glue("{stroke}px"),
                   # animate the radius
                   tags$animate(attributeName = "r",
                                values = glue("{(radius*(1-breath))+radius_bulge};
@@ -109,10 +112,11 @@ ring_module_server <- function(id, patterns){
       reps <- input$reps
       low_half <- (reps-1)/2
       high_half <- (reps+1)/2
-      element_mat <- matrix(c(#column and row indices
+      element_mat <- matrix(c(
+        #column and row indices
         rep(seq(1:reps),reps), # 123,123,123
         rep(seq(1:reps),each=reps), # 111,222,333
-        #produces the bulge with higher values at the centre of the matrix
+        #bulge with higher values at the centre of the matrix
         rep(c(0:low_half, (low_half-1):0), reps) + #01210
           c(rep(seq(1:high_half),each=reps), rev(rep(seq(low_half:1), each=reps)))), #111,222,111
         nrow = reps^2, byrow = F)
@@ -123,7 +127,7 @@ ring_module_server <- function(id, patterns){
                         speed = input$speed,
                         radius = input$radius,
                         breath = input$breath,
-                        stroke = input$stroke,
+                        # stroke = input$stroke,
                         reps = input$reps,
                         bulge = input$bulge)
 
@@ -151,10 +155,13 @@ ring_module_server <- function(id, patterns){
                        tags$style(paste0("
                                 :root{",
                                 css_colour_var_result
-                                ,"}
+                                ,"
+                                 --stroke: 0.5px
+                                }
 
                                 circle {animation: col 30s linear infinite;
-                                      fill: none;}
+                                      fill: none;
+                                      stroke-width: var(--stroke)}
 
                                 @keyframes col {",css_colour_keys_result,"
                                 }

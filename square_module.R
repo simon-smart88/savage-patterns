@@ -1,88 +1,118 @@
 square_module_ui <- function(id){
   ns <- shiny::NS(id)
   tagList(
-    sliderInput(ns("reps"), "Repetitions", value = 25, step = 2, min = 11, max = 45),
-    sliderInput(ns("bulge"), "Radius bulge", value = 1, step = 0.1, min = 0.1, max = 10),
+    sliderInput(ns("reps"), "Repetitions", value = 19, step = 2, min = 7, max = 31),
+    sliderInput(ns("bulge"), "Bulge", value = 5, step = 0.5, min = -10, max = 10),
     sliderInput(ns("internal"), "Internal size", value = c(10, 50), step = 1, min = 10, max = 90),
     #sliderInput(ns("lag_offset"), "Maximum internal", value = 20, step = 1, min = 10, max = 30),
     sliderInput(ns("speed"), "Animation duration", value = 30, step = 1, min = 5, max = 60),
+    sliderInput(ns("colour_speed"), "Colour change duration", value = 30, step = 1, min = 5, max = 60),
+    sliderInput(ns("colour_dif"), "Inner and outer colour difference", value = 50, step = 1, min = 5, max = 95),
     uiOutput(ns("colour_picker")),
-    actionButton(ns("add_colour"), "Add colour"),
     selectInput(ns("hue"), "Hue", c("random", "red", "orange", "yellow",
                                     "green", "blue", "purple", "pink", "monochrome")),
     selectInput(ns("lumin"), "Luminosity", c("random", "light", "bright", "dark")),
-    actionButton(ns("update"), "Update")
+    actionButton(ns("random"), "Randomise")
   )
 }
 
 square_module_server <- function(id, patterns){
   moduleServer(id, function(input, output, session) {
 
+    invalidate_trigger <- reactiveVal(0)
+
+    init_cols <- reactive({
+      invalidate_trigger()
+      randomcoloR::randomColor(count = 3, hue = input$hue, luminosity = input$lumin)
+    })
 
     output$colour_picker <- renderUI({
-      n_cols <- 2 + input$add_colour
+      n_cols <- 3
       ids <- session$ns(paste0("colour_", 1:n_cols))
-      init_cols <- randomcoloR::randomColor(count = n_cols, hue = input$hue, luminosity = input$lumin)
       tagList(
         tags$label("Pick colours"),
         lapply(seq_along(ids), function(i) {colourpicker::colourInput(
-                                          ids[i], "", value = init_cols[i],
-                                          showColour = "background", closeOnClick = TRUE)}))
+          ids[i], "", value = init_cols()[i],
+          showColour = "background", closeOnClick = TRUE)}))
     })
 
+    observeEvent(input$random, {
+      updateSliderInput(session, "bulge", value = sample.int(20, size = 1) - 10)
+      updateSliderInput(session, "reps", value = 1 + sample.int(15, size = 1) * 2)
+      low_internal <- 10 + sample.int(30, size = 1)
+      high_internal <- low_internal + sample.int(30, size = 1)
+      updateSliderInput(session, "internal", value = c(low_internal, high_internal))
+      updateSliderInput(session, "speed", value = 4 + sample.int(56, size = 1))
+      updateSliderInput(session, "colour_speed", value = 4 + sample.int(56, size = 1))
+      updateSliderInput(session, "dif", value = 5 + sample.int(90, size = 1))
+      invalidate_trigger(invalidate_trigger() + 1)
+    })
 
     #function to generate svg circle
     svg_rect <- function(matrix, reps, bulge, internal, speed){
       # for use with colours
       centre_bulge <- (matrix[4]/reps*2) * (bulge/10)
 
+      # + 0.5 to avoid white lines
+      width <- round(matrix[5], 3) + 0.5
+      x <- round(matrix[6], 3)
+      height <- round(matrix[7], 3) + 0.5
+      y <- round(matrix[8], 3)
 
-      # total_width <- sum(width_bulge)
-      # width_fraction <- width_bulge / total_width
-      # width <- width_fraction * 1000
+      center_x <- x + (width * 0.5)
+      center_y <- y + (height * 0.5)
+
+      # Initial width and height
+      initial_width <- round(width * (1 - (internal[1] / 100)), 3)
+      initial_height <- round(height * (1 - (internal[1] / 100)), 3)
+
+      # Final width and height (increased by the factor)
+      final_width <- round(width * (1 - (internal[2] / 100)), 3)
+      final_height <- round(height * (1 - (internal[2] / 100)), 3)
+
+      # Calculate x and y to keep the rectangle centered
+      initial_x <- round(center_x - (initial_width / 2), 3)
+      initial_y <- round(center_y - (initial_height / 2), 3)
+      final_x <- round(center_x - (final_width / 2), 3)
+      final_y <- round(center_y - (final_height / 2), 3)
       # browser()
-      width <- matrix[5]
-      x <- matrix[6]
-      height <- matrix[7]
-      y <- matrix[8]
-      tags$rect(class = glue("rect_{matrix[3]}"),
-                  # x = matrix[1] * width,
-                  # y = matrix[2] * width,
-                  # width = width + (matrix[1] * width),
-                  # height = width + (matrix[2] * width),
+      tags$g(
+      tags$rect(class = glue("rect_{matrix[4]}_out"),
                   x = x,
                   y =  y,
                   width = width,
-                  height = height,
-                  fill = "red",
-                  stroke = "black",
-                  `stroke-width` = 1
-
-                  # animate the radius
-                  # tags$animate(attributeName = "r",
-                  #              values = glue("{(radius*(1-breath))+radius_bulge};
-                  #                           {(radius*(1+breath))+radius_bulge};
-                  #                           {(radius*(1-breath))+radius_bulge}"),
-                  #              dur = glue("{speed}s"),
-                  #              repeatCount = "indefinite"),
+                  height = height),
+      tags$rect(class = glue("rect_{matrix[4]}_in"),
+                tags$animate(attributeName = "x",
+                             values = glue("{initial_x};
+                                          {final_x};
+                                          {initial_x}"),
+                             dur = glue("{speed}s"),
+                             repeatCount = "indefinite"),
+                tags$animate(attributeName = "y",
+                             values = glue("{initial_y};
+                                          {final_y};
+                                          {initial_y}"),
+                             dur = glue("{speed}s"),
+                             repeatCount = "indefinite"),
+                tags$animate(attributeName = "width",
+                             values = glue("{initial_width};
+                                          {final_width};
+                                          {initial_width}"),
+                             dur = glue("{speed}s"),
+                             repeatCount = "indefinite"),
+                tags$animate(attributeName = "height",
+                             values = glue("{initial_height};
+                                          {final_height};
+                                          {initial_height}"),
+                             dur = glue("{speed}s"),
+                             repeatCount = "indefinite"),
+                ),
       )
+
     }
 
-    # observeEvent(input$update, {
-    #     shinyjs::runjs(sprintf("
-    #         document.getElementById('%s').style.fill = '%s';", "ab", "#00FF00"))
-    #   })
-    observeEvent(input$update, {
-      shinyjs::runjs(sprintf("
-            document.getElementById('anim').setAttribute('values', '40; 50; 40');"))
-    })
 
-
-#
-#     observeEvent(input$get_html, {
-#     a <- shinyjs::runjs("document.getElementsByTagName('svg');")
-#     print(a)
-#     })
     observe({
       req(length(input_colours()) > 0)
       colours <- input_colours()
@@ -92,10 +122,6 @@ square_module_server <- function(id, patterns){
       document.getElementById('pattern').style.setProperty('--colour_3', '{input$colour_3}');"))
     })
 
-    observe({
-      shinyjs::runjs(glue("
-      document.getElementById('pattern').style.setProperty('--stroke', '{input$stroke}');"))
-    })
 
     input_colours <- reactive({
       n_cols <- 3
@@ -104,11 +130,10 @@ square_module_server <- function(id, patterns){
     })
 
     css_colours <- reactive({
-      n_cols <- 3 + input$add_colour
+      n_cols <- 3
       ids <- paste0("colour_", 1:n_cols)
       steps <- seq(0, 100, length.out = (2*n_cols)-1)
       a <- paste(lapply(seq_along(ids), function(i) {glue::glue("{steps[i]}% {{fill: input[['{ids[i]}']] }}")}), collapse= ' ')
-      #print(a)
       a
     })
 
@@ -118,12 +143,14 @@ square_module_server <- function(id, patterns){
 
     # generates css of colour sequence
     css_colour_keys <- function(frame, variable){
-      glue("{frame}% {{stroke: var({variable})}}")
+      glue("{frame}% {{fill: var({variable})}}")
     }
 
     # generates delays in start of css animation to create gradient
-    css_delay <- function(x, speed, reps){
-      glue(".circle_{x[1]} {{ animation-delay: {-(speed/reps)*x[1]}s;}}")
+    # reversed for inner and outer rectangles
+    css_delay <- function(matrix, speed, reps, colour_dif){
+      glue(".rect_{matrix[1] + 1}_out {{animation-delay: {-(speed/reps)*matrix[4]}s;}}
+            .rect_{matrix[1] + 1}_in {{animation-delay: {(-((speed/reps)*matrix[4])) - (speed * {colour_dif / 100})}s;}}")
     }
 
     # generate the pattern
@@ -131,7 +158,6 @@ square_module_server <- function(id, patterns){
       req(length(input_colours) > 0)
       #view port to crop borders
       top_corner <- 0
-      #top_corner <- input$radius+ ((input$radius*(1+input$breath))+input$bulge)
       bottom_corner <- 1000
 
       #create a matrix of sequences
@@ -146,9 +172,18 @@ square_module_server <- function(id, patterns){
         #bulge with higher values at the centre of the matrix
         rep(c(0:low_half, (low_half-1):0), reps) + #01210
           c(rep(seq(1:high_half),each=reps), rev(rep(seq(low_half:1), each=reps)))), #111,222,111
+
         nrow = reps^2, byrow = F)
 
-      width_bulge <- element_mat[,3] ^ (input$bulge/10)
+      if (input$bulge >= 0){
+        width_bulge <- element_mat[,3] ^ (input$bulge/5)
+      }
+
+      if (input$bulge < 0){
+        pattern <- rep(c((high_half):1, (2:high_half)), reps)
+        width_bulge <- pattern ^ (abs(input$bulge)/5)
+      }
+
       total_width <- sum(width_bulge)
       width_fraction <- width_bulge / total_width
       width <- width_fraction * input$reps * 1000
@@ -160,21 +195,19 @@ square_module_server <- function(id, patterns){
       height <- rep(width[1:reps], each = reps)
       element_mat <- cbind(element_mat, height)
 
-      #y <- rep(c(0, cumsum(height[1:(reps-1)])), reps)
       y <- rep(x[1:reps], each = reps)
       element_mat <- cbind(element_mat, y)
 
-      # browser()
-      #apply the svg_circle function to the matrix
+      #apply the svg_rect function to the matrix
       elements <- apply(element_mat, 1, svg_rect,
-                        # width = width,
                         internal = input$internal,
                         speed = input$speed,
                         reps = input$reps,
                         bulge = input$bulge)
 
-      elements_sub <- element_mat[unique(element_mat[,3]),]
-      css_delay_result <- paste(apply(elements_sub, 1, css_delay, speed = input$speed, reps = input$reps), collapse= ' ')
+      elements_sub <- element_mat[unique(element_mat[,4]),]
+      # interesting with input$speed too
+      css_delay_result <- paste(apply(elements_sub, 1, css_delay, speed = input$colour_speed, reps = input$reps, colour_dif = input$colour_dif), collapse= ' ')
 
       #colours <- gradient$result()$col
       colours <- isolate(input_colours())
@@ -201,7 +234,7 @@ square_module_server <- function(id, patterns){
                                  --stroke: 0.5px
                                 }
 
-                                circle {animation: col 30s linear infinite;
+                                rect {animation: col ", input$colour_speed, "s linear infinite;
                                       fill: none;
                                       stroke-width: var(--stroke)}
 
@@ -213,39 +246,6 @@ square_module_server <- function(id, patterns){
                        elements))
     })
 
-    #' svg_pattern <- reactive({
-    #'
-    #'   tagList(tags$svg(xmlns = "http://www.w3.org/2000/svg",
-    #'                    `xmlns:xlink`="http://www.w3.org/1999/xlink",
-    #'                    version="1.1",
-    #'                    viewBox = glue("0 0 100 100"),
-    #'                    height="100%",
-    #'                    tags$style(paste0("
-    #'                             .clr {animation: col 3s linear infinite;}
-    #'                             @keyframes col {",css_colours(),"}")),
-    #'                   #  tags$style("
-    #'                   # .clr {attributeName: 'width';
-    #'                   #       values: '40;80;40';
-    #'                   #       repeatCount: 'indefinite';}
-    #'                   #  "),
-    #'                    tags$rect(class="clr",
-    #'                              x = 10,
-    #'                              y = 10,
-    #'                              height = 50,
-    #'                              width = 30,
-    #'                              `stroke-width` = 2,
-    #'                              # fill = 'red',
-    #'                              stroke='black'),
-    #'                   tags$rect(class="clr",
-    #'                             x = 10,
-    #'                             y = 10,
-    #'                             height = 50,
-    #'                             width = 30,
-    #'                             `stroke-width` = 2,
-    #'                             # fill = 'red',
-    #'                             stroke='black'),
-    #'                    ))
-    #' })
     observe(patterns$square <- svg_pattern())
 
   }

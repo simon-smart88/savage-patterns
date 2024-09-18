@@ -12,8 +12,7 @@ ring_module_ui <- function(id){
   selectInput(ns("hue"), "Hue", c("random", "red", "orange", "yellow",
                                   "green", "blue", "purple", "pink", "monochrome")),
   selectInput(ns("lumin"), "Luminosity", c("random", "light", "bright", "dark")),
-  actionButton(ns("random"), "Randomise"),
-  actionButton(ns("update"), "Update")
+  actionButton(ns("random"), "Randomise")
   )
 }
 
@@ -75,7 +74,6 @@ ring_module_server <- function(id, patterns){
       tags$circle(class = glue("circle_{x[3]}"),
                   cx = radius+(x[1]*space),
                   cy = radius+(x[2]*space),
-                  # `stroke-width` = glue("{stroke}px"),
                   # animate the radius
                   tags$animate(attributeName = "r",
                                values = glue("{(radius*(1-breath))+radius_bulge};

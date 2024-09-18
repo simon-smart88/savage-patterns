@@ -4,7 +4,6 @@ library(glue)
 library(colourpicker)
 library(shinyjqui)
 library(shinyjs)
-source("gradientInput.R")
 source("ring_module.R")
 source("square_module.R")
 
@@ -12,14 +11,13 @@ jsCode <- "shinyjs.svgprint = function(){
 document.getElementsByTagName('svg');
 }"
 
-
 ui <- fluidPage(
   shinyjs::useShinyjs(),
   shinyjs::extendShinyjs(text = jsCode, functions = c("svgprint")),
   #title = "Savage patterns",
   titlePanel("Savage patterns"),
         sidebarPanel(width = c(4,8),
-            selectInput("module", "Pattern", choices = c("Square" = "square", "Ring" = "ring"), selected = "ring"),
+            selectInput("module", "Pattern", choices = c("Square" = "square", "Ring" = "ring"), selected = "square"),
             conditionalPanel("input.module == 'ring'", ring_module_ui("ring_module")),
             conditionalPanel("input.module == 'square'", square_module_ui("square_module")),
             downloadButton("download"),
@@ -42,8 +40,9 @@ server <- function(input, output, session){
     patterns[[input$module]]
   })
 
-
-  observeEvent(input$get_html, {
+  check_timer <- reactiveTimer(2000)
+  observe({
+    check_timer()
     runjs("
       var elements = document.getElementsByTagName('svg')[0];
       var svgHTML = new XMLSerializer().serializeToString(elements);
@@ -53,9 +52,12 @@ server <- function(input, output, session){
 
   output$download <- downloadHandler(
     filename = function(){
-      "your_test.svg"
+      "your_test3.svg"
     },
     content = function(file){
+      #shinyjs::click("get_html")
+
+      req(input$svg)
       #write(as.character(patterns[[input$module]]), file)
       write(input$svg, file)
     }

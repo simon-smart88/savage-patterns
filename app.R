@@ -22,8 +22,8 @@ ui <- fluidPage(
             conditionalPanel("input.module == 'ring'", ring_module_ui("ring_module")),
             conditionalPanel("input.module == 'square'", square_module_ui("square_module")),
             conditionalPanel("input.module == 'line'", line_module_ui("line_module")),
-            downloadButton("download"),
-            actionButton("get_html", "Get html")
+            actionButton("download", "Download"),
+            div(downloadButton("download_h"), style = "visibility: hidden")
         ),
         mainPanel(
             uiOutput("svgout"),
@@ -43,25 +43,22 @@ server <- function(input, output, session){
     patterns[[input$module]]
   })
 
-  check_timer <- reactiveTimer(2000)
-  observe({
-    check_timer()
+  observeEvent(input$download, {
     runjs("
       var elements = document.getElementsByTagName('svg')[0];
       var svgHTML = new XMLSerializer().serializeToString(elements);
       Shiny.setInputValue('svg', svgHTML, {priority: 'event', raw: true});
+      document.getElementById('download_h').click();
     ")
   })
 
-  output$download <- downloadHandler(
+
+  output$download_h <- downloadHandler(
     filename = function(){
       "your_test3.svg"
     },
     content = function(file){
-      #shinyjs::click("get_html")
-
       req(input$svg)
-      #write(as.character(patterns[[input$module]]), file)
       write(input$svg, file)
     }
   )

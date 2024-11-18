@@ -1,8 +1,9 @@
 line_module_ui <- function(id){
   ns <- shiny::NS(id)
   tagList(
-    sliderInput(ns("outer"), "Outer", value = 11, step = 1, min = 6, max = 20),
-    sliderInput(ns("inner"), "Inner", value = 5, step = 1, min = 2, max = 11),
+    sliderInput(ns("outer"), "Outer", value = 9, step = 1, min = 6, max = 20),
+    sliderInput(ns("inner"), "Inner", value = 3, step = 1, min = 2, max = 11),
+    sliderInput(ns("inner_size"), "Inner size", value = 50, step = 1, min = 10, max = 90)
 
   )
 }
@@ -29,14 +30,23 @@ line_module_server <- function(id, patterns){
     inner_x <- c(seq(0, inner_points - 1), rep(c(0, inner_points - 1), inner_points - 2), seq(0, inner_points - 1)) + inner_offset
     inner_y <- c(rep(0, inner_points), rep(seq(1, inner_points - 2), each = 2), rep(inner_points - 1, inner_points)) + inner_offset
     
+    old_inner_range <- diff(range(inner_y))
+    new_inner_range <- input$outer * (input$inner_size / 100)
+    
+    inner_scale <- new_inner_range / old_inner_range
+    inner_mean <- mean(inner_x)
+    
+    inner_x <- (inner_x - inner_mean) * inner_scale + inner_mean
+    inner_y <- (inner_y - inner_mean) * inner_scale + inner_mean
+    
     x1 <- rep(outer_x, length(inner_x))
-    x2 <- rep(inner_x, length(outer_x))
+    x2 <- rep(inner_x, each = length(outer_x))
     
     y1 <- rep(outer_y, length(inner_y))
-    y2 <- rep(inner_y, length(outer_y))
+    y2 <- rep(inner_y, each = length(outer_y))
     
     element_mat <- matrix(c(x1, x2, y1, y2), ncol = 4)
-      
+    # browser()
     elements <- apply(element_mat, 1, svg_line)
     
     top_corner <- 0

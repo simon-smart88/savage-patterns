@@ -4,8 +4,10 @@ line_module_ui <- function(id){
     sliderInput(ns("outer"), "Outer", value = 9, step = 1, min = 6, max = 20),
     sliderInput(ns("inner"), "Inner", value = 3, step = 1, min = 2, max = 11),
     sliderInput(ns("inner_size"), "Inner size", value = 50, step = 1, min = 10, max = 80),
+    sliderInput(ns("inner_offset"), "Inner offset", value = 50, step = 1, min = 10, max = 80),
     sliderInput(ns("breath"), "Change in size", value = 20, step = 1, min = 10, max = 50),
-    sliderInput(ns("speed"), "Animation duration", value = 30, step = 1, min = 5, max = 60)
+    sliderInput(ns("speed"), "Animation duration", value = 30, step = 1, min = 5, max = 60),
+    shinyWidgets::materialSwitch(ns("zoom"), "Zoom", value = FALSE)
 
   )
 }
@@ -14,8 +16,7 @@ line_module_server <- function(id, patterns){
   moduleServer(id, function(input, output, session) {
 
     svg_line <- function(x, speed){
-      tags$line(x1 = x[1], x2 = x[2], y1 = x[3], y2 = x[4]
-                ,
+      tags$line(x1 = x[1], x2 = x[2], y1 = x[3], y2 = x[4],
                 tags$animate(attributeName = "x2",
                              values = glue("{x[2]}; {x[5]}; {x[2]}"),
                              dur = glue("{speed}s"),
@@ -43,7 +44,7 @@ line_module_server <- function(id, patterns){
     
     # rescale the inner points relative to inner points
     old_inner_range <- diff(range(inner_y))
-    new_inner_range <- inner_points * (input$inner_size / 100)
+    new_inner_range <- outer_points * (input$inner_size / 100)
     inner_scale <- new_inner_range / old_inner_range
     inner_mean <- mean(inner_x)
     inner_x1 <- (inner_x - inner_mean) * inner_scale + inner_mean
@@ -61,21 +62,30 @@ line_module_server <- function(id, patterns){
     inner_x2_set <- rep(inner_x2, each = length(outer_x))
     inner_y2_set <- rep(inner_y2, each = length(outer_y))
     
-    outer_side <- c(rep(1, outer_points), rep(2, outer_points - 2), rep(3, outer_points - 2), rep(4, outer_points))
-    outer_side_set <- rep(outer_side, length(inner_x))
-    point_offset <- 0.5
-    # browser()
+    # adjust the inner lines by the offset if they are joined to the top and bottom outer nodes
+    side_top <- outer_y_set == 0 & outer_x_set < outer_points - 1 & outer_x_set > 0
+    side_bottom <- outer_y_set == outer_points - 1 & outer_x_set < outer_points - 1 & outer_x_set > 0
+    side_left <- outer_x_set == 0
+    side_right <- outer_x_set == outer_points - 1
     
-    inner_y1_set[outer_side_set == 1] <- inner_y1_set[outer_side_set == 1] + point_offset
-    inner_y1_set[outer_side_set == 4] <- inner_y1_set[outer_side_set == 4] - point_offset
+    point_offset <- (inner_x[2] - inner_x[1]) * (input$inner_offset / 100)
+    inner_y1_set[side_top] <- inner_y1_set[side_top] - point_offset
+    inner_y1_set[side_bottom] <- inner_y1_set[side_bottom] + point_offset
+    inner_x1_set[side_left] <- inner_x1_set[side_left] - point_offset
+    inner_x1_set[side_right] <- inner_x1_set[side_right] + point_offset
     
     # apply to the function
     element_mat <- matrix(c(outer_x_set, inner_x1_set, outer_y_set, inner_y1_set, inner_x2_set, inner_y2_set), ncol = 6)
     elements <- apply(element_mat, 1, svg_line,
                       speed = input$speed)
     
-    top_corner <- 0
-    bottom_corner <- input$outer
+    if (input$zoom){
+      top_corner <- min(inner_x1)
+      bottom_corner <- max(inner_x1) - top_corner
+    } else {
+      top_corner <- 0
+      bottom_corner <- input$outer
+    }
     
     # create the final svg
     tagList(tags$svg(xmlns = "http://www.w3.org/2000/svg",

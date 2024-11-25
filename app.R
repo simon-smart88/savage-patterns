@@ -19,8 +19,8 @@ ui <- fluidPage(
             selectInput("module", "Pattern", choices = modules, selected = modules[length(modules)]),
             do.call(tagList, lapply(modules, function(module) {
               conditionalPanel(
-                condition = sprintf("input.module == '%s'", module),
-                get(paste0(module, "_module_ui"))(paste0(module, "_module"))
+                condition = glue("input.module == '{module}'"),
+                get(glue("{module}_module_ui"))(glue("{module}_module"))
               )
             })),
             actionButton("download", "Download"),
@@ -56,7 +56,6 @@ server <- function(input, output, session){
       document.getElementById('download_h').click();
     ")
   })
-
 
   output$download_h <- downloadHandler(
     filename = function(){

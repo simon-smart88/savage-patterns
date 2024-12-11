@@ -9,14 +9,14 @@ source("square_module.R")
 source("line_module.R")
 
 modules <- c("square", "ring", "line")
-names(modules) <- tools::toTitleCase(modules)
+names(modules) <- paste0("<img src='", modules, "_icon.svg'>")
 
 modules
 ui <- fluidPage(
   shinyjs::useShinyjs(),
   titlePanel("Savage patterns"),
         sidebarPanel(width = c(4,8),
-            selectInput("module", "Pattern", choices = modules, selected = modules[length(modules)]),
+            shinyWidgets::radioGroupButtons("module", "Pattern", choices = modules, justified = TRUE),
             do.call(tagList, lapply(modules, function(module) {
               conditionalPanel(
                 condition = glue("input.module == '{module}'"),

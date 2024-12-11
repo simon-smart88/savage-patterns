@@ -2,12 +2,14 @@ line_module_ui <- function(id){
   ns <- shiny::NS(id)
   tagList(
     sliderInput(ns("outer"), "Outer", value = 9, step = 1, min = 6, max = 20),
-    sliderInput(ns("inner"), "Inner", value = 3, step = 1, min = 2, max = 11),
+    sliderInput(ns("inner"), "Inner", value = 3, step = 1, min = 2, max = 15),
     sliderInput(ns("inner_size"), "Inner size", value = 50, step = 1, min = 10, max = 80),
     sliderInput(ns("inner_offset"), "Inner offset", value = 50, step = 1, min = 10, max = 80),
     sliderInput(ns("breath"), "Change in size", value = 20, step = 1, min = 10, max = 50),
     sliderInput(ns("speed"), "Animation duration", value = 30, step = 1, min = 5, max = 60),
-    shinyWidgets::materialSwitch(ns("zoom"), "Zoom", value = FALSE)
+    sliderInput(ns("stroke"), "Line thickness", value = 1, step = 0.05, min = 0.1, max = 2),
+    shinyWidgets::materialSwitch(ns("zoom"), "Zoom", value = FALSE),
+    actionButton(ns("random"), "Randomise")
 
   )
 }
@@ -15,6 +17,22 @@ line_module_ui <- function(id){
 line_module_server <- function(id, patterns){
   moduleServer(id, function(input, output, session) {
 
+    
+    observeEvent(input$random, {
+      updateSliderInput(session, "outer", value = 6 + sample.int(14, size = 1))
+      updateSliderInput(session, "inner", value = 3+ sample.int(12, size = 1))
+      updateSliderInput(session, "inner_size", value = 10 + sample.int(70, size = 1))
+      updateSliderInput(session, "inner_offset", value = 10 + sample.int(70, size = 1))
+      updateSliderInput(session, "breath", value = 10 + sample.int(30, size = 1))
+      updateSliderInput(session, "speed", value = 5 + sample.int(55, size = 1))
+      # updateSliderInput(session, "stroke", value = sample.int(10, size = 1)/10)
+    })
+    
+    observe({
+      shinyjs::runjs(glue("
+      document.getElementById('pattern').style.setProperty('--stroke', '{input$stroke / 100}');"))
+    })
+    
     svg_line <- function(x, speed){
       tags$line(x1 = x[1], x2 = x[2], y1 = x[3], y2 = x[4],
                 tags$animate(attributeName = "x2",
@@ -34,15 +52,14 @@ line_module_server <- function(id, patterns){
     outer_points <- input$outer
     inner_points <- input$inner
     
+    # create coordinates of the nodes
     inner_offset <- (outer_points - inner_points) / 2
-    
     outer_x <- c(seq(0, outer_points - 1), rep(c(0, outer_points - 1), outer_points - 2), seq(0, outer_points - 1))
     outer_y <- c(rep(0, outer_points), rep(seq(1, outer_points - 2), each = 2), rep(outer_points - 1, outer_points))
-    
     inner_x <- c(seq(0, inner_points - 1), rep(c(0, inner_points - 1), inner_points - 2), seq(0, inner_points - 1)) + inner_offset
     inner_y <- c(rep(0, inner_points), rep(seq(1, inner_points - 2), each = 2), rep(inner_points - 1, inner_points)) + inner_offset
     
-    # rescale the inner points relative to inner points
+    # rescale the inner points relative to outer points
     old_inner_range <- diff(range(inner_y))
     new_inner_range <- outer_points * (input$inner_size / 100)
     inner_scale <- new_inner_range / old_inner_range
@@ -84,7 +101,7 @@ line_module_server <- function(id, patterns){
       bottom_corner <- max(inner_x1) - top_corner
     } else {
       top_corner <- 0
-      bottom_corner <- input$outer
+      bottom_corner <- input$outer - 1
     }
     
     # create the final svg
@@ -95,10 +112,12 @@ line_module_server <- function(id, patterns){
                      height = "100%",
                      id = "pattern",
                      tags$style(paste0("
-                                line { stroke-width: 0.01px;
-                                      stroke: black}
+                             :root{
+                               --stroke: 0.5px
+                             }
+                            line {stroke-width: var(--stroke);
+                                  stroke: black}
                        ")),
-                     
                      elements))
     
   })

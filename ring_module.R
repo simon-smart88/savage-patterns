@@ -1,18 +1,28 @@
 ring_module_ui <- function(id){
   ns <- shiny::NS(id)
   tagList(
-  sliderInput(ns("radius"), "Radius", value = 30, step = 1, min = 10, max = 50),
-  sliderInput(ns("bulge"), "Radius bulge", value = 1, step = 0.1, min = 0.1, max = 100),
-  sliderInput(ns("reps"), "Repetitions", value = 25, step = 2, min = 11, max = 45),
-  sliderInput(ns("space"), "Space between circles", value = 10, step = 1, min = 1, max = 30),
-  sliderInput(ns("breath"), "Change in radius", value = 20, step = 1, min = 10, max = 30),
-  sliderInput(ns("speed"), "Animation duration", value = 30, step = 1, min = 5, max = 60),
-  sliderInput(ns("stroke"), "Line thickness", value = 0.5, step = 0.05, min = 0.1, max = 1),
-  uiOutput(ns("colour_picker")),
-  selectInput(ns("hue"), "Hue", c("random", "red", "orange", "yellow",
-                                  "green", "blue", "purple", "pink", "monochrome")),
-  selectInput(ns("lumin"), "Luminosity", c("random", "light", "bright", "dark")),
-  actionButton(ns("random"), "Randomise")
+    actionButton(ns("random"), "Randomise", icon = icon("random"), width = "100%", style = "font-size: 1.5rem;"),
+    accordion(
+      multiple = FALSE,
+      open = c("Pattern"),
+      accordion_panel("Pattern",
+        sliderInput(ns("radius"), "Radius", value = 30, step = 1, min = 10, max = 50),
+        sliderInput(ns("bulge"), "Radius bulge", value = 1, step = 0.1, min = 0.1, max = 100),
+        sliderInput(ns("reps"), "Repetitions", value = 25, step = 2, min = 11, max = 45),
+        sliderInput(ns("space"), "Space between circles", value = 10, step = 1, min = 1, max = 30)
+      ),
+      accordion_panel("Animation",
+        sliderInput(ns("breath"), "Change in radius", value = 20, step = 1, min = 10, max = 30),
+        sliderInput(ns("speed"), "Animation duration", value = 30, step = 1, min = 5, max = 60)
+      ),
+      accordion_panel("Colour",
+        sliderInput(ns("stroke"), "Line thickness", value = 0.5, step = 0.05, min = 0.1, max = 1),
+        uiOutput(ns("colour_picker")),
+        selectInput(ns("hue"), "Hue", c("random", "red", "orange", "yellow",
+                                        "green", "blue", "purple", "pink", "monochrome")),
+        selectInput(ns("lumin"), "Luminosity", c("random", "light", "bright", "dark"))
+      )
+    )
   )
 }
 

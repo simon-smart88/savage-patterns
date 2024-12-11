@@ -1,19 +1,29 @@
 square_module_ui <- function(id){
   ns <- shiny::NS(id)
   tagList(
-    sliderInput(ns("reps"), "Repetitions", value = 19, step = 2, min = 7, max = 31),
-    sliderInput(ns("bulge"), "Bulge", value = 5, step = 0.5, min = -10, max = 10),
-    sliderInput(ns("internal"), "Internal size", value = c(10, 50), step = 1, min = 10, max = 90),
-    #sliderInput(ns("lag_offset"), "Maximum internal", value = 20, step = 1, min = 10, max = 30),
-    sliderInput(ns("speed"), "Animation duration", value = 30, step = 1, min = 5, max = 60),
-    sliderInput(ns("colour_speed"), "Colour change duration", value = 30, step = 1, min = 5, max = 60),
-    sliderInput(ns("colour_dif"), "Inner and outer colour difference", value = 50, step = 1, min = 5, max = 95),
-    uiOutput(ns("colour_picker")),
-    selectInput(ns("hue"), "Hue", c("random", "red", "orange", "yellow",
-                                    "green", "blue", "purple", "pink", "monochrome")),
-    selectInput(ns("lumin"), "Luminosity", c("random", "light", "bright", "dark")),
-    shinyWidgets::materialSwitch(ns("switch"), "Switch", value = FALSE, status = "success"),
-    actionButton(ns("random"), "Randomise")
+    actionButton(ns("random"), "Randomise", icon = icon("random"), width = "100%", style = "font-size: 1.5rem;"),
+    accordion(
+      multiple = FALSE,
+      open = c("Pattern"),
+      accordion_panel("Pattern",
+        sliderInput(ns("reps"), "Repetitions", value = 19, step = 2, min = 7, max = 31),
+        sliderInput(ns("bulge"), "Bulge", value = 5, step = 0.5, min = -10, max = 10),
+        sliderInput(ns("internal"), "Internal size", value = c(10, 50), step = 1, min = 10, max = 90),
+        shinyWidgets::materialSwitch(ns("switch"), "Switch", value = FALSE, status = "success"),
+      ),
+      accordion_panel("Animation",
+        #sliderInput(ns("lag_offset"), "Maximum internal", value = 20, step = 1, min = 10, max = 30),
+        sliderInput(ns("speed"), "Animation duration", value = 30, step = 1, min = 5, max = 60),
+        sliderInput(ns("colour_speed"), "Colour change duration", value = 30, step = 1, min = 5, max = 60),
+      ),
+      accordion_panel("Colour",
+        sliderInput(ns("colour_dif"), "Inner and outer colour difference", value = 50, step = 1, min = 5, max = 95),
+        uiOutput(ns("colour_picker")),
+        selectInput(ns("hue"), "Hue", c("random", "red", "orange", "yellow",
+                                        "green", "blue", "purple", "pink", "monochrome")),
+        selectInput(ns("lumin"), "Luminosity", c("random", "light", "bright", "dark"))
+      )
+    )
   )
 }
 
@@ -49,7 +59,7 @@ square_module_server <- function(id, patterns){
       invalidate_trigger(invalidate_trigger() + 1)
     })
 
-    #function to generate svg circle
+    # function to generate svg circle
     svg_rect <- function(matrix, reps, bulge, internal, speed){
       # for use with colours
       centre_bulge <- (matrix[4]/reps*2) * (bulge/10)
@@ -76,7 +86,7 @@ square_module_server <- function(id, patterns){
       initial_y <- round(center_y - (initial_height / 2), 3)
       final_x <- round(center_x - (final_width / 2), 3)
       final_y <- round(center_y - (final_height / 2), 3)
-      # browser()
+
       tags$g(
       tags$rect(class = glue("rect_{matrix[4]}_out"),
                   x = x,
@@ -206,9 +216,7 @@ square_module_server <- function(id, patterns){
       y <- rep(x[1:reps], each = reps)
       element_mat <- cbind(element_mat, y)
 
-      # browser()
-
-      #apply the svg_rect function to the matrix
+      # apply the svg_rect function to the matrix
       elements <- apply(element_mat, 1, svg_rect,
                         internal = input$internal,
                         speed = input$speed,
@@ -219,7 +227,6 @@ square_module_server <- function(id, patterns){
       # interesting with input$speed too
       css_delay_result <- paste(apply(elements_sub, 1, css_delay, speed = input$colour_speed, reps = input$reps, colour_dif = input$colour_dif), collapse= ' ')
 
-      #colours <- gradient$result()$col
       colours <- isolate(input_colours())
       n_cols <- length(colours)
       col_vars <- glue("--colour_{1:n_cols}")
@@ -230,7 +237,7 @@ square_module_server <- function(id, patterns){
       colour_var_seq <- c(col_vars, rev(col_vars[1:n_cols - 1]))
       css_colour_keys_result <- paste(css_colour_keys(frames, colour_var_seq), collapse = ' ')
 
-      #create the final svg
+      # create the final svg
       tagList(tags$svg(xmlns = "http://www.w3.org/2000/svg",
                        `xmlns:xlink`="http://www.w3.org/1999/xlink",
                        version="1.1",

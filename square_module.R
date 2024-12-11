@@ -12,6 +12,7 @@ square_module_ui <- function(id){
     selectInput(ns("hue"), "Hue", c("random", "red", "orange", "yellow",
                                     "green", "blue", "purple", "pink", "monochrome")),
     selectInput(ns("lumin"), "Luminosity", c("random", "light", "bright", "dark")),
+    shinyWidgets::materialSwitch(ns("switch"), "Switch", value = FALSE, status = "success"),
     actionButton(ns("random"), "Randomise")
   )
 }
@@ -54,10 +55,10 @@ square_module_server <- function(id, patterns){
       centre_bulge <- (matrix[4]/reps*2) * (bulge/10)
 
       # + 0.5 to avoid white lines
-      width <- round(matrix[5], 3) + 0.5
-      x <- round(matrix[6], 3)
-      height <- round(matrix[7], 3) + 0.5
-      y <- round(matrix[8], 3)
+      width <- round(matrix[7], 3) + 0.5
+      x <- round(matrix[8], 3)
+      height <- round(matrix[9], 3) + 0.5
+      y <- round(matrix[10], 3)
 
       center_x <- x + (width * 0.5)
       center_y <- y + (height * 0.5)
@@ -160,28 +161,35 @@ square_module_server <- function(id, patterns){
       top_corner <- 0
       bottom_corner <- 1000
 
-      #create a matrix of sequences
+      # create a matrix of sequences
       reps <- input$reps
       low_half <- (reps-1)/2
       high_half <- (reps+1)/2
       element_mat <- matrix(c(
-        #column and row indices
+        # column and row indices
         rep(seq(1:reps),reps) - 1, # 123,123,123
         rep(seq(1:reps),each=reps) - 1, # 111,222,333
         rep(c(1:(low_half+1), (low_half):1), reps), #12321
-        #bulge with higher values at the centre of the matrix
+        # bulge with higher values at the centre of the matrix
         rep(c(0:low_half, (low_half-1):0), reps) + #01210
-          c(rep(seq(1:high_half),each=reps), rev(rep(seq(low_half:1), each=reps)))), #111,222,111
-
+          c(rep(seq(1:high_half),each=reps), rev(rep(seq(low_half:1), each=reps)), #111,222,111
+        # reverse bulge
+        rep(c(low_half:0, (1:low_half)), reps) +  #21012
+          c(rev(rep(1:high_half,each=reps)), rep(2:high_half, each=reps)), #222,111,222
+        rep(c((high_half):1, (2:high_half)), reps))),
         nrow = reps^2, byrow = F)
 
       if (input$bulge >= 0){
         width_bulge <- element_mat[,3] ^ (input$bulge/5)
       }
-
       if (input$bulge < 0){
+        #width_bulge <- element_mat[,6] ^ (abs(input$bulge)/5)
         pattern <- rep(c((high_half):1, (2:high_half)), reps)
         width_bulge <- pattern ^ (abs(input$bulge)/5)
+      }
+
+      if (input$switch){
+        element_mat[(element_mat[,4] %% 2 == 1 ), 4] <- element_mat[(element_mat[,4] %% 2 == 1 ), 5]
       }
 
       total_width <- sum(width_bulge)
@@ -197,6 +205,8 @@ square_module_server <- function(id, patterns){
 
       y <- rep(x[1:reps], each = reps)
       element_mat <- cbind(element_mat, y)
+
+      # browser()
 
       #apply the svg_rect function to the matrix
       elements <- apply(element_mat, 1, svg_rect,

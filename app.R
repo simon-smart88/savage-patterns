@@ -17,7 +17,7 @@ ui <- page_sidebar(
   shinyjs::useShinyjs(),
   title = "Savage patterns",
   sidebar = sidebar(
-    shinyWidgets::radioGroupButtons("module", "Pattern", choices = modules, justified = TRUE),
+    shinyWidgets::radioGroupButtons("module", "Pattern", choices = modules, justified = TRUE, size = "lg"),
     do.call(tagList, lapply(modules, function(module) {
       conditionalPanel(
         condition = glue("input.module == '{module}'"),

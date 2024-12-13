@@ -6,7 +6,7 @@ line_module_ui <- function(id){
       multiple = FALSE,
       open = c("Pattern"),
       accordion_panel("Pattern",
-        sliderInput(ns("outer"), "Outer", value = 9, step = 1, min = 6, max = 20),
+        sliderInput(ns("outer"), "Outer", value = 9, step = 1, min = 4, max = 20),
         sliderInput(ns("inner"), "Inner", value = 3, step = 1, min = 2, max = 15),
         sliderInput(ns("inner_size"), "Inner size", value = 50, step = 1, min = 10, max = 80),
         sliderInput(ns("inner_offset"), "Inner offset", value = 50, step = 1, min = 10, max = 80),
@@ -42,16 +42,19 @@ line_module_server <- function(id, patterns){
     })
 
     svg_line <- function(x, speed){
-      tags$line(x1 = x[1], x2 = x[2], y1 = x[3], y2 = x[4],
-                tags$animate(attributeName = "x2",
-                             values = glue("{x[2]}; {x[5]}; {x[2]}"),
-                             dur = glue("{speed}s"),
-                             repeatCount = "indefinite"),
-                tags$animate(attributeName = "y2",
-                             values = glue("{x[4]}; {x[6]}; {x[4]}"),
-                             dur = glue("{speed}s"),
-                             repeatCount = "indefinite"),
-                )
+      tags$line(
+        x1 = x[1], x2 = x[2], y1 = x[3], y2 = x[4],
+        tags$animate(
+          attributeName = "x2",
+          values = glue("{x[2]}; {x[5]}; {x[2]}"),
+          dur = glue("{speed}s"),
+          repeatCount = "indefinite"),
+        tags$animate(
+          attributeName = "y2",
+           values = glue("{x[4]}; {x[6]}; {x[4]}"),
+           dur = glue("{speed}s"),
+           repeatCount = "indefinite")
+          )
     }
 
 
@@ -113,20 +116,24 @@ line_module_server <- function(id, patterns){
     }
 
     # create the final svg
-    tagList(tags$svg(xmlns = "http://www.w3.org/2000/svg",
-                     `xmlns:xlink`="http://www.w3.org/1999/xlink",
-                     version="1.1",
-                     viewBox = glue("{top_corner} {top_corner} {bottom_corner} {bottom_corner}"),
-                     height = "100%",
-                     id = "pattern",
-                     tags$style(paste0("
-                             :root{
-                               --stroke: 0.01px
-                             }
-                            line {stroke-width: var(--stroke);
-                                  stroke: black}
-                       ")),
-                     elements))
+    tagList(
+      tags$svg(
+        xmlns = "http://www.w3.org/2000/svg",
+       `xmlns:xlink`="http://www.w3.org/1999/xlink",
+        version="1.1",
+        viewBox = glue("{top_corner} {top_corner} {bottom_corner} {bottom_corner}"),
+        height = "100%",
+        id = "pattern",
+        tags$style(
+          paste0("
+           :root{
+             --stroke: 0.01px
+           }
+           line {
+            stroke-width: var(--stroke);
+            stroke: black}
+           ")),
+         elements))
 
   })
 

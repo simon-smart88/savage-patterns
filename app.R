@@ -11,7 +11,7 @@ source("square_module.R")
 source("line_module.R")
 source("about.R")
 
-modules <- c("square", "ring", "line")
+modules <- c("ring", "square", "line")
 names(modules) <- paste0("<img src='", modules, "_icon.svg'>")
 
 ui <- page_sidebar(
@@ -45,11 +45,12 @@ server <- function(input, output, session){
   square_module_server("square_module", patterns)
   line_module_server("line_module", patterns)
 
-  #send to UI
+  # send to UI
   output$svgout <- renderUI({
     patterns[[input$module]]
   })
 
+  # store the current pattern and then click the actual download button
   observeEvent(input$download, {
     runjs("
       var elements = document.getElementsByTagName('svg')[0];

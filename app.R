@@ -14,23 +14,36 @@ source("about.R")
 modules <- c("ring", "square", "line")
 names(modules) <- paste0("<img src='", modules, "_icon.svg'>")
 
-ui <- page_sidebar(
+ui <- page_navbar(
   shinyjs::useShinyjs(),
+  theme = bs_theme(version = 5, "minty"),
   title = "Savage patterns",
-  sidebar = sidebar(
-    shinyWidgets::radioGroupButtons("module", "Pattern", choices = modules, justified = TRUE, size = "lg"),
-    do.call(tagList, lapply(modules, function(module) {
-      conditionalPanel(
-        condition = glue("input.module == '{module}'"),
-        get(glue("{module}_module_ui"))(glue("{module}_module"))
-      )})
-    ),
-    actionButton("download", "Download", icon = icon("download"), width = "100%", style = "font-size: 1.5rem;"),
-    div(downloadButton("download_h"), style = "visibility: hidden"),
-    width = "35%",
-  ),
-  #uiOutput("svgout")
-  about_module_ui("about")
+  nav_panel("Create",
+    layout_sidebar(
+      sidebar = sidebar(
+        shinyWidgets::radioGroupButtons("module", "Pattern", choices = modules, justified = TRUE, size = "lg"),
+        do.call(tagList, lapply(modules, function(module) {
+          conditionalPanel(
+            condition = glue("input.module == '{module}'"),
+            get(glue("{module}_module_ui"))(glue("{module}_module"))
+          )})
+        ),
+        actionButton("download", "Download", icon = icon("download"), width = "100%", style = "font-size: 1.5rem;"),
+        div(downloadButton("download_h"), style = "visibility: hidden"),
+        width = "35%",
+      ),
+      uiOutput("svgout")
+    )),
+  nav_panel("About",
+    layout_columns(
+      col_widths = breakpoints(
+        sm = c(12, 12, 12),
+        md = c(-2, 8, -2),
+        lg = c(-3, 6, -3)
+      ),
+      about_module_ui("about"),
+    )
+  )
 )
 
 server <- function(input, output, session){
@@ -71,8 +84,6 @@ server <- function(input, output, session){
   )
 
 }
-
-
 
 shinyApp(ui, server)
 

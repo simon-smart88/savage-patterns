@@ -9,6 +9,7 @@ library(shinyjs)
 source("ring_module.R")
 source("square_module.R")
 source("line_module.R")
+source("about.R")
 
 modules <- c("square", "ring", "line")
 names(modules) <- paste0("<img src='", modules, "_icon.svg'>")
@@ -28,7 +29,8 @@ ui <- page_sidebar(
     div(downloadButton("download_h"), style = "visibility: hidden"),
     width = "35%",
   ),
-  uiOutput("svgout")
+  #uiOutput("svgout")
+  about_module_ui("about")
 )
 
 server <- function(input, output, session){

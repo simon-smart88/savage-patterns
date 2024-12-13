@@ -1,646 +1,393 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 6 6" height="100%" id="pattern">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 3 3" height="100%" id="pattern">
   <style>
-                                line { stroke-width: 0.01px;
-                                      stroke: black}
+                             :root{
+                               --stroke: 0.01px
+                             }
+                            line {stroke-width: var(--stroke);
+                                  stroke: black}
                        </style>
-  <line x1="0" x2="-0.4" y1="0" y2="0.0999999999999996">
-    <animate attributeName="x2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="1" x2="0.0999999999999996" y1="0" y2="-0.4">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="2" x2="0.0999999999999996" y1="0" y2="-0.4">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="3" x2="0.0999999999999996" y1="0" y2="-0.4">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="4" x2="0.0999999999999996" y1="0" y2="-0.4">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="0.6" y1="0" y2="0.0999999999999996">
-    <animate attributeName="x2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="-0.4" y1="1" y2="0.0999999999999996">
-    <animate attributeName="x2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="0.6" y1="1" y2="0.0999999999999996">
-    <animate attributeName="x2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="-0.4" y1="2" y2="0.0999999999999996">
-    <animate attributeName="x2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="0.6" y1="2" y2="0.0999999999999996">
-    <animate attributeName="x2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="-0.4" y1="3" y2="0.0999999999999996">
-    <animate attributeName="x2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="0.6" y1="3" y2="0.0999999999999996">
-    <animate attributeName="x2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="-0.4" y1="4" y2="0.0999999999999996">
-    <animate attributeName="x2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="0.6" y1="4" y2="0.0999999999999996">
-    <animate attributeName="x2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="-0.4" y1="5" y2="0.0999999999999996">
-    <animate attributeName="x2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="1" x2="0.0999999999999996" y1="5" y2="0.6">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="2" x2="0.0999999999999996" y1="5" y2="0.6">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="3" x2="0.0999999999999996" y1="5" y2="0.6">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="4" x2="0.0999999999999996" y1="5" y2="0.6">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="0.6" y1="5" y2="0.0999999999999996">
-    <animate attributeName="x2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="2" y1="0" y2="0.0999999999999996">
-    <animate attributeName="x2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="1" x2="2.5" y1="0" y2="-0.4">
-    <animate attributeName="x2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="2" x2="2.5" y1="0" y2="-0.4">
-    <animate attributeName="x2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="3" x2="2.5" y1="0" y2="-0.4">
-    <animate attributeName="x2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="4" x2="2.5" y1="0" y2="-0.4">
-    <animate attributeName="x2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="3" y1="0" y2="0.0999999999999996">
-    <animate attributeName="x2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="2" y1="1" y2="0.0999999999999996">
-    <animate attributeName="x2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="3" y1="1" y2="0.0999999999999996">
-    <animate attributeName="x2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="2" y1="2" y2="0.0999999999999996">
-    <animate attributeName="x2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="3" y1="2" y2="0.0999999999999996">
-    <animate attributeName="x2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="2" y1="3" y2="0.0999999999999996">
-    <animate attributeName="x2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="3" y1="3" y2="0.0999999999999996">
-    <animate attributeName="x2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="2" y1="4" y2="0.0999999999999996">
-    <animate attributeName="x2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="3" y1="4" y2="0.0999999999999996">
-    <animate attributeName="x2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="2" y1="5" y2="0.0999999999999996">
-    <animate attributeName="x2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="1" x2="2.5" y1="5" y2="0.6">
-    <animate attributeName="x2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="2" x2="2.5" y1="5" y2="0.6">
-    <animate attributeName="x2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="3" x2="2.5" y1="5" y2="0.6">
-    <animate attributeName="x2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="4" x2="2.5" y1="5" y2="0.6">
-    <animate attributeName="x2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="3" y1="5" y2="0.0999999999999996">
-    <animate attributeName="x2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="4.4" y1="0" y2="0.0999999999999996">
-    <animate attributeName="x2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="1" x2="4.9" y1="0" y2="-0.4">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="2" x2="4.9" y1="0" y2="-0.4">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="3" x2="4.9" y1="0" y2="-0.4">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="4" x2="4.9" y1="0" y2="-0.4">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="5.4" y1="0" y2="0.0999999999999996">
-    <animate attributeName="x2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="4.4" y1="1" y2="0.0999999999999996">
-    <animate attributeName="x2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="5.4" y1="1" y2="0.0999999999999996">
-    <animate attributeName="x2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="4.4" y1="2" y2="0.0999999999999996">
-    <animate attributeName="x2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="5.4" y1="2" y2="0.0999999999999996">
-    <animate attributeName="x2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="4.4" y1="3" y2="0.0999999999999996">
-    <animate attributeName="x2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="5.4" y1="3" y2="0.0999999999999996">
-    <animate attributeName="x2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="4.4" y1="4" y2="0.0999999999999996">
-    <animate attributeName="x2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="5.4" y1="4" y2="0.0999999999999996">
-    <animate attributeName="x2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="4.4" y1="5" y2="0.0999999999999996">
-    <animate attributeName="x2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="1" x2="4.9" y1="5" y2="0.6">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="2" x2="4.9" y1="5" y2="0.6">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="3" x2="4.9" y1="5" y2="0.6">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="4" x2="4.9" y1="5" y2="0.6">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="5.4" y1="5" y2="0.0999999999999996">
-    <animate attributeName="x2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="-0.4" y1="0" y2="2.5">
-    <animate attributeName="x2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="1" x2="0.0999999999999996" y1="0" y2="2">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="2" x2="0.0999999999999996" y1="0" y2="2">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="3" x2="0.0999999999999996" y1="0" y2="2">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="4" x2="0.0999999999999996" y1="0" y2="2">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="0.6" y1="0" y2="2.5">
-    <animate attributeName="x2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="-0.4" y1="1" y2="2.5">
-    <animate attributeName="x2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="0.6" y1="1" y2="2.5">
-    <animate attributeName="x2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="-0.4" y1="2" y2="2.5">
-    <animate attributeName="x2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="0.6" y1="2" y2="2.5">
-    <animate attributeName="x2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="-0.4" y1="3" y2="2.5">
-    <animate attributeName="x2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="0.6" y1="3" y2="2.5">
-    <animate attributeName="x2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="-0.4" y1="4" y2="2.5">
-    <animate attributeName="x2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="0.6" y1="4" y2="2.5">
-    <animate attributeName="x2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="-0.4" y1="5" y2="2.5">
-    <animate attributeName="x2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="1" x2="0.0999999999999996" y1="5" y2="3">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="2" x2="0.0999999999999996" y1="5" y2="3">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="3" x2="0.0999999999999996" y1="5" y2="3">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="4" x2="0.0999999999999996" y1="5" y2="3">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="0.6" y1="5" y2="2.5">
-    <animate attributeName="x2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="4.4" y1="0" y2="2.5">
-    <animate attributeName="x2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="1" x2="4.9" y1="0" y2="2">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="2" x2="4.9" y1="0" y2="2">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="3" x2="4.9" y1="0" y2="2">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="4" x2="4.9" y1="0" y2="2">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="5.4" y1="0" y2="2.5">
-    <animate attributeName="x2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="4.4" y1="1" y2="2.5">
-    <animate attributeName="x2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="5.4" y1="1" y2="2.5">
-    <animate attributeName="x2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="4.4" y1="2" y2="2.5">
-    <animate attributeName="x2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="5.4" y1="2" y2="2.5">
-    <animate attributeName="x2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="4.4" y1="3" y2="2.5">
-    <animate attributeName="x2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="5.4" y1="3" y2="2.5">
-    <animate attributeName="x2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="4.4" y1="4" y2="2.5">
-    <animate attributeName="x2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="5.4" y1="4" y2="2.5">
-    <animate attributeName="x2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="4.4" y1="5" y2="2.5">
-    <animate attributeName="x2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="1" x2="4.9" y1="5" y2="3">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="2" x2="4.9" y1="5" y2="3">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="3" x2="4.9" y1="5" y2="3">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="4" x2="4.9" y1="5" y2="3">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="5.4" y1="5" y2="2.5">
-    <animate attributeName="x2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="-0.4" y1="0" y2="4.9">
-    <animate attributeName="x2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="1" x2="0.0999999999999996" y1="0" y2="4.4">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="2" x2="0.0999999999999996" y1="0" y2="4.4">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="3" x2="0.0999999999999996" y1="0" y2="4.4">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="4" x2="0.0999999999999996" y1="0" y2="4.4">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="0.6" y1="0" y2="4.9">
-    <animate attributeName="x2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="-0.4" y1="1" y2="4.9">
-    <animate attributeName="x2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="0.6" y1="1" y2="4.9">
-    <animate attributeName="x2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="-0.4" y1="2" y2="4.9">
-    <animate attributeName="x2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="0.6" y1="2" y2="4.9">
-    <animate attributeName="x2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="-0.4" y1="3" y2="4.9">
-    <animate attributeName="x2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="0.6" y1="3" y2="4.9">
-    <animate attributeName="x2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="-0.4" y1="4" y2="4.9">
-    <animate attributeName="x2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="0.6" y1="4" y2="4.9">
-    <animate attributeName="x2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="-0.4" y1="5" y2="4.9">
-    <animate attributeName="x2" values="-0.4; 0.5; -0.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="1" x2="0.0999999999999996" y1="5" y2="5.4">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="2" x2="0.0999999999999996" y1="5" y2="5.4">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="3" x2="0.0999999999999996" y1="5" y2="5.4">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="4" x2="0.0999999999999996" y1="5" y2="5.4">
-    <animate attributeName="x2" values="0.0999999999999996; 0.5; 0.0999999999999996" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="0.6" y1="5" y2="4.9">
-    <animate attributeName="x2" values="0.6; 0.5; 0.6" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="2" y1="0" y2="4.9">
-    <animate attributeName="x2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="1" x2="2.5" y1="0" y2="4.4">
-    <animate attributeName="x2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="2" x2="2.5" y1="0" y2="4.4">
-    <animate attributeName="x2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="3" x2="2.5" y1="0" y2="4.4">
-    <animate attributeName="x2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="4" x2="2.5" y1="0" y2="4.4">
-    <animate attributeName="x2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="3" y1="0" y2="4.9">
-    <animate attributeName="x2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="2" y1="1" y2="4.9">
-    <animate attributeName="x2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="3" y1="1" y2="4.9">
-    <animate attributeName="x2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="2" y1="2" y2="4.9">
-    <animate attributeName="x2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="3" y1="2" y2="4.9">
-    <animate attributeName="x2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="2" y1="3" y2="4.9">
-    <animate attributeName="x2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="3" y1="3" y2="4.9">
-    <animate attributeName="x2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="2" y1="4" y2="4.9">
-    <animate attributeName="x2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="3" y1="4" y2="4.9">
-    <animate attributeName="x2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="2" y1="5" y2="4.9">
-    <animate attributeName="x2" values="2; 2.5; 2" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="1" x2="2.5" y1="5" y2="5.4">
-    <animate attributeName="x2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="2" x2="2.5" y1="5" y2="5.4">
-    <animate attributeName="x2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="3" x2="2.5" y1="5" y2="5.4">
-    <animate attributeName="x2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="4" x2="2.5" y1="5" y2="5.4">
-    <animate attributeName="x2" values="2.5; 2.5; 2.5" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="3" y1="5" y2="4.9">
-    <animate attributeName="x2" values="3; 2.5; 3" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="4.4" y1="0" y2="4.9">
-    <animate attributeName="x2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="1" x2="4.9" y1="0" y2="4.4">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="2" x2="4.9" y1="0" y2="4.4">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="3" x2="4.9" y1="0" y2="4.4">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="4" x2="4.9" y1="0" y2="4.4">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="5.4" y1="0" y2="4.9">
-    <animate attributeName="x2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="4.4" y1="1" y2="4.9">
-    <animate attributeName="x2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="5.4" y1="1" y2="4.9">
-    <animate attributeName="x2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="4.4" y1="2" y2="4.9">
-    <animate attributeName="x2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="5.4" y1="2" y2="4.9">
-    <animate attributeName="x2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="4.4" y1="3" y2="4.9">
-    <animate attributeName="x2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="5.4" y1="3" y2="4.9">
-    <animate attributeName="x2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="4.4" y1="4" y2="4.9">
-    <animate attributeName="x2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="5.4" y1="4" y2="4.9">
-    <animate attributeName="x2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="0" x2="4.4" y1="5" y2="4.9">
-    <animate attributeName="x2" values="4.4; 4.5; 4.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="1" x2="4.9" y1="5" y2="5.4">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="2" x2="4.9" y1="5" y2="5.4">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="3" x2="4.9" y1="5" y2="5.4">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="4" x2="4.9" y1="5" y2="5.4">
-    <animate attributeName="x2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-  </line>
-  <line x1="5" x2="5.4" y1="5" y2="4.9">
-    <animate attributeName="x2" values="5.4; 4.5; 5.4" dur="34s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="4.9; 4.5; 4.9" dur="34s" repeatCount="indefinite"/>
+  <line x1="0" x2="0.14" y1="0" y2="0.5">
+    <animate attributeName="x2" values="0.14; 0.62280701754386; 0.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="1" x2="0.5" y1="0" y2="0.14">
+    <animate attributeName="x2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.14; 0.62280701754386; 0.14" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="2" x2="0.5" y1="0" y2="0.14">
+    <animate attributeName="x2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.14; 0.62280701754386; 0.14" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="0.86" y1="0" y2="0.5">
+    <animate attributeName="x2" values="0.86; 0.62280701754386; 0.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="0.14" y1="1" y2="0.5">
+    <animate attributeName="x2" values="0.14; 0.62280701754386; 0.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="0.86" y1="1" y2="0.5">
+    <animate attributeName="x2" values="0.86; 0.62280701754386; 0.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="0.14" y1="2" y2="0.5">
+    <animate attributeName="x2" values="0.14; 0.62280701754386; 0.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="0.86" y1="2" y2="0.5">
+    <animate attributeName="x2" values="0.86; 0.62280701754386; 0.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="0.14" y1="3" y2="0.5">
+    <animate attributeName="x2" values="0.14; 0.62280701754386; 0.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="1" x2="0.5" y1="3" y2="0.86">
+    <animate attributeName="x2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.86; 0.62280701754386; 0.86" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="2" x2="0.5" y1="3" y2="0.86">
+    <animate attributeName="x2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.86; 0.62280701754386; 0.86" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="0.86" y1="3" y2="0.5">
+    <animate attributeName="x2" values="0.86; 0.62280701754386; 0.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="1.14" y1="0" y2="0.5">
+    <animate attributeName="x2" values="1.14; 1.5; 1.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="1" x2="1.5" y1="0" y2="0.14">
+    <animate attributeName="x2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.14; 0.62280701754386; 0.14" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="2" x2="1.5" y1="0" y2="0.14">
+    <animate attributeName="x2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.14; 0.62280701754386; 0.14" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="1.86" y1="0" y2="0.5">
+    <animate attributeName="x2" values="1.86; 1.5; 1.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="1.14" y1="1" y2="0.5">
+    <animate attributeName="x2" values="1.14; 1.5; 1.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="1.86" y1="1" y2="0.5">
+    <animate attributeName="x2" values="1.86; 1.5; 1.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="1.14" y1="2" y2="0.5">
+    <animate attributeName="x2" values="1.14; 1.5; 1.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="1.86" y1="2" y2="0.5">
+    <animate attributeName="x2" values="1.86; 1.5; 1.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="1.14" y1="3" y2="0.5">
+    <animate attributeName="x2" values="1.14; 1.5; 1.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="1" x2="1.5" y1="3" y2="0.86">
+    <animate attributeName="x2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.86; 0.62280701754386; 0.86" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="2" x2="1.5" y1="3" y2="0.86">
+    <animate attributeName="x2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.86; 0.62280701754386; 0.86" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="1.86" y1="3" y2="0.5">
+    <animate attributeName="x2" values="1.86; 1.5; 1.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="2.14" y1="0" y2="0.5">
+    <animate attributeName="x2" values="2.14; 2.37719298245614; 2.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="1" x2="2.5" y1="0" y2="0.14">
+    <animate attributeName="x2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.14; 0.62280701754386; 0.14" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="2" x2="2.5" y1="0" y2="0.14">
+    <animate attributeName="x2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.14; 0.62280701754386; 0.14" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="2.86" y1="0" y2="0.5">
+    <animate attributeName="x2" values="2.86; 2.37719298245614; 2.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="2.14" y1="1" y2="0.5">
+    <animate attributeName="x2" values="2.14; 2.37719298245614; 2.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="2.86" y1="1" y2="0.5">
+    <animate attributeName="x2" values="2.86; 2.37719298245614; 2.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="2.14" y1="2" y2="0.5">
+    <animate attributeName="x2" values="2.14; 2.37719298245614; 2.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="2.86" y1="2" y2="0.5">
+    <animate attributeName="x2" values="2.86; 2.37719298245614; 2.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="2.14" y1="3" y2="0.5">
+    <animate attributeName="x2" values="2.14; 2.37719298245614; 2.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="1" x2="2.5" y1="3" y2="0.86">
+    <animate attributeName="x2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.86; 0.62280701754386; 0.86" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="2" x2="2.5" y1="3" y2="0.86">
+    <animate attributeName="x2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.86; 0.62280701754386; 0.86" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="2.86" y1="3" y2="0.5">
+    <animate attributeName="x2" values="2.86; 2.37719298245614; 2.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="0.14" y1="0" y2="1.5">
+    <animate attributeName="x2" values="0.14; 0.62280701754386; 0.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="1" x2="0.5" y1="0" y2="1.14">
+    <animate attributeName="x2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.14; 1.5; 1.14" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="2" x2="0.5" y1="0" y2="1.14">
+    <animate attributeName="x2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.14; 1.5; 1.14" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="0.86" y1="0" y2="1.5">
+    <animate attributeName="x2" values="0.86; 0.62280701754386; 0.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="0.14" y1="1" y2="1.5">
+    <animate attributeName="x2" values="0.14; 0.62280701754386; 0.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="0.86" y1="1" y2="1.5">
+    <animate attributeName="x2" values="0.86; 0.62280701754386; 0.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="0.14" y1="2" y2="1.5">
+    <animate attributeName="x2" values="0.14; 0.62280701754386; 0.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="0.86" y1="2" y2="1.5">
+    <animate attributeName="x2" values="0.86; 0.62280701754386; 0.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="0.14" y1="3" y2="1.5">
+    <animate attributeName="x2" values="0.14; 0.62280701754386; 0.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="1" x2="0.5" y1="3" y2="1.86">
+    <animate attributeName="x2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.86; 1.5; 1.86" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="2" x2="0.5" y1="3" y2="1.86">
+    <animate attributeName="x2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.86; 1.5; 1.86" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="0.86" y1="3" y2="1.5">
+    <animate attributeName="x2" values="0.86; 0.62280701754386; 0.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="2.14" y1="0" y2="1.5">
+    <animate attributeName="x2" values="2.14; 2.37719298245614; 2.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="1" x2="2.5" y1="0" y2="1.14">
+    <animate attributeName="x2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.14; 1.5; 1.14" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="2" x2="2.5" y1="0" y2="1.14">
+    <animate attributeName="x2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.14; 1.5; 1.14" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="2.86" y1="0" y2="1.5">
+    <animate attributeName="x2" values="2.86; 2.37719298245614; 2.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="2.14" y1="1" y2="1.5">
+    <animate attributeName="x2" values="2.14; 2.37719298245614; 2.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="2.86" y1="1" y2="1.5">
+    <animate attributeName="x2" values="2.86; 2.37719298245614; 2.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="2.14" y1="2" y2="1.5">
+    <animate attributeName="x2" values="2.14; 2.37719298245614; 2.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="2.86" y1="2" y2="1.5">
+    <animate attributeName="x2" values="2.86; 2.37719298245614; 2.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="2.14" y1="3" y2="1.5">
+    <animate attributeName="x2" values="2.14; 2.37719298245614; 2.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="1" x2="2.5" y1="3" y2="1.86">
+    <animate attributeName="x2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.86; 1.5; 1.86" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="2" x2="2.5" y1="3" y2="1.86">
+    <animate attributeName="x2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.86; 1.5; 1.86" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="2.86" y1="3" y2="1.5">
+    <animate attributeName="x2" values="2.86; 2.37719298245614; 2.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="0.14" y1="0" y2="2.5">
+    <animate attributeName="x2" values="0.14; 0.62280701754386; 0.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="1" x2="0.5" y1="0" y2="2.14">
+    <animate attributeName="x2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.14; 2.37719298245614; 2.14" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="2" x2="0.5" y1="0" y2="2.14">
+    <animate attributeName="x2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.14; 2.37719298245614; 2.14" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="0.86" y1="0" y2="2.5">
+    <animate attributeName="x2" values="0.86; 0.62280701754386; 0.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="0.14" y1="1" y2="2.5">
+    <animate attributeName="x2" values="0.14; 0.62280701754386; 0.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="0.86" y1="1" y2="2.5">
+    <animate attributeName="x2" values="0.86; 0.62280701754386; 0.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="0.14" y1="2" y2="2.5">
+    <animate attributeName="x2" values="0.14; 0.62280701754386; 0.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="0.86" y1="2" y2="2.5">
+    <animate attributeName="x2" values="0.86; 0.62280701754386; 0.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="0.14" y1="3" y2="2.5">
+    <animate attributeName="x2" values="0.14; 0.62280701754386; 0.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="1" x2="0.5" y1="3" y2="2.86">
+    <animate attributeName="x2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.86; 2.37719298245614; 2.86" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="2" x2="0.5" y1="3" y2="2.86">
+    <animate attributeName="x2" values="0.5; 0.62280701754386; 0.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.86; 2.37719298245614; 2.86" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="0.86" y1="3" y2="2.5">
+    <animate attributeName="x2" values="0.86; 0.62280701754386; 0.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="1.14" y1="0" y2="2.5">
+    <animate attributeName="x2" values="1.14; 1.5; 1.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="1" x2="1.5" y1="0" y2="2.14">
+    <animate attributeName="x2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.14; 2.37719298245614; 2.14" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="2" x2="1.5" y1="0" y2="2.14">
+    <animate attributeName="x2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.14; 2.37719298245614; 2.14" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="1.86" y1="0" y2="2.5">
+    <animate attributeName="x2" values="1.86; 1.5; 1.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="1.14" y1="1" y2="2.5">
+    <animate attributeName="x2" values="1.14; 1.5; 1.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="1.86" y1="1" y2="2.5">
+    <animate attributeName="x2" values="1.86; 1.5; 1.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="1.14" y1="2" y2="2.5">
+    <animate attributeName="x2" values="1.14; 1.5; 1.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="1.86" y1="2" y2="2.5">
+    <animate attributeName="x2" values="1.86; 1.5; 1.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="1.14" y1="3" y2="2.5">
+    <animate attributeName="x2" values="1.14; 1.5; 1.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="1" x2="1.5" y1="3" y2="2.86">
+    <animate attributeName="x2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.86; 2.37719298245614; 2.86" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="2" x2="1.5" y1="3" y2="2.86">
+    <animate attributeName="x2" values="1.5; 1.5; 1.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.86; 2.37719298245614; 2.86" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="1.86" y1="3" y2="2.5">
+    <animate attributeName="x2" values="1.86; 1.5; 1.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="2.14" y1="0" y2="2.5">
+    <animate attributeName="x2" values="2.14; 2.37719298245614; 2.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="1" x2="2.5" y1="0" y2="2.14">
+    <animate attributeName="x2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.14; 2.37719298245614; 2.14" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="2" x2="2.5" y1="0" y2="2.14">
+    <animate attributeName="x2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.14; 2.37719298245614; 2.14" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="2.86" y1="0" y2="2.5">
+    <animate attributeName="x2" values="2.86; 2.37719298245614; 2.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="2.14" y1="1" y2="2.5">
+    <animate attributeName="x2" values="2.14; 2.37719298245614; 2.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="2.86" y1="1" y2="2.5">
+    <animate attributeName="x2" values="2.86; 2.37719298245614; 2.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="2.14" y1="2" y2="2.5">
+    <animate attributeName="x2" values="2.14; 2.37719298245614; 2.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="2.86" y1="2" y2="2.5">
+    <animate attributeName="x2" values="2.86; 2.37719298245614; 2.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="0" x2="2.14" y1="3" y2="2.5">
+    <animate attributeName="x2" values="2.14; 2.37719298245614; 2.14" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="1" x2="2.5" y1="3" y2="2.86">
+    <animate attributeName="x2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.86; 2.37719298245614; 2.86" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="2" x2="2.5" y1="3" y2="2.86">
+    <animate attributeName="x2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.86; 2.37719298245614; 2.86" dur="30s" repeatCount="indefinite"/>
+  </line>
+  <line x1="3" x2="2.86" y1="3" y2="2.5">
+    <animate attributeName="x2" values="2.86; 2.37719298245614; 2.86" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="2.5; 2.37719298245614; 2.5" dur="30s" repeatCount="indefinite"/>
   </line>
 </svg>

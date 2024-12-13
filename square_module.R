@@ -88,38 +88,36 @@ square_module_server <- function(id, patterns){
       final_y <- round(center_y - (final_height / 2), 3)
 
       tags$g(
-      tags$rect(class = glue("rect_{matrix[4]}_out"),
-                  x = x,
-                  y =  y,
-                  width = width,
-                  height = height),
-      tags$rect(class = glue("rect_{matrix[4]}_in"),
-                tags$animate(attributeName = "x",
-                             values = glue("{initial_x};
-                                          {final_x};
-                                          {initial_x}"),
-                             dur = glue("{speed}s"),
-                             repeatCount = "indefinite"),
-                tags$animate(attributeName = "y",
-                             values = glue("{initial_y};
-                                          {final_y};
-                                          {initial_y}"),
-                             dur = glue("{speed}s"),
-                             repeatCount = "indefinite"),
-                tags$animate(attributeName = "width",
-                             values = glue("{initial_width};
-                                          {final_width};
-                                          {initial_width}"),
-                             dur = glue("{speed}s"),
-                             repeatCount = "indefinite"),
-                tags$animate(attributeName = "height",
-                             values = glue("{initial_height};
-                                          {final_height};
-                                          {initial_height}"),
-                             dur = glue("{speed}s"),
-                             repeatCount = "indefinite"),
-                ),
-      )
+        tags$rect(
+          class = glue("rect_{matrix[4]}_out"),
+          x = x,
+          y =  y,
+          width = width,
+          height = height),
+        tags$rect(
+          class = glue("rect_{matrix[4]}_in"),
+          tags$animate(
+            attributeName = "x",
+            values = glue("{initial_x}; {final_x}; {initial_x}"),
+            dur = glue("{speed}s"),
+            repeatCount = "indefinite"),
+          tags$animate(
+            attributeName = "y",
+            values = glue("{initial_y}; {final_y}; {initial_y}"),
+            dur = glue("{speed}s"),
+            repeatCount = "indefinite"),
+          tags$animate(
+            attributeName = "width",
+            values = glue("{initial_width}; {final_width}; {initial_width}"),
+            dur = glue("{speed}s"),
+            repeatCount = "indefinite"),
+          tags$animate(
+            attributeName = "height",
+            values = glue("{initial_height}; {final_height}; {initial_height}"),
+            dur = glue("{speed}s"),
+            repeatCount = "indefinite")
+          )
+        )
 
     }
 
@@ -225,7 +223,12 @@ square_module_server <- function(id, patterns){
 
       elements_sub <- element_mat[unique(element_mat[,4]),]
       # interesting with input$speed too
-      css_delay_result <- paste(apply(elements_sub, 1, css_delay, speed = input$colour_speed, reps = input$reps, colour_dif = input$colour_dif), collapse= ' ')
+      css_delay_result <- paste(
+        apply(elements_sub, 1, css_delay, 
+              speed = input$colour_speed, 
+              reps = input$reps, 
+              colour_dif = input$colour_dif), 
+        collapse= ' ')
 
       colours <- isolate(input_colours())
       n_cols <- length(colours)
@@ -238,29 +241,30 @@ square_module_server <- function(id, patterns){
       css_colour_keys_result <- paste(css_colour_keys(frames, colour_var_seq), collapse = ' ')
 
       # create the final svg
-      tagList(tags$svg(xmlns = "http://www.w3.org/2000/svg",
-                       `xmlns:xlink`="http://www.w3.org/1999/xlink",
-                       version="1.1",
-                       viewBox = glue("{top_corner} {top_corner} {bottom_corner} {bottom_corner}"),
-                       height = "100%",
-                       id = "pattern",
-                       tags$style(paste0("
-                                :root{",
-                                         css_colour_var_result
-                                         ,"
-                                 --stroke: 0.5px
-                                }
+      tagList(
+        tags$svg(
+          xmlns = "http://www.w3.org/2000/svg",
+         `xmlns:xlink`="http://www.w3.org/1999/xlink",
+          version="1.1",
+          viewBox = glue("{top_corner} {top_corner} {bottom_corner} {bottom_corner}"),
+          height = "100%",
+          id = "pattern",
+          tags$style(
+            paste0("
+              :root{",
+                 css_colour_var_result
+                 ,"
+               --stroke: 0.5px
+              }
+              rect {animation: col ", input$colour_speed, "s linear infinite;
+                    fill: none;
+                    stroke-width: var(--stroke)}
 
-                                rect {animation: col ", input$colour_speed, "s linear infinite;
-                                      fill: none;
-                                      stroke-width: var(--stroke)}
-
-                                @keyframes col {",css_colour_keys_result,"
-                                }
-                       ")),
-                       tags$style(css_delay_result),
-
-                       elements))
+              @keyframes col {",css_colour_keys_result,"
+              }
+         ")),
+         tags$style(css_delay_result),
+         elements))
     })
 
     observe(patterns$square <- svg_pattern())

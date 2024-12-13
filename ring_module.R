@@ -8,7 +8,7 @@ ring_module_ui <- function(id){
       accordion_panel("Pattern",
         sliderInput(ns("radius"), "Radius", value = 30, step = 1, min = 10, max = 50),
         sliderInput(ns("bulge"), "Radius bulge", value = 1, step = 0.1, min = 0.1, max = 100),
-        sliderInput(ns("reps"), "Repetitions", value = 25, step = 2, min = 11, max = 45),
+        sliderInput(ns("reps"), "Repetitions", value = 7, step = 2, min = 7, max = 45),
         sliderInput(ns("space"), "Space between circles", value = 10, step = 1, min = 1, max = 30)
       ),
       accordion_panel("Animation",
@@ -81,16 +81,18 @@ ring_module_server <- function(id, patterns){
     svg_circle <- function(x, space, speed, radius, breath, stroke, reps, bulge){
       breath <- breath/100
       radius_bulge <- (x[3]/reps*2) * (bulge/10)
-      tags$circle(class = glue("circle_{x[3]}"),
-                  cx = radius+(x[1]*space),
-                  cy = radius+(x[2]*space),
-                  # animate the radius
-                  tags$animate(attributeName = "r",
-                               values = glue("{(radius*(1-breath))+radius_bulge};
-                                            {(radius*(1+breath))+radius_bulge};
-                                            {(radius*(1-breath))+radius_bulge}"),
-                               dur = glue("{speed}s"),
-                               repeatCount = "indefinite"),
+      tags$circle(
+        class = glue("circle_{x[3]}"),
+        cx = radius+(x[1]*space),
+        cy = radius+(x[2]*space),
+        # animate the radius
+        tags$animate(
+          attributeName = "r",
+          values = glue("{(radius*(1-breath))+radius_bulge};
+                          {(radius*(1+breath))+radius_bulge};
+                          {(radius*(1-breath))+radius_bulge}"),
+           dur = glue("{speed}s"),
+           repeatCount = "indefinite"),
       )
     }
 
@@ -111,38 +113,41 @@ ring_module_server <- function(id, patterns){
     # generate the pattern
     svg_pattern <- reactive({
       req(length(input_colours) > 0)
-      #view port to crop borders
+      # view port to crop borders
+      # radius+(x[1]*space)
       top_corner <- 2 * input$radius
-      #top_corner <- input$radius+ ((input$radius*(1+input$breath))+input$bulge)
-      bottom_corner <- (input$reps * input$space) - top_corner
+      # top_corner <- input$radius+ ((input$radius*(1+input$breath))+input$bulge)
+      bottom_corner <- (input$reps * input$space) - top_corner 
+      #bottom_corner <- top_corner + ((input$radius - 6) * input$space) 
 
-      #create a matrix of sequences
+      # create a matrix of sequences
       reps <- input$reps
       low_half <- (reps-1)/2
       high_half <- (reps+1)/2
       element_mat <- matrix(c(
-        #column and row indices
+        # column and row indices
         rep(seq(1:reps),reps), # 123,123,123
         rep(seq(1:reps),each=reps), # 111,222,333
-        #bulge with higher values at the centre of the matrix
-        rep(c(0:low_half, (low_half-1):0), reps) + #01210
+        # bulge with higher values at the centre of the matrix
+        rep(c(0:low_half, (low_half-1):0), reps) + # 01210
           c(rep(seq(1:high_half),each=reps), rev(rep(seq(low_half:1), each=reps)))), #111,222,111
         nrow = reps^2, byrow = F)
 
-      #apply the svg_circle function to the matrix
-      elements <- apply(element_mat, 1, svg_circle,
-                        space = input$space,
-                        speed = input$speed,
-                        radius = input$radius,
-                        breath = input$breath,
-                        # stroke = input$stroke,
-                        reps = input$reps,
-                        bulge = input$bulge)
+      # apply the svg_circle function to the matrix
+      elements <- apply(
+        element_mat, 1, svg_circle,
+        space = input$space,
+        speed = input$speed,
+        radius = input$radius,
+        breath = input$breath,
+        # stroke = input$stroke,
+        reps = input$reps,
+        bulge = input$bulge)
 
       elements_sub <- element_mat[unique(element_mat[,3]),]
       css_delay_result <- paste(apply(elements_sub, 1, css_delay, speed = input$speed, reps = input$reps), collapse= ' ')
 
-      #colours <- gradient$result()$col
+      # colours <- gradient$result()$col
       colours <- isolate(input_colours())
       n_cols <- length(colours)
       col_vars <- glue("--colour_{1:n_cols}")
@@ -153,30 +158,35 @@ ring_module_server <- function(id, patterns){
       colour_var_seq <- c(col_vars, rev(col_vars[1:n_cols - 1]))
       css_colour_keys_result <- paste(css_colour_keys(frames, colour_var_seq), collapse = ' ')
 
-      #create the final svg
-      tagList(tags$svg(xmlns = "http://www.w3.org/2000/svg",
-                       `xmlns:xlink`="http://www.w3.org/1999/xlink",
-                       version="1.1",
-                       viewBox = glue("{top_corner} {top_corner} {bottom_corner} {bottom_corner}"),
-                       height = "100%",
-                       id = "pattern",
-                       tags$style(paste0("
-                                :root{",
-                                css_colour_var_result
-                                ,"
-                                 --stroke: 0.5px
-                                }
+      # browser()
+      
+      # create the final svg
+      tagList(
+        tags$svg(
+          xmlns = "http://www.w3.org/2000/svg",
+         `xmlns:xlink`="http://www.w3.org/1999/xlink",
+         version="1.1",
+         viewBox = glue("{top_corner} {top_corner} {bottom_corner} {bottom_corner}"),
+         height = "100%",
+         id = "pattern",
+         tags$style(paste0("
+          :root{",
+            css_colour_var_result
+            ,"
+             --stroke: 0.5px
+          }
 
-                                circle {animation: col 30s linear infinite;
-                                      fill: none;
-                                      stroke-width: var(--stroke)}
+          circle {animation: col 30s linear infinite;
+                  fill: none;
+                  stroke-width: var(--stroke)}
 
-                                @keyframes col {",css_colour_keys_result,"
-                                }
-                       ")),
-                       tags$style(css_delay_result),
+          @keyframes col {",
+            css_colour_keys_result,"
+          }
+         ")),
+         tags$style(css_delay_result),
 
-                       elements))
+         elements))
     })
     observe(patterns$ring <- svg_pattern())
 

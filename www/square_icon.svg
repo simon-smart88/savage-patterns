@@ -1,463 +1,99 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1000 1000" height="100%" id="pattern" style="--colour_1: #181819; --colour_2: #41D4F2; --colour_3: #BACBD6;">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1000 1000" height="100%" id="pattern">
   <style>
-                                :root{--colour_1: #796F96 ; --colour_2: #D1779F ; --colour_3: #A04143 ;
+                                :root{--colour_1: #727272 ; --colour_2: #878787 ; --colour_3: #FCFCFC ;
                                  --stroke: 0.5px
                                 }
 
-                                rect {animation: col 30s linear infinite;
+                                rect {animation: col 40s linear infinite;
                                       fill: none;
                                       stroke-width: var(--stroke)}
 
                                 @keyframes col {0% {fill: var(--colour_1)} 25% {fill: var(--colour_2)} 50% {fill: var(--colour_3)} 75% {fill: var(--colour_2)} 100% {fill: var(--colour_1)}
                                 }
                        </style>
-  <style>.rect_1_out {animation-delay: -4.28571428571429s;}
-.rect_1_in {animation-delay: -19.2857142857143s;} .rect_2_out {animation-delay: -8.57142857142857s;}
-.rect_2_in {animation-delay: -23.5714285714286s;} .rect_3_out {animation-delay: -12.8571428571429s;}
-.rect_3_in {animation-delay: -27.8571428571429s;} .rect_4_out {animation-delay: -17.1428571428571s;}
-.rect_4_in {animation-delay: -32.1428571428571s;} .rect_5_out {animation-delay: -12.8571428571429s;}
-.rect_5_in {animation-delay: -27.8571428571429s;} .rect_6_out {animation-delay: -8.57142857142857s;}
-.rect_6_in {animation-delay: -23.5714285714286s;} .rect_7_out {animation-delay: -4.28571428571429s;}
-.rect_7_in {animation-delay: -19.2857142857143s;}</style>
+  <style>.rect_1_out {animation-delay: -13.3333333333333s;}
+.rect_1_in {animation-delay: -33.3333333333333s;} .rect_2_out {animation-delay: -26.6666666666667s;}
+.rect_2_in {animation-delay: -46.6666666666667s;} .rect_3_out {animation-delay: -13.3333333333333s;}
+.rect_3_in {animation-delay: -33.3333333333333s;}</style>
   <g>
-    <rect class="rect_1_out" x="0" y="0" width="114.671" height="114.671"/>
+    <rect class="rect_1_out" x="0" y="0" width="284.937" height="284.937"/>
     <rect class="rect_1_in">
-      <animate attributeName="x" values="5.734;&#10;28.668;&#10;5.734" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="5.734;&#10;28.668;&#10;5.734" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="38.467;&#10;89.755;&#10;38.467" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="38.467;&#10;89.755;&#10;38.467" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
     </rect>
   </g>
   <g>
-    <rect class="rect_2_out" x="114.171" y="0" width="141.061" height="114.671"/>
+    <rect class="rect_2_out" x="284.437" y="0" width="431.626" height="284.937"/>
     <rect class="rect_2_in">
-      <animate attributeName="x" values="121.224;&#10;149.437;&#10;121.224" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="5.734;&#10;28.668;&#10;5.734" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="342.706;&#10;420.399;&#10;342.706" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="38.467;&#10;89.755;&#10;38.467" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="315.087;&#10;159.702;&#10;315.087" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
     </rect>
   </g>
   <g>
-    <rect class="rect_3_out" x="254.732" y="0" width="159.242" height="114.671"/>
-    <rect class="rect_3_in">
-      <animate attributeName="x" values="262.694;&#10;294.543;&#10;262.694" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="5.734;&#10;28.668;&#10;5.734" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_4_out" x="413.474" y="0" width="173.551" height="114.671"/>
-    <rect class="rect_4_in">
-      <animate attributeName="x" values="422.152;&#10;456.862;&#10;422.152" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="5.734;&#10;28.668;&#10;5.734" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="156.196;&#10;86.775;&#10;156.196" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_3_out" x="586.526" y="0" width="159.242" height="114.671"/>
-    <rect class="rect_3_in">
-      <animate attributeName="x" values="594.488;&#10;626.336;&#10;594.488" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="5.734;&#10;28.668;&#10;5.734" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_2_out" x="745.268" y="0" width="141.061" height="114.671"/>
-    <rect class="rect_2_in">
-      <animate attributeName="x" values="752.321;&#10;780.534;&#10;752.321" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="5.734;&#10;28.668;&#10;5.734" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_1_out" x="885.829" y="0" width="114.671" height="114.671"/>
+    <rect class="rect_1_out" x="715.563" y="0" width="284.937" height="284.937"/>
     <rect class="rect_1_in">
-      <animate attributeName="x" values="891.562;&#10;914.496;&#10;891.562" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="5.734;&#10;28.668;&#10;5.734" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="754.03;&#10;805.318;&#10;754.03" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="38.467;&#10;89.755;&#10;38.467" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
     </rect>
   </g>
   <g>
-    <rect class="rect_2_out" x="0" y="114.171" width="114.671" height="141.061"/>
+    <rect class="rect_2_out" x="0" y="284.437" width="284.937" height="431.626"/>
     <rect class="rect_2_in">
-      <animate attributeName="x" values="5.734;&#10;28.668;&#10;5.734" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="121.224;&#10;149.437;&#10;121.224" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="38.467;&#10;89.755;&#10;38.467" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="342.706;&#10;420.399;&#10;342.706" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="315.087;&#10;159.702;&#10;315.087" dur="20s" repeatCount="indefinite"/>
     </rect>
   </g>
   <g>
-    <rect class="rect_3_out" x="114.171" y="114.171" width="141.061" height="141.061"/>
+    <rect class="rect_3_out" x="284.437" y="284.437" width="431.626" height="431.626"/>
     <rect class="rect_3_in">
-      <animate attributeName="x" values="121.224;&#10;149.437;&#10;121.224" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="121.224;&#10;149.437;&#10;121.224" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="342.706;&#10;420.399;&#10;342.706" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="342.706;&#10;420.399;&#10;342.706" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="315.087;&#10;159.702;&#10;315.087" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="315.087;&#10;159.702;&#10;315.087" dur="20s" repeatCount="indefinite"/>
     </rect>
   </g>
   <g>
-    <rect class="rect_4_out" x="254.732" y="114.171" width="159.242" height="141.061"/>
-    <rect class="rect_4_in">
-      <animate attributeName="x" values="262.694;&#10;294.543;&#10;262.694" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="121.224;&#10;149.437;&#10;121.224" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_5_out" x="413.474" y="114.171" width="173.551" height="141.061"/>
-    <rect class="rect_5_in">
-      <animate attributeName="x" values="422.152;&#10;456.862;&#10;422.152" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="121.224;&#10;149.437;&#10;121.224" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="156.196;&#10;86.775;&#10;156.196" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_4_out" x="586.526" y="114.171" width="159.242" height="141.061"/>
-    <rect class="rect_4_in">
-      <animate attributeName="x" values="594.488;&#10;626.336;&#10;594.488" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="121.224;&#10;149.437;&#10;121.224" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_3_out" x="745.268" y="114.171" width="141.061" height="141.061"/>
-    <rect class="rect_3_in">
-      <animate attributeName="x" values="752.321;&#10;780.534;&#10;752.321" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="121.224;&#10;149.437;&#10;121.224" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_2_out" x="885.829" y="114.171" width="114.671" height="141.061"/>
+    <rect class="rect_2_out" x="715.563" y="284.437" width="284.937" height="431.626"/>
     <rect class="rect_2_in">
-      <animate attributeName="x" values="891.562;&#10;914.496;&#10;891.562" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="121.224;&#10;149.437;&#10;121.224" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="754.03;&#10;805.318;&#10;754.03" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="342.706;&#10;420.399;&#10;342.706" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="315.087;&#10;159.702;&#10;315.087" dur="20s" repeatCount="indefinite"/>
     </rect>
   </g>
   <g>
-    <rect class="rect_3_out" x="0" y="254.732" width="114.671" height="159.242"/>
-    <rect class="rect_3_in">
-      <animate attributeName="x" values="5.734;&#10;28.668;&#10;5.734" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="262.694;&#10;294.543;&#10;262.694" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_4_out" x="114.171" y="254.732" width="141.061" height="159.242"/>
-    <rect class="rect_4_in">
-      <animate attributeName="x" values="121.224;&#10;149.437;&#10;121.224" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="262.694;&#10;294.543;&#10;262.694" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_5_out" x="254.732" y="254.732" width="159.242" height="159.242"/>
-    <rect class="rect_5_in">
-      <animate attributeName="x" values="262.694;&#10;294.543;&#10;262.694" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="262.694;&#10;294.543;&#10;262.694" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_6_out" x="413.474" y="254.732" width="173.551" height="159.242"/>
-    <rect class="rect_6_in">
-      <animate attributeName="x" values="422.152;&#10;456.862;&#10;422.152" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="262.694;&#10;294.543;&#10;262.694" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="156.196;&#10;86.775;&#10;156.196" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_5_out" x="586.526" y="254.732" width="159.242" height="159.242"/>
-    <rect class="rect_5_in">
-      <animate attributeName="x" values="594.488;&#10;626.336;&#10;594.488" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="262.694;&#10;294.543;&#10;262.694" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_4_out" x="745.268" y="254.732" width="141.061" height="159.242"/>
-    <rect class="rect_4_in">
-      <animate attributeName="x" values="752.321;&#10;780.534;&#10;752.321" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="262.694;&#10;294.543;&#10;262.694" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_3_out" x="885.829" y="254.732" width="114.671" height="159.242"/>
-    <rect class="rect_3_in">
-      <animate attributeName="x" values="891.562;&#10;914.496;&#10;891.562" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="262.694;&#10;294.543;&#10;262.694" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_4_out" x="0" y="413.474" width="114.671" height="173.551"/>
-    <rect class="rect_4_in">
-      <animate attributeName="x" values="5.734;&#10;28.668;&#10;5.734" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="422.152;&#10;456.862;&#10;422.152" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="156.196;&#10;86.775;&#10;156.196" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_5_out" x="114.171" y="413.474" width="141.061" height="173.551"/>
-    <rect class="rect_5_in">
-      <animate attributeName="x" values="121.224;&#10;149.437;&#10;121.224" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="422.152;&#10;456.862;&#10;422.152" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="156.196;&#10;86.775;&#10;156.196" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_6_out" x="254.732" y="413.474" width="159.242" height="173.551"/>
-    <rect class="rect_6_in">
-      <animate attributeName="x" values="262.694;&#10;294.543;&#10;262.694" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="422.152;&#10;456.862;&#10;422.152" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="156.196;&#10;86.775;&#10;156.196" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_7_out" x="413.474" y="413.474" width="173.551" height="173.551"/>
-    <rect class="rect_7_in">
-      <animate attributeName="x" values="422.152;&#10;456.862;&#10;422.152" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="422.152;&#10;456.862;&#10;422.152" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="156.196;&#10;86.775;&#10;156.196" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="156.196;&#10;86.775;&#10;156.196" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_6_out" x="586.526" y="413.474" width="159.242" height="173.551"/>
-    <rect class="rect_6_in">
-      <animate attributeName="x" values="594.488;&#10;626.336;&#10;594.488" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="422.152;&#10;456.862;&#10;422.152" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="156.196;&#10;86.775;&#10;156.196" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_5_out" x="745.268" y="413.474" width="141.061" height="173.551"/>
-    <rect class="rect_5_in">
-      <animate attributeName="x" values="752.321;&#10;780.534;&#10;752.321" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="422.152;&#10;456.862;&#10;422.152" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="156.196;&#10;86.775;&#10;156.196" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_4_out" x="885.829" y="413.474" width="114.671" height="173.551"/>
-    <rect class="rect_4_in">
-      <animate attributeName="x" values="891.562;&#10;914.496;&#10;891.562" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="422.152;&#10;456.862;&#10;422.152" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="156.196;&#10;86.775;&#10;156.196" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_3_out" x="0" y="586.526" width="114.671" height="159.242"/>
-    <rect class="rect_3_in">
-      <animate attributeName="x" values="5.734;&#10;28.668;&#10;5.734" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="594.488;&#10;626.336;&#10;594.488" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_4_out" x="114.171" y="586.526" width="141.061" height="159.242"/>
-    <rect class="rect_4_in">
-      <animate attributeName="x" values="121.224;&#10;149.437;&#10;121.224" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="594.488;&#10;626.336;&#10;594.488" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_5_out" x="254.732" y="586.526" width="159.242" height="159.242"/>
-    <rect class="rect_5_in">
-      <animate attributeName="x" values="262.694;&#10;294.543;&#10;262.694" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="594.488;&#10;626.336;&#10;594.488" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_6_out" x="413.474" y="586.526" width="173.551" height="159.242"/>
-    <rect class="rect_6_in">
-      <animate attributeName="x" values="422.152;&#10;456.862;&#10;422.152" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="594.488;&#10;626.336;&#10;594.488" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="156.196;&#10;86.775;&#10;156.196" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_5_out" x="586.526" y="586.526" width="159.242" height="159.242"/>
-    <rect class="rect_5_in">
-      <animate attributeName="x" values="594.488;&#10;626.336;&#10;594.488" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="594.488;&#10;626.336;&#10;594.488" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_4_out" x="745.268" y="586.526" width="141.061" height="159.242"/>
-    <rect class="rect_4_in">
-      <animate attributeName="x" values="752.321;&#10;780.534;&#10;752.321" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="594.488;&#10;626.336;&#10;594.488" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_3_out" x="885.829" y="586.526" width="114.671" height="159.242"/>
-    <rect class="rect_3_in">
-      <animate attributeName="x" values="891.562;&#10;914.496;&#10;891.562" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="594.488;&#10;626.336;&#10;594.488" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_2_out" x="0" y="745.268" width="114.671" height="141.061"/>
-    <rect class="rect_2_in">
-      <animate attributeName="x" values="5.734;&#10;28.668;&#10;5.734" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="752.321;&#10;780.534;&#10;752.321" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_3_out" x="114.171" y="745.268" width="141.061" height="141.061"/>
-    <rect class="rect_3_in">
-      <animate attributeName="x" values="121.224;&#10;149.437;&#10;121.224" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="752.321;&#10;780.534;&#10;752.321" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_4_out" x="254.732" y="745.268" width="159.242" height="141.061"/>
-    <rect class="rect_4_in">
-      <animate attributeName="x" values="262.694;&#10;294.543;&#10;262.694" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="752.321;&#10;780.534;&#10;752.321" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_5_out" x="413.474" y="745.268" width="173.551" height="141.061"/>
-    <rect class="rect_5_in">
-      <animate attributeName="x" values="422.152;&#10;456.862;&#10;422.152" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="752.321;&#10;780.534;&#10;752.321" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="156.196;&#10;86.775;&#10;156.196" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_4_out" x="586.526" y="745.268" width="159.242" height="141.061"/>
-    <rect class="rect_4_in">
-      <animate attributeName="x" values="594.488;&#10;626.336;&#10;594.488" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="752.321;&#10;780.534;&#10;752.321" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_3_out" x="745.268" y="745.268" width="141.061" height="141.061"/>
-    <rect class="rect_3_in">
-      <animate attributeName="x" values="752.321;&#10;780.534;&#10;752.321" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="752.321;&#10;780.534;&#10;752.321" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_2_out" x="885.829" y="745.268" width="114.671" height="141.061"/>
-    <rect class="rect_2_in">
-      <animate attributeName="x" values="891.562;&#10;914.496;&#10;891.562" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="752.321;&#10;780.534;&#10;752.321" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_1_out" x="0" y="885.829" width="114.671" height="114.671"/>
+    <rect class="rect_1_out" x="0" y="715.563" width="284.937" height="284.937"/>
     <rect class="rect_1_in">
-      <animate attributeName="x" values="5.734;&#10;28.668;&#10;5.734" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="891.562;&#10;914.496;&#10;891.562" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="38.467;&#10;89.755;&#10;38.467" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="754.03;&#10;805.318;&#10;754.03" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
     </rect>
   </g>
   <g>
-    <rect class="rect_2_out" x="114.171" y="885.829" width="141.061" height="114.671"/>
+    <rect class="rect_2_out" x="284.437" y="715.563" width="431.626" height="284.937"/>
     <rect class="rect_2_in">
-      <animate attributeName="x" values="121.224;&#10;149.437;&#10;121.224" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="891.562;&#10;914.496;&#10;891.562" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="342.706;&#10;420.399;&#10;342.706" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="754.03;&#10;805.318;&#10;754.03" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="315.087;&#10;159.702;&#10;315.087" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
     </rect>
   </g>
   <g>
-    <rect class="rect_3_out" x="254.732" y="885.829" width="159.242" height="114.671"/>
-    <rect class="rect_3_in">
-      <animate attributeName="x" values="262.694;&#10;294.543;&#10;262.694" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="891.562;&#10;914.496;&#10;891.562" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_4_out" x="413.474" y="885.829" width="173.551" height="114.671"/>
-    <rect class="rect_4_in">
-      <animate attributeName="x" values="422.152;&#10;456.862;&#10;422.152" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="891.562;&#10;914.496;&#10;891.562" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="156.196;&#10;86.775;&#10;156.196" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_3_out" x="586.526" y="885.829" width="159.242" height="114.671"/>
-    <rect class="rect_3_in">
-      <animate attributeName="x" values="594.488;&#10;626.336;&#10;594.488" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="891.562;&#10;914.496;&#10;891.562" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="143.318;&#10;79.621;&#10;143.318" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_2_out" x="745.268" y="885.829" width="141.061" height="114.671"/>
-    <rect class="rect_2_in">
-      <animate attributeName="x" values="752.321;&#10;780.534;&#10;752.321" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="891.562;&#10;914.496;&#10;891.562" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="126.955;&#10;70.53;&#10;126.955" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <g>
-    <rect class="rect_1_out" x="885.829" y="885.829" width="114.671" height="114.671"/>
+    <rect class="rect_1_out" x="715.563" y="715.563" width="284.937" height="284.937"/>
     <rect class="rect_1_in">
-      <animate attributeName="x" values="891.562;&#10;914.496;&#10;891.562" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="891.562;&#10;914.496;&#10;891.562" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="width" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
-      <animate attributeName="height" values="103.204;&#10;57.336;&#10;103.204" dur="30s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="754.03;&#10;805.318;&#10;754.03" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="754.03;&#10;805.318;&#10;754.03" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
     </rect>
   </g>
 </svg>

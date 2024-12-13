@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 debug.Rmd
+.Rproj
+.DS_Store

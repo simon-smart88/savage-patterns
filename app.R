@@ -14,13 +14,11 @@ modules <- c("ring", "square", "line")
 names(modules) <- paste0("<img src='", modules, "_icon.svg'>")
 
 ui <- page_navbar(
-  shinyjs::useShinyjs(),
-  theme = bs_theme(version = 5, "minty"),
-  title = "Savage patterns",
   nav_panel("Create",
+    shinyjs::useShinyjs(),
     layout_sidebar(
       sidebar = sidebar(
-        shinyWidgets::radioGroupButtons("module", "Pattern", choices = modules, justified = TRUE, size = "lg"),
+        shinyWidgets::radioGroupButtons("module", "Choose a pattern", choices = modules, justified = TRUE, size = "lg"),
         do.call(tagList, lapply(modules, function(module) {
           conditionalPanel(
             condition = glue("input.module == '{module}'"),
@@ -36,13 +34,15 @@ ui <- page_navbar(
   nav_panel("About",
     layout_columns(
       col_widths = breakpoints(
-        sm = c(12, 12, 12),
+        sm = c(12),
         md = c(-2, 8, -2),
         lg = c(-3, 6, -3)
       ),
       about_module_ui("about"),
     )
-  )
+  ),
+  theme = bs_theme(version = 5, "minty"),
+  title = "Savage patterns"
 )
 
 server <- function(input, output, session){

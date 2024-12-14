@@ -2,25 +2,60 @@ ring_module_ui <- function(id){
   ns <- shiny::NS(id)
   tagList(
     actionButton(ns("random"), "Randomise", icon = icon("random"), width = "100%", style = "font-size: 1.5rem;"),
+    layout_columns(
+      col_widths = c(4, 4, 4),
+      actionButton(ns("random_pattern"), "Pattern", width = "100%"),
+      actionButton(ns("random_animation"), "Animation", width = "100%"),
+      actionButton(ns("random_colour"), "Colour", width = "100%")
+    ),
     accordion(
       multiple = FALSE,
       open = c("Pattern"),
       accordion_panel("Pattern",
-        sliderInput(ns("radius"), "Radius", value = 30, step = 1, min = 10, max = 50),
-        sliderInput(ns("bulge"), "Radius bulge", value = 1, step = 0.1, min = 0.1, max = 100),
-        sliderInput(ns("reps"), "Repetitions", value = 7, step = 2, min = 7, max = 45),
-        sliderInput(ns("space"), "Space between circles", value = 10, step = 1, min = 1, max = 30)
+        sliderInput(ns("reps"),
+                    span("Number of circles",
+                         tooltip(icon("info-circle"), "The number of circles on each side of the pattern")),
+                    value = 25, step = 2, min = 7, max = 45),
+        sliderInput(ns("radius"),
+                    span("Circle size",
+                         tooltip(icon("info-circle"), "The size of each circle")),
+                    value = 30, step = 1, min = 10, max = 50),
+        sliderInput(ns("bulge"),
+                    span("Circle size bulge",
+                         tooltip(icon("info-circle"), "Determines how much bigger the circles in the centre are compared to the outside")),
+                    value = 1, step = 0.1, min = 0.1, max = 100),
+        sliderInput(ns("space"),
+                    span("Distance between circles",
+                         tooltip(icon("info-circle"), "The distance between each circle")),
+                    value = 10, step = 1, min = 1, max = 30)
       ),
       accordion_panel("Animation",
-        sliderInput(ns("breath"), "Change in radius", value = 20, step = 1, min = 10, max = 30),
-        sliderInput(ns("speed"), "Animation duration", value = 30, step = 1, min = 5, max = 60)
+        sliderInput(ns("breath"),
+                    span("Change in size",
+                         tooltip(icon("info-circle"), "How much the circles change in size during the animation")),
+                    value = 20, step = 1, min = 10, max = 30),
+        sliderInput(ns("speed"),
+                    span("Animation duration",
+                         tooltip(icon("info-circle"), "How long in seconds the animation takes to go through one cycle")),
+                    value = 30, step = 1, min = 5, max = 60)
       ),
       accordion_panel("Colour",
-        sliderInput(ns("stroke"), "Line thickness", value = 0.5, step = 0.05, min = 0.1, max = 1),
+        sliderInput(ns("stroke"),
+                    span("Line thickness",
+                         tooltip(icon("info-circle"), "Adjust the thickness of the lines")),
+                    value = 0.5, step = 0.05, min = 0.1, max = 1),
         uiOutput(ns("colour_picker")),
-        selectInput(ns("hue"), "Hue", c("random", "red", "orange", "yellow",
-                                        "green", "blue", "purple", "pink", "monochrome")),
-        selectInput(ns("lumin"), "Luminosity", c("random", "light", "bright", "dark"))
+        selectInput(ns("hue"),
+                    span("Hue",
+                         tooltip(icon("info-circle"), "Choose a colour palette to use")),
+                    c("Random" = "random", "Red" = "red", "Orange" = "orange",
+                      "Yellow" = "yellow", "Green" = "green", "Blue" =  "blue",
+                      "Purple" = "purple", "Pink" = "pink", "Monochrome" = "monochrome")),
+        selectInput(ns("lumin"),
+                    span("Luminosity",
+                         tooltip(icon("info-circle"), "Choose how bright the colour palette is")),
+                    c("Random" = "random", "Light" = "light",
+                      "Bright" = "bright", "Dark" = "dark"))
       )
     )
   )
@@ -29,7 +64,10 @@ ring_module_ui <- function(id){
 ring_module_server <- function(id, patterns){
   moduleServer(id, function(input, output, session) {
 
+    invalidate_trigger <- reactiveVal(0)
+
     init_cols <- reactive({
+      invalidate_trigger()
       randomcoloR::randomColor(count = 3, hue = input$hue, luminosity = input$lumin)
     })
 
@@ -37,7 +75,10 @@ ring_module_server <- function(id, patterns){
       n_cols <- 3
       ids <- session$ns(paste0("colour_", 1:n_cols))
       tagList(
-        tags$label("Pick colours"),
+        tags$label(
+          span("Pick colours",
+               tooltip(icon("info-circle"), "Manually select the colours that the pattern cycles through"))
+        ),
         lapply(seq_along(ids), function(i) {colourpicker::colourInput(
           ids[i], "", value = init_cols()[i],
           showColour = "background", closeOnClick = TRUE)}))
@@ -51,6 +92,24 @@ ring_module_server <- function(id, patterns){
       updateSliderInput(session, "breath", value = 9 + sample.int(21, size = 1))
       updateSliderInput(session, "speed", value = 4 + sample.int(56, size = 1))
       updateSliderInput(session, "stroke", value = sample.int(10, size = 1)/10)
+      invalidate_trigger(invalidate_trigger() + 1)
+    })
+
+    observeEvent(input$random_pattern, {
+      updateSliderInput(session, "radius", value = 9 + sample.int(41, size = 1))
+      updateSliderInput(session, "bulge", value = sample.int(100, size = 1))
+      updateSliderInput(session, "reps", value = 1 + sample.int(22, size = 1) * 2)
+      updateSliderInput(session, "space", value = sample.int(30, size = 1))
+    })
+
+    observeEvent(input$random_animation, {
+      updateSliderInput(session, "breath", value = 9 + sample.int(21, size = 1))
+      updateSliderInput(session, "speed", value = 4 + sample.int(56, size = 1))
+    })
+
+    observeEvent(input$random_colour, {
+      updateSliderInput(session, "stroke", value = sample.int(10, size = 1)/10)
+      invalidate_trigger(invalidate_trigger() + 1)
     })
 
     observe({
@@ -73,11 +132,7 @@ ring_module_server <- function(id, patterns){
       c(lapply(seq_along(ids), function(i) {input[[ids[i]]]}))
     })
 
-    # gradient <- callModule(gradientInput, "cols", init_cols = c(10, 50, 70))
-    # #create colour gradient from result
-    # #sample from gradient depending on reps
-
-    #function to generate svg circle
+    # function to generate svg circle
     svg_circle <- function(x, space, speed, radius, breath, stroke, reps, bulge){
       breath <- breath/100
       radius_bulge <- (x[3]/reps*2) * (bulge/10)
@@ -117,8 +172,8 @@ ring_module_server <- function(id, patterns){
       # radius+(x[1]*space)
       top_corner <- 2 * input$radius
       # top_corner <- input$radius+ ((input$radius*(1+input$breath))+input$bulge)
-      bottom_corner <- (input$reps * input$space) - top_corner 
-      #bottom_corner <- top_corner + ((input$radius - 6) * input$space) 
+      bottom_corner <- (input$reps * input$space) - top_corner
+      #bottom_corner <- top_corner + ((input$radius - 6) * input$space)
 
       # create a matrix of sequences
       reps <- input$reps
@@ -140,7 +195,6 @@ ring_module_server <- function(id, patterns){
         speed = input$speed,
         radius = input$radius,
         breath = input$breath,
-        # stroke = input$stroke,
         reps = input$reps,
         bulge = input$bulge)
 
@@ -158,8 +212,6 @@ ring_module_server <- function(id, patterns){
       colour_var_seq <- c(col_vars, rev(col_vars[1:n_cols - 1]))
       css_colour_keys_result <- paste(css_colour_keys(frames, colour_var_seq), collapse = ' ')
 
-      # browser()
-      
       # create the final svg
       tagList(
         tags$svg(

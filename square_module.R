@@ -2,26 +2,61 @@ square_module_ui <- function(id){
   ns <- shiny::NS(id)
   tagList(
     actionButton(ns("random"), "Randomise", icon = icon("random"), width = "100%", style = "font-size: 1.5rem;"),
+    layout_columns(
+      col_widths = c(4, 4, 4),
+      actionButton(ns("random_pattern"), "Pattern", width = "100%"),
+      actionButton(ns("random_animation"), "Animation", width = "100%"),
+      actionButton(ns("random_colour"), "Colour", width = "100%")
+    ),
     accordion(
       multiple = FALSE,
       open = c("Pattern"),
       accordion_panel("Pattern",
-        sliderInput(ns("reps"), "Repetitions", value = 19, step = 2, min = 7, max = 31),
-        sliderInput(ns("bulge"), "Bulge", value = 5, step = 0.5, min = -10, max = 10),
-        sliderInput(ns("internal"), "Internal size", value = c(10, 50), step = 1, min = 10, max = 90),
-        shinyWidgets::materialSwitch(ns("switch"), "Switch", value = FALSE, status = "success"),
+        sliderInput(ns("reps"),
+                    span("Number of squares",
+                         tooltip(icon("info-circle"), "The number of squares on each side of the pattern")),
+                    value = 19, step = 2, min = 7, max = 31),
+        sliderInput(ns("bulge"),
+                    span("Bulge",
+                         tooltip(icon("info-circle"), "How much the pattern bulges - negative values make the corners bulge, positive values make the centre bulge")),
+                    value = 5, step = 0.5, min = -10, max = 10),
+        sliderInput(ns("internal"),
+                    span("Internal square size",
+                         tooltip(icon("info-circle"), "The size of the squares inside the squares")),
+                    value = c(10, 50), step = 1, min = 10, max = 90),
+        shinyWidgets::materialSwitch(ns("switch"),
+                                     span("Activate checkerboard",
+                                          tooltip(icon("info-circle"), "If this is toggled, the colours of the squares are swapped round in adjacent squares creating a checkerboard effect")),
+                                     value = FALSE, status = "success"),
       ),
       accordion_panel("Animation",
         #sliderInput(ns("lag_offset"), "Maximum internal", value = 20, step = 1, min = 10, max = 30),
-        sliderInput(ns("speed"), "Animation duration", value = 30, step = 1, min = 5, max = 60),
-        sliderInput(ns("colour_speed"), "Colour change duration", value = 30, step = 1, min = 5, max = 60),
+        sliderInput(ns("speed"),
+                    span("Animation duration",
+                         tooltip(icon("info-circle"), "How long in seconds the animation takes to go through one cycle")),
+                    value = 30, step = 1, min = 5, max = 60),
+        sliderInput(ns("colour_speed"),
+                    span("Colour change duration",
+                         tooltip(icon("info-circle"), "How long in seconds the colour animation takes to go through one cycle")),
+                    value = 30, step = 1, min = 5, max = 60),
       ),
       accordion_panel("Colour",
-        sliderInput(ns("colour_dif"), "Inner and outer colour difference", value = 50, step = 1, min = 5, max = 95),
+        sliderInput(ns("colour_dif"),
+                    span("Inner and outer colour difference",
+                         tooltip(icon("info-circle"), "How contrasting the colour difference is between the inner and outer squares")),
+                    value = 50, step = 1, min = 5, max = 95),
         uiOutput(ns("colour_picker")),
-        selectInput(ns("hue"), "Hue", c("random", "red", "orange", "yellow",
-                                        "green", "blue", "purple", "pink", "monochrome")),
-        selectInput(ns("lumin"), "Luminosity", c("random", "light", "bright", "dark"))
+        selectInput(ns("hue"),
+                    span("Hue",
+                         tooltip(icon("info-circle"), "Choose a colour palette to use")),
+                    c("Random" = "random", "Red" = "red", "Orange" = "orange",
+                      "Yellow" = "yellow", "Green" = "green", "Blue" =  "blue",
+                      "Purple" = "purple", "Pink" = "pink", "Monochrome" = "monochrome")),
+        selectInput(ns("lumin"),
+                    span("Luminosity",
+                         tooltip(icon("info-circle"), "Choose how bright the colour palette is")),
+                    c("Random" = "random", "Light" = "light",
+                      "Bright" = "bright", "Dark" = "dark"))
       )
     )
   )
@@ -41,7 +76,10 @@ square_module_server <- function(id, patterns){
       n_cols <- 3
       ids <- session$ns(paste0("colour_", 1:n_cols))
       tagList(
-        tags$label("Pick colours"),
+        tags$label(
+          span("Pick colours",
+               tooltip(icon("info-circle"), "Manually select the colours that the pattern cycles through"))
+        ),
         lapply(seq_along(ids), function(i) {colourpicker::colourInput(
           ids[i], "", value = init_cols()[i],
           showColour = "background", closeOnClick = TRUE)}))
@@ -59,10 +97,26 @@ square_module_server <- function(id, patterns){
       invalidate_trigger(invalidate_trigger() + 1)
     })
 
+    observeEvent(input$random_pattern, {
+      updateSliderInput(session, "bulge", value = sample.int(20, size = 1) - 10)
+      updateSliderInput(session, "reps", value = 1 + sample.int(15, size = 1) * 2)
+      low_internal <- 10 + sample.int(30, size = 1)
+      high_internal <- low_internal + sample.int(30, size = 1)
+      updateSliderInput(session, "internal", value = c(low_internal, high_internal))
+    })
+
+    observeEvent(input$random_animation, {
+      updateSliderInput(session, "speed", value = 4 + sample.int(56, size = 1))
+      updateSliderInput(session, "colour_speed", value = 4 + sample.int(56, size = 1))
+      updateSliderInput(session, "dif", value = 5 + sample.int(90, size = 1))
+    })
+
+    observeEvent(input$random_colour, {
+      invalidate_trigger(invalidate_trigger() + 1)
+    })
+
     # function to generate svg circle
     svg_rect <- function(matrix, reps, bulge, internal, speed){
-      # for use with colours
-      centre_bulge <- (matrix[4]/reps*2) * (bulge/10)
 
       # + 0.5 to avoid white lines
       width <- round(matrix[7], 3) + 0.5
@@ -121,6 +175,10 @@ square_module_server <- function(id, patterns){
 
     }
 
+    observe({
+      shinyjs::runjs(glue("
+      document.getElementById('pattern').style.setProperty('--colour_speed', '{input$colour_speed}s');"))
+    })
 
     observe({
       req(length(input_colours()) > 0)
@@ -224,10 +282,10 @@ square_module_server <- function(id, patterns){
       elements_sub <- element_mat[unique(element_mat[,4]),]
       # interesting with input$speed too
       css_delay_result <- paste(
-        apply(elements_sub, 1, css_delay, 
-              speed = input$colour_speed, 
-              reps = input$reps, 
-              colour_dif = input$colour_dif), 
+        apply(elements_sub, 1, css_delay,
+              speed = input$colour_speed,
+              reps = input$reps,
+              colour_dif = input$colour_dif),
         collapse= ' ')
 
       colours <- isolate(input_colours())
@@ -254,11 +312,11 @@ square_module_server <- function(id, patterns){
               :root{",
                  css_colour_var_result
                  ,"
-               --stroke: 0.5px
+               --colour_speed: 30s;
               }
-              rect {animation: col ", input$colour_speed, "s linear infinite;
+              rect {animation: col var(--colour_speed) linear infinite;
                     fill: none;
-                    stroke-width: var(--stroke)}
+                    }
 
               @keyframes col {",css_colour_keys_result,"
               }

@@ -14,7 +14,7 @@ ui <- page_navbar(
     shinyjs::useShinyjs(),
     layout_sidebar(
       sidebar = sidebar(
-        shinyWidgets::radioGroupButtons("module", "Choose a pattern", choices = modules, justified = TRUE, size = "lg"),
+        shinyWidgets::radioGroupButtons("module", "Choose a pattern", choices = modules, justified = TRUE, size = "lg", status = "info"),
         do.call(tagList, lapply(modules, function(module) {
           conditionalPanel(
             condition = glue("input.module == '{module}'"),
@@ -25,7 +25,7 @@ ui <- page_navbar(
         div(downloadButton("download_h"), style = "visibility: hidden"),
         width = "400px",
       ),
-      div(style = "overflow:hidden", uiOutput("svgout"))
+      div(style = "overflow:hidden", uiOutput("svgout"), height="90vh", width = "100%")
     )),
   nav_panel("About",
     layout_columns(
@@ -37,7 +37,9 @@ ui <- page_navbar(
       about_module_ui("about"),
     )
   ),
-  theme = bs_theme(version = 5, "litera"),
+  theme = bs_theme(version = 5, "simplex",
+                   primary = "#e4401b",
+                   info = "#eae5e5"),
   title = "Savage patterns"
 )
 
@@ -70,7 +72,7 @@ server <- function(input, output, session){
 
   output$download_h <- downloadHandler(
     filename = function(){
-      "your_test3.svg"
+      glue("{input$module}_{substr(Sys.time(), 1, 19)}.svg")
     },
     content = function(file){
       req(input$svg)

@@ -168,12 +168,6 @@ ring_module_server <- function(id, patterns){
     # generate the pattern
     svg_pattern <- reactive({
       req(length(input_colours) > 0)
-      # view port to crop borders
-      # radius+(x[1]*space)
-      top_corner <- 2 * input$radius
-      # top_corner <- input$radius+ ((input$radius*(1+input$breath))+input$bulge)
-      bottom_corner <- (input$reps * input$space) - top_corner
-      #bottom_corner <- top_corner + ((input$radius - 6) * input$space)
 
       # create a matrix of sequences
       reps <- input$reps
@@ -197,6 +191,12 @@ ring_module_server <- function(id, patterns){
         breath = input$breath,
         reps = input$reps,
         bulge = input$bulge)
+
+      # view port to crop borders
+      centre <- input$radius+(element_mat[ceiling(input$reps/2),1]*input$space)
+      edge <- centre - (input$radius+(element_mat[3,1]*input$space))
+      top_corner <- centre - edge
+      bottom_corner <- (centre + edge) - top_corner
 
       elements_sub <- element_mat[unique(element_mat[,3]),]
       css_delay_result <- paste(apply(elements_sub, 1, css_delay, speed = input$speed, reps = input$reps), collapse= ' ')

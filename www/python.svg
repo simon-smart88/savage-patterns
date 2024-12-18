@@ -54,6 +54,18 @@
  .z { -webkit-animation: z 20s infinite;}
 @-webkit-keyframes z { 0% { fill-opacity: 0.25 ; } 50% { fill-opacity: 1.0 ; } 100% { fill-opacity: 0.25 ; }	}
 ]]></style>
+<g id="scale">
+
+<animateTransform
+  attributeName="transform"
+  type="scale"
+  begin="0s"
+  dur="20s"
+  values="1;1.023;1;0.977;1"
+  repeatCount="indefinite" />
+
+  <!--617, 631, 646-->
+
 <g id="tile">
 <ellipse class="a">
 <animate attributeName="fill" values="#60C;#6CF;#060;#FF6;#F60;#C00;#F39;#60C" repeatCount="indefinite"  begin="-0.0s" dur="50s"/>
@@ -4433,5 +4445,7 @@
 <animate attributeName="rx" values="20;8;20;32;20" dur="20s" repeatCount="indefinite"/>
 <animate attributeName="ry" values="20;8;20;32;20" dur="20s" repeatCount="indefinite"/>
 </ellipse>
+
+</g>
 </svg>
 

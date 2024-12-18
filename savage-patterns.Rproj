@@ -1,4 +1,5 @@
 Version: 1.0
+ProjectId: f291dc70-e190-476b-abad-ecfc483e30b0
 
 RestoreWorkspace: Default
 SaveWorkspace: Default
@@ -8,9 +9,9 @@ EnableCodeIndexing: Yes
 UseSpacesForTab: Yes
 NumSpacesForTab: 2
 Encoding: UTF-8
+
 RnwWeave: knitr
 LaTeX: pdfLaTeX
 
 AutoAppendNewline: Yes
 StripTrailingWhitespace: Yes
-

@@ -43,18 +43,7 @@ line_module_ui <- function(id){
                     span("Opacity",
                          tooltip(icon("info-circle"), "Move the lines to the inner points away from each other towards the nearest outer edge")),
                     value = c(25,75), step = 1, min = 0, max = 100, ticks = FALSE),
-        uiOutput(ns("colour_picker")),
-        selectInput(ns("hue"),
-                    span("Hue",
-                         tooltip(icon("info-circle"), "Choose a colour palette to use")),
-                    c("Random" = "random", "Red" = "red", "Orange" = "orange",
-                      "Yellow" = "yellow", "Green" = "green", "Blue" =  "blue",
-                      "Purple" = "purple", "Pink" = "pink", "Monochrome" = "monochrome")),
-        selectInput(ns("lumin"),
-                    span("Luminosity",
-                         tooltip(icon("info-circle"), "Choose how bright the colour palette is")),
-                    c("Random" = "random", "Light" = "light",
-                      "Bright" = "bright", "Dark" = "dark"))
+        colour_ui(ns("line")),
       )
     )
   )
@@ -63,26 +52,8 @@ line_module_ui <- function(id){
 line_module_server <- function(id, patterns){
   moduleServer(id, function(input, output, session) {
 
-    invalidate_trigger <- reactiveVal(0)
-
-    init_cols <- reactive({
-      invalidate_trigger()
-      randomcoloR::randomColor(count = 3, hue = input$hue, luminosity = input$lumin)
-    })
-
-    output$colour_picker <- renderUI({
-      n_cols <- 3
-      ids <- session$ns(paste0("colour_", 1:n_cols))
-      tagList(
-        tags$label(
-          span("Pick colours",
-               tooltip(icon("info-circle"), "Manually select the colours that the pattern cycles through"))
-        ),
-        lapply(seq_along(ids), function(i) {colourpicker::colourInput(
-          ids[i], "", value = init_cols()[i],
-          showColour = "background", closeOnClick = TRUE)}))
-    })
-
+    invalidate_colour <- reactiveVal(0)
+    colour <- colour_server("line", invalidate_colour)
     random <- random_server("line")
 
     observeEvent(random$all(), {
@@ -93,7 +64,7 @@ line_module_server <- function(id, patterns){
       updateSliderInput(session, "breath", value = 10 + sample.int(30, size = 1))
       updateSliderInput(session, "speed", value = 5 + sample.int(55, size = 1))
       updateSliderInput(session, "stroke", value = sample.int(20, size = 1)/20)
-      invalidate_trigger(invalidate_trigger() + 1)
+      invalidate_colour(invalidate_colour() + 1)
     })
 
     observeEvent(random$pattern(), {
@@ -110,7 +81,7 @@ line_module_server <- function(id, patterns){
 
     observeEvent(random$colour(), {
       updateSliderInput(session, "stroke", value = sample.int(20, size = 1)/20)
-      invalidate_trigger(invalidate_trigger() + 1)
+      invalidate_colour(invalidate_colour() + 1)
     })
 
     observe({
@@ -128,9 +99,9 @@ line_module_server <- function(id, patterns){
       # req(length(input_colours()) > 0)
       # colours <- input_colours()
       shinyjs::runjs(glue("
-      document.getElementById('pattern').style.setProperty('--colour_1', '{input$colour_1}');
-      document.getElementById('pattern').style.setProperty('--colour_2', '{input$colour_2}');
-      document.getElementById('pattern').style.setProperty('--colour_3', '{input$colour_3}');"))
+      document.getElementById('pattern').style.setProperty('--colour_1', '{colour$colour_1()}');
+      document.getElementById('pattern').style.setProperty('--colour_2', '{colour$colour_2()}');
+      document.getElementById('pattern').style.setProperty('--colour_3', '{colour$colour_3()}');"))
     })
 
     observe({
@@ -239,9 +210,9 @@ line_module_server <- function(id, patterns){
              --opacity_start: 0;
              --opacity_mid: 0.5;
              --opacity_end: 1;
-             --colour_1: "black";
-             --colour_2: "black";
-             --colour_3: "black";
+             # --colour_1: "black";
+             # --colour_2: "black";
+             # --colour_3: "black";
            }
            line {
             stroke-width: var(--stroke);

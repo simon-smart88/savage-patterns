@@ -39,18 +39,7 @@ square_module_ui <- function(id){
                     span("Inner and outer colour difference",
                          tooltip(icon("info-circle"), "How contrasting the colour difference is between the inner and outer squares")),
                     value = 50, step = 1, min = 5, max = 95, ticks = FALSE),
-        uiOutput(ns("colour_picker")),
-        selectInput(ns("hue"),
-                    span("Hue",
-                         tooltip(icon("info-circle"), "Choose a colour palette to use")),
-                    c("Random" = "random", "Red" = "red", "Orange" = "orange",
-                      "Yellow" = "yellow", "Green" = "green", "Blue" =  "blue",
-                      "Purple" = "purple", "Pink" = "pink", "Monochrome" = "monochrome")),
-        selectInput(ns("lumin"),
-                    span("Luminosity",
-                         tooltip(icon("info-circle"), "Choose how bright the colour palette is")),
-                    c("Random" = "random", "Light" = "light",
-                      "Bright" = "bright", "Dark" = "dark"))
+        colour_ui(ns("square")),
       )
     )
   )
@@ -59,26 +48,8 @@ square_module_ui <- function(id){
 square_module_server <- function(id, patterns){
   moduleServer(id, function(input, output, session) {
 
-    invalidate_trigger <- reactiveVal(0)
-
-    init_cols <- reactive({
-      invalidate_trigger()
-      randomcoloR::randomColor(count = 3, hue = input$hue, luminosity = input$lumin)
-    })
-
-    output$colour_picker <- renderUI({
-      n_cols <- 3
-      ids <- session$ns(paste0("colour_", 1:n_cols))
-      tagList(
-        tags$label(
-          span("Pick colours",
-               tooltip(icon("info-circle"), "Manually select the colours that the pattern cycles through"))
-        ),
-        lapply(seq_along(ids), function(i) {colourpicker::colourInput(
-          ids[i], "", value = init_cols()[i],
-          showColour = "background", closeOnClick = TRUE)}))
-    })
-
+    invalidate_colour <- reactiveVal(0)
+    colour <- colour_server("square", invalidate_colour)
     random <- random_server("square")
 
     observeEvent(random$all(), {
@@ -90,7 +61,7 @@ square_module_server <- function(id, patterns){
       updateSliderInput(session, "speed", value = 4 + sample.int(56, size = 1))
       updateSliderInput(session, "colour_speed", value = 4 + sample.int(56, size = 1))
       updateSliderInput(session, "dif", value = 5 + sample.int(90, size = 1))
-      invalidate_trigger(invalidate_trigger() + 1)
+      invalidate_colour(invalidate_colour() + 1)
     })
 
     observeEvent(random$pattern(), {
@@ -108,7 +79,7 @@ square_module_server <- function(id, patterns){
     })
 
     observeEvent(random$colour(), {
-      invalidate_trigger(invalidate_trigger() + 1)
+      invalidate_colour(invalidate_colour() + 1)
     })
 
     # function to generate svg circle
@@ -180,9 +151,9 @@ square_module_server <- function(id, patterns){
       req(length(input_colours()) > 0)
       colours <- input_colours()
       shinyjs::runjs(glue("
-      document.getElementById('pattern').style.setProperty('--colour_1', '{input$colour_1}');
-      document.getElementById('pattern').style.setProperty('--colour_2', '{input$colour_2}');
-      document.getElementById('pattern').style.setProperty('--colour_3', '{input$colour_3}');"))
+      document.getElementById('pattern').style.setProperty('--colour_1', '{colour$colour_1()}');
+      document.getElementById('pattern').style.setProperty('--colour_2', '{colour$colour_2()}');
+      document.getElementById('pattern').style.setProperty('--colour_3', '{colour$colour_3()}');"))
     })
 
 

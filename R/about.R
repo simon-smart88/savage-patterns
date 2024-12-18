@@ -32,6 +32,7 @@ tagList(
   ),
     tags$object(id = "swf-container", data = "flash.swf", type = "application/x-shockwave-flash", width = "100%", height = "auto",
                 tags$param(name="allowScriptAccess", value = "always")
+                # tags$param(name= "scale", value = "exactfit")
   ),
   h2("SVGs"),
     markdown("My web designer brother kindly pointed out to me that scalable vector graphics (.svg) would be a good format to use and

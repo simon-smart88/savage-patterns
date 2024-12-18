@@ -13,7 +13,7 @@ tagList(
     markdown("Still at school I started using the only drawing technology I knew about to make patterns - Photoshop.
               This was definitely an improvement on painting, but I was still drawing each shape by hand and a pixel-based
               system was wholly inappropriate when I wanted sharp lines. This is a screenshot of part of a piece imitating
-              pieces like [Victor Vasarely's Vega (1968)](https://www.wikiart.org/en/victor-vasarely/vega-200-1968){_target=blank} to demonstrate
+              pieces like <a href=https://www.wikiart.org/en/victor-vasarely/vega-200-1968 target='_blank'>Victor Vasarely's Vega (1968)</a> to demonstrate
               the problem."),
     img(src = "photoshop.png"),
   h2("Illustrator"),
@@ -30,9 +30,8 @@ tagList(
   tags$head(
     tags$script(src = "https://unpkg.com/@ruffle-rs/ruffle")
   ),
-  tags$div(
-    tags$object(id = "swf-container", data = "flash.swf", type = "application/x-shockwave-flash", width = "600", height = "600",
-                tags$param(name="allowScriptAccess", value = "always"))
+    tags$object(id = "swf-container", data = "flash.swf", type = "application/x-shockwave-flash", width = "100%", height = "auto",
+                tags$param(name="allowScriptAccess", value = "always")
   ),
   h2("SVGs"),
     markdown("My web designer brother kindly pointed out to me that scalable vector graphics (.svg) would be a good format to use and

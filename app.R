@@ -6,7 +6,7 @@ library(glue)
 library(colourpicker)
 library(shinyjs)
 
-modules <- c("ring", "square", "line")
+modules <- gsub("_module.R", "", list.files("R/", "*module*"))
 names(modules) <- paste0("<img src='", modules, "_icon.svg'>")
 
 ui <- page_navbar(
@@ -23,9 +23,9 @@ ui <- page_navbar(
         ),
         actionButton("download", "Download", icon = icon("download"), width = "100%", style = "font-size: 1.5rem;"),
         div(downloadButton("download_h"), style = "visibility: hidden"),
-        width = "35%",
+        width = "400px",
       ),
-      uiOutput("svgout")
+      div(style = "overflow:hidden", uiOutput("svgout"))
     )),
   nav_panel("About",
     layout_columns(
@@ -37,7 +37,7 @@ ui <- page_navbar(
       about_module_ui("about"),
     )
   ),
-  theme = bs_theme(version = 5, "minty"),
+  theme = bs_theme(version = 5, "litera"),
   title = "Savage patterns"
 )
 

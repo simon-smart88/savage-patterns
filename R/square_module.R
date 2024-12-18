@@ -1,13 +1,7 @@
 square_module_ui <- function(id){
   ns <- shiny::NS(id)
   tagList(
-    actionButton(ns("random"), "Randomise", icon = icon("random"), width = "100%", style = "font-size: 1.5rem;"),
-    layout_columns(
-      col_widths = c(4, 4, 4),
-      actionButton(ns("random_pattern"), "Pattern", width = "100%"),
-      actionButton(ns("random_animation"), "Animation", width = "100%"),
-      actionButton(ns("random_colour"), "Colour", width = "100%")
-    ),
+    random_ui(ns("square")),
     accordion(
       multiple = FALSE,
       open = c("Pattern"),
@@ -85,7 +79,9 @@ square_module_server <- function(id, patterns){
           showColour = "background", closeOnClick = TRUE)}))
     })
 
-    observeEvent(input$random, {
+    random <- random_server("square")
+
+    observeEvent(random$all(), {
       updateSliderInput(session, "bulge", value = sample.int(20, size = 1) - 10)
       updateSliderInput(session, "reps", value = 1 + sample.int(15, size = 1) * 2)
       low_internal <- 10 + sample.int(30, size = 1)
@@ -97,7 +93,7 @@ square_module_server <- function(id, patterns){
       invalidate_trigger(invalidate_trigger() + 1)
     })
 
-    observeEvent(input$random_pattern, {
+    observeEvent(random$pattern(), {
       updateSliderInput(session, "bulge", value = sample.int(20, size = 1) - 10)
       updateSliderInput(session, "reps", value = 1 + sample.int(15, size = 1) * 2)
       low_internal <- 10 + sample.int(30, size = 1)
@@ -105,13 +101,13 @@ square_module_server <- function(id, patterns){
       updateSliderInput(session, "internal", value = c(low_internal, high_internal))
     })
 
-    observeEvent(input$random_animation, {
+    observeEvent(random$animation(), {
       updateSliderInput(session, "speed", value = 4 + sample.int(56, size = 1))
       updateSliderInput(session, "colour_speed", value = 4 + sample.int(56, size = 1))
       updateSliderInput(session, "dif", value = 5 + sample.int(90, size = 1))
     })
 
-    observeEvent(input$random_colour, {
+    observeEvent(random$colour(), {
       invalidate_trigger(invalidate_trigger() + 1)
     })
 

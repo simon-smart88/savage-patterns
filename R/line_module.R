@@ -1,7 +1,7 @@
 line_module_ui <- function(id){
   ns <- shiny::NS(id)
   tagList(
-    actionButton(ns("random"), "Randomise", icon = icon("random"), width = "100%", style = "font-size: 1.5rem;"),
+    random_ui(ns("line")),
     accordion(
       multiple = FALSE,
       open = c("Pattern"),
@@ -83,7 +83,9 @@ line_module_server <- function(id, patterns){
           showColour = "background", closeOnClick = TRUE)}))
     })
 
-    observeEvent(input$random, {
+    random <- random_server("line")
+
+    observeEvent(random$all(), {
       updateSliderInput(session, "outer", value = 6 + sample.int(14, size = 1))
       updateSliderInput(session, "inner", value = 3+ sample.int(12, size = 1))
       updateSliderInput(session, "inner_size", value = 10 + sample.int(70, size = 1))
@@ -91,6 +93,24 @@ line_module_server <- function(id, patterns){
       updateSliderInput(session, "breath", value = 10 + sample.int(30, size = 1))
       updateSliderInput(session, "speed", value = 5 + sample.int(55, size = 1))
       updateSliderInput(session, "stroke", value = sample.int(20, size = 1)/20)
+      invalidate_trigger(invalidate_trigger() + 1)
+    })
+
+    observeEvent(random$pattern(), {
+      updateSliderInput(session, "outer", value = 6 + sample.int(14, size = 1))
+      updateSliderInput(session, "inner", value = 3+ sample.int(12, size = 1))
+      updateSliderInput(session, "inner_size", value = 10 + sample.int(70, size = 1))
+      updateSliderInput(session, "inner_offset", value = 10 + sample.int(70, size = 1))
+    })
+
+    observeEvent(random$animation(), {
+      updateSliderInput(session, "breath", value = 10 + sample.int(30, size = 1))
+      updateSliderInput(session, "speed", value = 5 + sample.int(55, size = 1))
+    })
+
+    observeEvent(random$colour(), {
+      updateSliderInput(session, "stroke", value = sample.int(20, size = 1)/20)
+      invalidate_trigger(invalidate_trigger() + 1)
     })
 
     observe({

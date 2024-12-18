@@ -1,13 +1,7 @@
 ring_module_ui <- function(id){
   ns <- shiny::NS(id)
   tagList(
-    actionButton(ns("random"), "Randomise", icon = icon("random"), width = "100%", style = "font-size: 1.5rem;"),
-    layout_columns(
-      col_widths = c(4, 4, 4),
-      actionButton(ns("random_pattern"), "Pattern", width = "100%"),
-      actionButton(ns("random_animation"), "Animation", width = "100%"),
-      actionButton(ns("random_colour"), "Colour", width = "100%")
-    ),
+    random_ui(ns("ring")),
     accordion(
       multiple = FALSE,
       open = c("Pattern"),
@@ -84,7 +78,9 @@ ring_module_server <- function(id, patterns){
           showColour = "background", closeOnClick = TRUE)}))
     })
 
-    observeEvent(input$random, {
+    random <- random_server("ring")
+
+    observeEvent(random$all(), {
       updateSliderInput(session, "radius", value = 9 + sample.int(41, size = 1))
       updateSliderInput(session, "bulge", value = sample.int(100, size = 1))
       updateSliderInput(session, "reps", value = 1 + sample.int(22, size = 1) * 2)
@@ -95,19 +91,19 @@ ring_module_server <- function(id, patterns){
       invalidate_trigger(invalidate_trigger() + 1)
     })
 
-    observeEvent(input$random_pattern, {
+    observeEvent(random$pattern(), {
       updateSliderInput(session, "radius", value = 9 + sample.int(41, size = 1))
       updateSliderInput(session, "bulge", value = sample.int(100, size = 1))
       updateSliderInput(session, "reps", value = 1 + sample.int(22, size = 1) * 2)
       updateSliderInput(session, "space", value = sample.int(30, size = 1))
     })
 
-    observeEvent(input$random_animation, {
+    observeEvent(random$animation(), {
       updateSliderInput(session, "breath", value = 9 + sample.int(21, size = 1))
       updateSliderInput(session, "speed", value = 4 + sample.int(56, size = 1))
     })
 
-    observeEvent(input$random_colour, {
+    observeEvent(random$colour(), {
       updateSliderInput(session, "stroke", value = sample.int(10, size = 1)/10)
       invalidate_trigger(invalidate_trigger() + 1)
     })

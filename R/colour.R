@@ -12,30 +12,23 @@ colour_ui <- function(id) {
                      tooltip(icon("info-circle"), "Choose how bright the colour palette is")),
                 c("Random" = "random", "Light" = "light",
                   "Bright" = "bright", "Dark" = "dark")),
-    uiOutput(ns("colour_picker"))
+    layout_columns(
+      col_widths = c(4, 4, 4),
+      colourpicker::colourInput(ns("colour_1"), "", showColour = "background", closeOnClick = TRUE),
+      colourpicker::colourInput(ns("colour_2"), "", showColour = "background", closeOnClick = TRUE),
+      colourpicker::colourInput(ns("colour_3"), "", showColour = "background", closeOnClick = TRUE))
     )
-
 }
 
 colour_server <- function(id, invalidate_color) {
   moduleServer(id, function(input, output, session) {
 
-    init_cols <- reactive({
+    observe({
       invalidate_color()
-      randomcoloR::randomColor(count = 3, hue = input$hue, luminosity = input$lumin)
-    })
-
-    output$colour_picker <- renderUI({
-      tagList(
-        tags$label(
-          span("Pick colours",
-               tooltip(icon("info-circle"), "Manually select the colours that the pattern cycles through"))
-        ),
-        layout_columns(
-          col_widths = c(4, 4, 4),
-          colourpicker::colourInput(session$ns("colour_1"), "", value = init_cols()[1], showColour = "background", closeOnClick = TRUE),
-          colourpicker::colourInput(session$ns("colour_2"), "", value = init_cols()[2], showColour = "background", closeOnClick = TRUE),
-          colourpicker::colourInput(session$ns("colour_3"), "", value = init_cols()[3], showColour = "background", closeOnClick = TRUE)))
+      random <- randomcoloR::randomColor(count = 3, hue = input$hue, luminosity = input$lumin)
+      colourpicker::updateColourInput(session, "colour_1", value = random[1])
+      colourpicker::updateColourInput(session, "colour_2", value = random[2])
+      colourpicker::updateColourInput(session, "colour_3", value = random[3])
     })
 
     list(

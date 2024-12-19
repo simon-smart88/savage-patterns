@@ -35,18 +35,25 @@ square_module_ui <- function(id){
                     value = 30, step = 1, min = 5, max = 60, ticks = FALSE),
       ),
       accordion_panel("Colour",
-        sliderInput(ns("colour_dif"),
-                    span("Inner and outer colour difference",
-                         tooltip(icon("info-circle"), "How contrasting the colour difference is between the inner and outer squares")),
-                    value = 50, step = 1, min = 5, max = 95, ticks = FALSE),
-        colour_ui(ns("square")),
-      )
+         sliderInput(ns("colour_dif"),
+                     span("Inner and outer colour difference",
+                          tooltip(icon("info-circle"), "How contrasting the colour difference is between the inner and outer squares")),
+                     value = 50, step = 1, min = 5, max = 95, ticks = FALSE),
+         colour_ui(ns("square"))
+       )
     )
   )
 }
 
-square_module_server <- function(id, patterns){
+square_module_server <- function(id, patterns, module){
   moduleServer(id, function(input, output, session) {
+
+    init <- observe({
+      if (module() == "square"){
+        shinyjs::runjs("document.getElementById('square_module-square-random').click();")
+        init$destroy()
+      }
+    })
 
     invalidate_colour <- reactiveVal(0)
     colour <- colour_server("square", invalidate_colour)
@@ -148,32 +155,18 @@ square_module_server <- function(id, patterns){
     })
 
     observe({
-      req(length(input_colours()) > 0)
-      colours <- input_colours()
       shinyjs::runjs(glue("
       document.getElementById('pattern').style.setProperty('--colour_1', '{colour$colour_1()}');
       document.getElementById('pattern').style.setProperty('--colour_2', '{colour$colour_2()}');
       document.getElementById('pattern').style.setProperty('--colour_3', '{colour$colour_3()}');"))
     })
 
-
-    input_colours <- reactive({
-      n_cols <- 3
-      ids <- paste0("colour_", 1:n_cols)
-      c(lapply(seq_along(ids), function(i) {input[[ids[i]]]}))
-    })
-
     css_colours <- reactive({
       n_cols <- 3
       ids <- paste0("colour_", 1:n_cols)
       steps <- seq(0, 100, length.out = (2*n_cols)-1)
-      a <- paste(lapply(seq_along(ids), function(i) {glue::glue("{steps[i]}% {{fill: input[['{ids[i]}']] }}")}), collapse= ' ')
-      a
+      paste(lapply(seq_along(ids), function(i) {glue::glue("{steps[i]}% {{fill: input[['{ids[i]}']] }}")}), collapse= ' ')
     })
-
-    css_colour_vars <- function(variable, colour){
-      glue("{variable}: {colour} ;")
-    }
 
     # generates css of colour sequence
     css_colour_keys <- function(frame, variable){
@@ -189,7 +182,6 @@ square_module_server <- function(id, patterns){
 
     # generate the pattern
     svg_pattern <- reactive({
-      req(length(input_colours) > 0)
       #view port to crop borders
       top_corner <- 0
       bottom_corner <- 1000
@@ -255,12 +247,11 @@ square_module_server <- function(id, patterns){
               colour_dif = input$colour_dif),
         collapse= ' ')
 
-      colours <- isolate(input_colours())
-      n_cols <- length(colours)
+      css_colour_var <- glue("--colour_1: {isolate(colour$colour_1())};
+                              --colour_2: {isolate(colour$colour_2())};
+                              --colour_3: {isolate(colour$colour_3())};")
+      n_cols <- 3
       col_vars <- glue("--colour_{1:n_cols}")
-
-      css_colour_var_result <- paste(css_colour_vars(col_vars, colours), collapse = ' ')
-
       frames <- c(seq(0, 50, length.out = n_cols), seq(50, 100, length.out = n_cols)[2:n_cols])
       colour_var_seq <- c(col_vars, rev(col_vars[1:n_cols - 1]))
       css_colour_keys_result <- paste(css_colour_keys(frames, colour_var_seq), collapse = ' ')
@@ -277,7 +268,7 @@ square_module_server <- function(id, patterns){
           tags$style(
             paste0("
               :root{",
-                 css_colour_var_result
+                 css_colour_var
                  ,"
                --colour_speed: 30s;
               }

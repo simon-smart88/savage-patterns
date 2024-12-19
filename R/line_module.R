@@ -49,8 +49,15 @@ line_module_ui <- function(id){
   )
 }
 
-line_module_server <- function(id, patterns){
+line_module_server <- function(id, patterns, module){
   moduleServer(id, function(input, output, session) {
+
+    init <- observe({
+      if (module() == "line"){
+        shinyjs::runjs("document.getElementById('line_module-line-random').click();")
+        init$destroy()
+      }
+    })
 
     invalidate_colour <- reactiveVal(0)
     colour <- colour_server("line", invalidate_colour)
@@ -88,16 +95,8 @@ line_module_server <- function(id, patterns){
       shinyjs::runjs(glue("
       document.getElementById('pattern').style.setProperty('--stroke', '{input$stroke / 100}');"))
     })
-#
-#     input_colours <- reactive({
-#       n_cols <- 3
-#       ids <- paste0("colour_", 1:n_cols)
-#       c(lapply(seq_along(ids), function(i) {input[[ids[i]]]}))
-#     })
 
     observe({
-      # req(length(input_colours()) > 0)
-      # colours <- input_colours()
       shinyjs::runjs(glue("
       document.getElementById('pattern').style.setProperty('--colour_1', '{colour$colour_1()}');
       document.getElementById('pattern').style.setProperty('--colour_2', '{colour$colour_2()}');
@@ -108,8 +107,7 @@ line_module_server <- function(id, patterns){
       shinyjs::runjs(glue("
       document.getElementById('pattern').style.setProperty('--opacity_start', '{input$opacity[1] / 100}');
       document.getElementById('pattern').style.setProperty('--opacity_mid', '{mean(input$opacity) / 100}');
-      document.getElementById('pattern').style.setProperty('--opacity_end', '{input$opacity[2] / 100}');"
-                          ))
+      document.getElementById('pattern').style.setProperty('--opacity_end', '{input$opacity[2] / 100}');"))
     })
 
     observe({
@@ -194,6 +192,14 @@ line_module_server <- function(id, patterns){
       bottom_corner <- input$outer - 1
     }
 
+    css_opacity_var <- glue(" --opacity_start: isolate(input$opacity[1]/100);
+                              --opacity_mid: isolate(mean(input$opacity)/100);
+                              --opacity_end: isolate(input$opacity[2]/100);")
+
+    css_colour_var <- glue("--colour_1: {isolate(colour$colour_1())};
+                            --colour_2: {isolate(colour$colour_2())};
+                            --colour_3: {isolate(colour$colour_3())};")
+
     # create the final svg
     tagList(
       tags$svg(
@@ -206,13 +212,9 @@ line_module_server <- function(id, patterns){
         tags$style(
           paste0('
            :root{
-             --stroke: 0.01px;
-             --opacity_start: 0;
-             --opacity_mid: 0.5;
-             --opacity_end: 1;
-             # --colour_1: "black";
-             # --colour_2: "black";
-             # --colour_3: "black";
+             --stroke: 0.01px;',
+              css_opacity_var,
+              css_colour_var,'
            }
            line {
             stroke-width: var(--stroke);

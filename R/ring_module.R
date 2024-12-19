@@ -44,8 +44,15 @@ ring_module_ui <- function(id){
   )
 }
 
-ring_module_server <- function(id, patterns){
+ring_module_server <- function(id, patterns, module){
   moduleServer(id, function(input, output, session) {
+
+    init <- observe({
+      if (module() == "ring"){
+        shinyjs::runjs("document.getElementById('ring_module-ring-random').click();")
+        init$destroy()
+      }
+    })
 
     invalidate_colour <- reactiveVal(0)
     colour <- colour_server("ring", invalidate_colour)
@@ -80,8 +87,6 @@ ring_module_server <- function(id, patterns){
     })
 
     observe({
-      req(length(input_colours()) > 0)
-      colours <- input_colours()
       shinyjs::runjs(glue("
       document.getElementById('pattern').style.setProperty('--colour_1', '{colour$colour_1()}');
       document.getElementById('pattern').style.setProperty('--colour_2', '{colour$colour_2()}');
@@ -91,12 +96,6 @@ ring_module_server <- function(id, patterns){
     observe({
       shinyjs::runjs(glue("
       document.getElementById('pattern').style.setProperty('--stroke', '{input$stroke}');"))
-    })
-
-    input_colours <- reactive({
-      n_cols <- 3
-      ids <- paste0("colour_", 1:n_cols)
-      c(lapply(seq_along(ids), function(i) {colour[[ids[i]]]}))
     })
 
     # function to generate svg circle
@@ -134,7 +133,6 @@ ring_module_server <- function(id, patterns){
 
     # generate the pattern
     svg_pattern <- reactive({
-      req(length(input_colours) > 0)
 
       # create a matrix of sequences
       reps <- input$reps
@@ -168,13 +166,12 @@ ring_module_server <- function(id, patterns){
       elements_sub <- element_mat[unique(element_mat[,3]),]
       css_delay_result <- paste(apply(elements_sub, 1, css_delay, speed = input$speed, reps = input$reps), collapse= ' ')
 
-      # colours <- gradient$result()$col
-      colours <- isolate(input_colours())
-      n_cols <- length(colours)
+      css_colour_var <- glue("--colour_1: {isolate(colour$colour_1())};
+                              --colour_2: {isolate(colour$colour_2())};
+                              --colour_3: {isolate(colour$colour_3())};")
+
+      n_cols <- 3
       col_vars <- glue("--colour_{1:n_cols}")
-
-      css_colour_var_result <- paste(css_colour_vars(col_vars, colours), collapse = ' ')
-
       frames <- c(seq(0, 50, length.out = n_cols), seq(50, 100, length.out = n_cols)[2:n_cols])
       colour_var_seq <- c(col_vars, rev(col_vars[1:n_cols - 1]))
       css_colour_keys_result <- paste(css_colour_keys(frames, colour_var_seq), collapse = ' ')
@@ -190,7 +187,7 @@ ring_module_server <- function(id, patterns){
          id = "pattern",
          tags$style(paste0("
           :root{",
-            css_colour_var_result
+            css_colour_var
             ,"
              --stroke: 0.5px
           }

@@ -14,7 +14,13 @@ ui <- page_navbar(
     shinyjs::useShinyjs(),
     layout_sidebar(
       sidebar = sidebar(
-        shinyWidgets::radioGroupButtons("module", "Choose a pattern", choices = modules, justified = TRUE, size = "lg", status = "info"),
+
+        # buttons for selecting module
+        radioGroupButtons("module", "Choose a pattern",
+                          choices = modules, justified = TRUE,
+                          size = "lg", status = "info"),
+
+        # call all the module UI inside conditional panels
         do.call(tagList, lapply(modules, function(module) {
           conditionalPanel(
             condition = glue("input.module == '{module}'"),
@@ -51,9 +57,9 @@ server <- function(input, output, session){
   #   do.call(get(paste0(module, "_module_server")), args = list(id = module, patterns = patterns))
   # })
 
-  ring_module_server("ring_module", patterns)
-  square_module_server("square_module", patterns)
-  line_module_server("line_module", patterns)
+  ring_module_server("ring_module", patterns, reactive(input$module))
+  square_module_server("square_module", patterns, reactive(input$module))
+  line_module_server("line_module", patterns, reactive(input$module))
 
   # send to UI
   output$svgout <- renderUI({

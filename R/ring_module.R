@@ -3,6 +3,7 @@ ring_module_ui <- function(id){
   tagList(
     random_ui(ns("ring")),
     accordion(
+      id = ns("acc"),
       multiple = FALSE,
       open = c("Pattern"),
       accordion_panel("Pattern",
@@ -74,16 +75,19 @@ ring_module_server <- function(id, patterns, module){
       updateSliderInput(session, "bulge", value = sample.int(100, size = 1))
       updateSliderInput(session, "reps", value = 1 + sample.int(22, size = 1) * 2)
       updateSliderInput(session, "space", value = sample.int(30, size = 1))
+      accordion_panel_open("acc", c("Pattern"))
     })
 
     observeEvent(random$animation(), {
       updateSliderInput(session, "breath", value = 9 + sample.int(21, size = 1))
       updateSliderInput(session, "speed", value = 4 + sample.int(56, size = 1))
+      accordion_panel_open("acc", c("Animation"))
     })
 
     observeEvent(random$colour(), {
       updateSliderInput(session, "stroke", value = sample.int(10, size = 1)/10)
       invalidate_colour(invalidate_colour() + 1)
+      accordion_panel_open("acc", c("Colour"))
     })
 
     observe({

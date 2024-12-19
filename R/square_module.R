@@ -3,6 +3,7 @@ square_module_ui <- function(id){
   tagList(
     random_ui(ns("square")),
     accordion(
+      id = ns("acc"),
       multiple = FALSE,
       open = c("Pattern"),
       accordion_panel("Pattern",
@@ -77,16 +78,19 @@ square_module_server <- function(id, patterns, module){
       low_internal <- 10 + sample.int(30, size = 1)
       high_internal <- low_internal + sample.int(30, size = 1)
       updateSliderInput(session, "internal", value = c(low_internal, high_internal))
+      accordion_panel_open("acc", c("Pattern"))
     })
 
     observeEvent(random$animation(), {
       updateSliderInput(session, "speed", value = 4 + sample.int(56, size = 1))
       updateSliderInput(session, "colour_speed", value = 4 + sample.int(56, size = 1))
       updateSliderInput(session, "dif", value = 5 + sample.int(90, size = 1))
+      accordion_panel_open("acc", c("Animation"))
     })
 
     observeEvent(random$colour(), {
       invalidate_colour(invalidate_colour() + 1)
+      accordion_panel_open("acc", c("Colour"))
     })
 
     # function to generate svg circle

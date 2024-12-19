@@ -3,6 +3,7 @@ line_module_ui <- function(id){
   tagList(
     random_ui(ns("line")),
     accordion(
+      id = ns("acc"),
       multiple = FALSE,
       open = c("Pattern"),
       accordion_panel("Pattern",
@@ -79,16 +80,19 @@ line_module_server <- function(id, patterns, module){
       updateSliderInput(session, "inner", value = 3+ sample.int(12, size = 1))
       updateSliderInput(session, "inner_size", value = 10 + sample.int(70, size = 1))
       updateSliderInput(session, "inner_offset", value = 10 + sample.int(70, size = 1))
+      accordion_panel_open("acc", c("Pattern"))
     })
 
     observeEvent(random$animation(), {
       updateSliderInput(session, "breath", value = 10 + sample.int(30, size = 1))
       updateSliderInput(session, "speed", value = 5 + sample.int(55, size = 1))
+      accordion_panel_open("acc", c("Animation"))
     })
 
     observeEvent(random$colour(), {
       updateSliderInput(session, "stroke", value = sample.int(20, size = 1)/20)
       invalidate_colour(invalidate_colour() + 1)
+      accordion_panel_open("acc", c("Colour"))
     })
 
     observe({

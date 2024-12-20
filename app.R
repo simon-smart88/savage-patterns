@@ -3,7 +3,6 @@ library(bslib)
 library(shinyWidgets)
 library(htmltools)
 library(glue)
-library(colourpicker)
 library(shinyjs)
 
 modules <- gsub("_module.R", "", list.files("R/", "*module*"))

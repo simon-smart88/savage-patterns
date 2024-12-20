@@ -1,6 +1,22 @@
 colour_ui <- function(id) {
   ns <- NS(id)
   tagList(
+    tags$head(
+      tags$script(src = "https://cdn.jsdelivr.net/npm/@jaames/iro@5"),
+      tags$style(HTML("
+      .colorPicker {
+        margin: 20px;
+        width: 300px;
+      }
+      .swatch {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    "))
+    ),
     selectInput(ns("hue"),
                 span("Hue",
                      tooltip(icon("info-circle"), "Choose a colour palette to use")),
@@ -12,11 +28,8 @@ colour_ui <- function(id) {
                      tooltip(icon("info-circle"), "Choose how bright the colour palette is")),
                 c("Random" = "random", "Light" = "light",
                   "Bright" = "bright", "Dark" = "dark")),
-    layout_columns(
-      col_widths = c(4, 4, 4),
-      colourpicker::colourInput(ns("colour_1"), "", showColour = "background", closeOnClick = TRUE),
-      colourpicker::colourInput(ns("colour_2"), "", showColour = "background", closeOnClick = TRUE),
-      colourpicker::colourInput(ns("colour_3"), "", showColour = "background", closeOnClick = TRUE))
+
+      div(id = ns("colorPickerContainer"), class = "colorPicker"),
     )
 }
 
@@ -24,17 +37,48 @@ colour_server <- function(id, invalidate_color) {
   moduleServer(id, function(input, output, session) {
 
     observe({
+      runjs(paste0('
+      const colorPicker = new iro.ColorPicker("#',session$ns("colorPickerContainer"),'", {
+        width: 300,
+        colors: [
+          "',random()[1],'",
+          "',random()[2],'",
+          "',random()[3],'"
+        ],
+        handleRadius: 9,
+        borderWidth: 1,
+        borderColor: "#fff"
+      });
+
+      const initialColors = [
+        "',random()[1],'",
+        "',random()[2],'",
+        "',random()[3],'"
+      ];
+
+      const selectedColors = [...initialColors];
+
+      colorPicker.on(["mount", "color:change"], function(color){
+        const hexString = color.hexString;
+        const index = color.index;
+        selectedColors[index] = hexString;
+        Shiny.setInputValue("',session$ns("colour"),'", selectedColors);
+  });
+    '))
+    })
+
+    observe(print(input$colour))
+
+    random <- reactive({
       invalidate_color()
-      random <- randomcoloR::randomColor(count = 3, hue = input$hue, luminosity = input$lumin)
-      colourpicker::updateColourInput(session, "colour_1", value = random[1])
-      colourpicker::updateColourInput(session, "colour_2", value = random[2])
-      colourpicker::updateColourInput(session, "colour_3", value = random[3])
+      randomcoloR::randomColor(count = 3, hue = input$hue, luminosity = input$lumin)
     })
 
     list(
-      colour_1 = reactive(input$colour_1),
-      colour_2 = reactive(input$colour_2),
-      colour_3 = reactive(input$colour_3)
+      colour_1 = reactive(input$colour[1]),
+      colour_2 = reactive(input$colour[2]),
+      colour_3 = reactive(input$colour[3])
     )
   })
 }
+

@@ -204,6 +204,44 @@ line_module_server <- function(id, patterns, module){
                             --colour_2: {isolate(colour$colour_2())};
                             --colour_3: {isolate(colour$colour_3())};")
 
+
+    line_gradients <- tagList(
+      tags$stop(offset = "0%", `stop-color` =  "var(--colour_1)", `stop-opacity` = "var(--opacity_start)"),
+      tags$stop(offset = "50%", `stop-color` =  "var(--colour_2)", `stop-opacity` = "var(--opacity_mid)"),
+      tags$stop(offset = "100%", `stop-color` = "var(--colour_3)", `stop-opacity` = "var(--opacity_end)")
+#
+#       tags$stop(
+#       offset = "0%",
+#       tags$animate(
+#         attributeName = "stop-color",
+#         values = "var(--colour_1); var(--colour_2); var(--colour_3); var(--colour_2); var(--colour_1)",
+#         dur = "30s",
+#         repeatCount = "indefinite"
+#       ),
+#       tags$animate(
+#         attributeName = "stop-opacity",
+#         values = "var(--opacity_start); var(--opacity_mid); var(--opacity_end); var(--opacity_mid); var(--opacity_start)",
+#         dur = "30s",
+#         repeatCount = "indefinite"
+#       )
+#     ),
+#     tags$stop(
+#       offset = "100%",
+#       tags$animate(
+#         attributeName = "stop-color",
+#         values = "var(--colour_3); var(--colour_2); var(--colour_1); var(--colour_2); var(--colour_3)",
+#         dur = "30s",
+#         repeatCount = "indefinite"
+#       ),
+#       tags$animate(
+#         attributeName = "stop-opacity",
+#         values = "var(--opacity_end); var(--opacity_mid); var(--opacity_start); var(--opacity_mid); var(--opacity_end)",
+#         dur = "30s",
+#         repeatCount = "indefinite"
+#       )
+#     )
+    )
+
     # create the final svg
     tagList(
       tags$svg(
@@ -226,28 +264,16 @@ line_module_server <- function(id, patterns, module){
            ')),
            tags$defs(
              tags$linearGradient(
-               id = "gradient-opacity1", x1 = "0%", y1 = "0%", x2 = "100%", y2 = "0%",
-               tags$stop(offset = "0%", `stop-color` =  "var(--colour_1)", `stop-opacity` = "var(--opacity_start)"),
-               tags$stop(offset = "50%", `stop-color` =  "var(--colour_2)", `stop-opacity` = "var(--opacity_mid)"),
-               tags$stop(offset = "100%", `stop-color` = "var(--colour_3)", `stop-opacity` = "var(--opacity_end)")
+               id = "gradient-opacity1", x1 = "0%", y1 = "0%", x2 = "100%", y2 = "0%", line_gradients
              ),
              tags$linearGradient(
-               id = "gradient-opacity2", x1 = "0%", y1 = "0%", x2 = "0%", y2 = "100%",
-               tags$stop(offset = "0%", `stop-color` =  "var(--colour_1)", `stop-opacity` = "var(--opacity_start)"),
-               tags$stop(offset = "50%", `stop-color` =  "var(--colour_2)", `stop-opacity` = "var(--opacity_mid)"),
-               tags$stop(offset = "100%", `stop-color` = "var(--colour_3)", `stop-opacity` = "var(--opacity_end)")
+               id = "gradient-opacity2", x1 = "0%", y1 = "0%", x2 = "0%", y2 = "100%", line_gradients
              ),
              tags$linearGradient(
-               id = "gradient-opacity3", x1 = "100%", y1 = "0%", x2 = "0%", y2 = "0%",
-               tags$stop(offset = "0%", `stop-color` =  "var(--colour_1)", `stop-opacity` = "var(--opacity_start)"),
-               tags$stop(offset = "50%", `stop-color` =  "var(--colour_2)", `stop-opacity` = "var(--opacity_mid)"),
-               tags$stop(offset = "100%", `stop-color` = "var(--colour_3)", `stop-opacity` = "var(--opacity_end)")
+               id = "gradient-opacity3", x1 = "100%", y1 = "0%", x2 = "0%", y2 = "0%", line_gradients
              ),
              tags$linearGradient(
-               id = "gradient-opacity4", x1 = "0%", y1 = "100%", x2 = "0%", y2 = "0%",
-               tags$stop(offset = "0%", `stop-color` =  "var(--colour_1)", `stop-opacity` = "var(--opacity_start)"),
-               tags$stop(offset = "50%", `stop-color` =  "var(--colour_2)", `stop-opacity` = "var(--opacity_mid)"),
-               tags$stop(offset = "100%", `stop-color` = "var(--colour_3)", `stop-opacity` = "var(--opacity_end)")
+               id = "gradient-opacity4", x1 = "0%", y1 = "100%", x2 = "0%", y2 = "0%", line_gradients
            )),
          elements))
 

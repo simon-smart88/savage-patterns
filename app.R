@@ -9,6 +9,14 @@ modules <- gsub("_module.R", "", list.files("R/", "*module*"))
 names(modules) <- paste0("<img src='", modules, "_icon.svg'>")
 
 ui <- page_navbar(
+  tags$head(
+    tags$style(
+      '.navbar.navbar-inverse {
+    --bslib-navbar-inverse-bg: #000000;
+    --bs-emphasis-color: #000000;
+}'
+    )
+  ),
   nav_panel("Create",
     shinyjs::useShinyjs(),
     layout_sidebar(
@@ -23,7 +31,7 @@ ui <- page_navbar(
         do.call(tagList, lapply(modules, function(module) {
           conditionalPanel(
             condition = glue("input.module == '{module}'"),
-            get(glue("{module}_module_ui"))(glue("{module}_module"))
+            get(glue("{module}_module_ui"))(module)
           )})
         ),
         actionButton("download", "Download", icon = icon("download"), width = "100%", style = "font-size: 1.5rem;"),
@@ -52,13 +60,10 @@ server <- function(input, output, session){
 
   patterns <- reactiveValues()
 
-  # lapply(modules, function(module) {
-  #   do.call(get(paste0(module, "_module_server")), args = list(id = module, patterns = patterns))
-  # })
-
-  ring_module_server("ring_module", patterns, reactive(input$module))
-  square_module_server("square_module", patterns, reactive(input$module))
-  line_module_server("line_module", patterns, reactive(input$module))
+  lapply(modules, function(module) {
+    do.call(get(paste0(module, "_module_server")),
+            args = list(module, patterns, reactive(input$module)))
+  })
 
   # send to UI
   output$svgout <- renderUI({

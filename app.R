@@ -9,14 +9,6 @@ modules <- gsub("_module.R", "", list.files("R/", "*module*"))
 names(modules) <- paste0("<img src='", modules, "_icon.svg'>")
 
 ui <- page_navbar(
-  tags$head(
-    tags$style(
-      '.navbar.navbar-inverse {
-    --bslib-navbar-inverse-bg: #000000;
-    --bs-emphasis-color: #000000;
-}'
-    )
-  ),
   nav_panel("Create",
     shinyjs::useShinyjs(),
     layout_sidebar(
@@ -38,7 +30,7 @@ ui <- page_navbar(
         div(downloadButton("download_h"), style = "visibility: hidden"),
         width = "400px",
       ),
-      div(style = "overflow:hidden", uiOutput("svgout"), height="90vh", width = "100%")
+      div(class = "svg_container", uiOutput("svgout"))
     )),
   nav_panel("About",
     layout_columns(
@@ -53,7 +45,26 @@ ui <- page_navbar(
   theme = bs_theme(version = 5, "simplex",
                    primary = "#e4401b",
                    info = "#eae5e5"),
-  title = "Savage patterns"
+  title = "Savage patterns",
+  tags$head(
+    tags$style(
+      '.navbar.navbar-inverse {
+    --bslib-navbar-inverse-bg: #000000;
+    --bs-emphasis-color: #000000;}
+
+    .svg_container {
+      overflow: hidden;
+    }
+    .svg_container svg {
+      width: 100%;
+      height: auto;
+      max-height: 88vh;
+      overflow: hidden;
+    }
+      '
+    )
+  )
+
 )
 
 server <- function(input, output, session){

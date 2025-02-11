@@ -46,28 +46,7 @@ ui <- page_navbar(
                    primary = "#e4401b",
                    info = "#eae5e5"),
   title = "Savage patterns",
-  tags$head(
-    tags$style(
-      '.navbar.navbar-inverse {
-    --bslib-navbar-inverse-bg: #000000;
-    --bs-emphasis-color: #000000;}
-
-    .svg_container {
-      overflow: hidden;
-    }
-
-    .svg_container svg {
-      width: 100%;
-      height: auto;
-      max-height: 88vh;
-      overflow: hidden;
-    }
-
-    .custom-left-picker .colourpicker-panel {
-      left: auto !important;
-      right: 20% !important;
-    }')
-  )
+  tags$head(tags$link(href = "styles.css", rel = "stylesheet"))
 )
 
 server <- function(input, output, session){

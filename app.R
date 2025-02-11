@@ -55,16 +55,19 @@ ui <- page_navbar(
     .svg_container {
       overflow: hidden;
     }
+
     .svg_container svg {
       width: 100%;
       height: auto;
       max-height: 88vh;
       overflow: hidden;
     }
-      '
-    )
-  )
 
+    .custom-left-picker .colourpicker-panel {
+      left: auto !important;
+      right: 20% !important;
+    }')
+  )
 )
 
 server <- function(input, output, session){

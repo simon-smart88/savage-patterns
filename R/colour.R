@@ -13,10 +13,13 @@ colour_ui <- function(id) {
                 c("Random" = "random", "Light" = "light",
                   "Bright" = "bright", "Dark" = "dark")),
     layout_columns(
-      col_widths = c(4, 4, 4),
+      col_widths = c(NA),
       colourpicker::colourInput(ns("colour_1"), "", showColour = "background", closeOnClick = TRUE),
       colourpicker::colourInput(ns("colour_2"), "", showColour = "background", closeOnClick = TRUE),
-      colourpicker::colourInput(ns("colour_3"), "", showColour = "background", closeOnClick = TRUE))
+      div(class = "custom-left-picker",
+        colourpicker::colourInput(ns("colour_3"), "", showColour = "background", closeOnClick = TRUE)
+      )
+    )
   )
 }
 

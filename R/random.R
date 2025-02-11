@@ -3,7 +3,6 @@ random_ui <- function(id) {
   tagList(
     actionButton(ns("random"), "Randomise", icon = icon("random"), width = "100%", style = "font-size: 1.5rem;"),
     layout_columns(
-      col_widths = c(4, 4, 4),
       actionButton(ns("random_pattern"), "Pattern", width = "100%"),
       actionButton(ns("random_animation"), "Animation", width = "100%"),
       actionButton(ns("random_colour"), "Colour", width = "100%")

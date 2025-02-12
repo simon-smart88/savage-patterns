@@ -1,0 +1,2204 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="41 41 154 154" height="100%" id="pattern" style="--stroke: 0.2; --colour_1: #2A9E26; --colour_2: #265C9E; --colour_3: #0A0506;">
+  <style>
+          :root{--colour_1: #15190F;
+--colour_2: #9E7C55;
+--colour_3: #CCDB83;
+             --stroke: 0.5px
+          }
+
+          circle {animation: col 30s linear infinite;
+                  fill: none;
+                  stroke-width: var(--stroke)}
+
+          @keyframes col {0% {stroke: var(--colour_1)} 25% {stroke: var(--colour_2)} 50% {stroke: var(--colour_3)} 75% {stroke: var(--colour_2)} 100% {stroke: var(--colour_1)}
+          }
+         </style>
+  <style>.circle_1 { animation-delay: -1.11111111111111s;} .circle_2 { animation-delay: -2.22222222222222s;} .circle_3 { animation-delay: -3.33333333333333s;} .circle_4 { animation-delay: -4.44444444444444s;} .circle_5 { animation-delay: -5.55555555555556s;} .circle_6 { animation-delay: -6.66666666666667s;} .circle_7 { animation-delay: -7.77777777777778s;} .circle_8 { animation-delay: -8.88888888888889s;} .circle_9 { animation-delay: -10s;} .circle_10 { animation-delay: -11.1111111111111s;} .circle_11 { animation-delay: -12.2222222222222s;} .circle_12 { animation-delay: -13.3333333333333s;} .circle_13 { animation-delay: -14.4444444444444s;} .circle_14 { animation-delay: -15.5555555555556s;} .circle_15 { animation-delay: -16.6666666666667s;} .circle_16 { animation-delay: -17.7777777777778s;} .circle_17 { animation-delay: -18.8888888888889s;} .circle_18 { animation-delay: -20s;} .circle_19 { animation-delay: -21.1111111111111s;} .circle_20 { animation-delay: -22.2222222222222s;} .circle_21 { animation-delay: -23.3333333333333s;} .circle_22 { animation-delay: -24.4444444444444s;} .circle_23 { animation-delay: -25.5555555555556s;} .circle_24 { animation-delay: -26.6666666666667s;} .circle_25 { animation-delay: -27.7777777777778s;} .circle_26 { animation-delay: -28.8888888888889s;} .circle_27 { animation-delay: -30s;}</style>
+  <circle class="circle_1" cx="27" cy="27">
+    <animate attributeName="r" values="14.26;&#xA;26.26;&#xA;14.26" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_2" cx="34" cy="27">
+    <animate attributeName="r" values="14.52;&#xA;26.52;&#xA;14.52" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_3" cx="41" cy="27">
+    <animate attributeName="r" values="14.78;&#xA;26.78;&#xA;14.78" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_4" cx="48" cy="27">
+    <animate attributeName="r" values="15.04;&#xA;27.04;&#xA;15.04" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="55" cy="27">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="62" cy="27">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="69" cy="27">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="76" cy="27">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="83" cy="27">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="90" cy="27">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="97" cy="27">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="104" cy="27">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="111" cy="27">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="118" cy="27">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="125" cy="27">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="132" cy="27">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="139" cy="27">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="146" cy="27">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="153" cy="27">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="160" cy="27">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="167" cy="27">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="174" cy="27">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="181" cy="27">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_4" cx="188" cy="27">
+    <animate attributeName="r" values="15.04;&#xA;27.04;&#xA;15.04" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_3" cx="195" cy="27">
+    <animate attributeName="r" values="14.78;&#xA;26.78;&#xA;14.78" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_2" cx="202" cy="27">
+    <animate attributeName="r" values="14.52;&#xA;26.52;&#xA;14.52" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_1" cx="209" cy="27">
+    <animate attributeName="r" values="14.26;&#xA;26.26;&#xA;14.26" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_2" cx="27" cy="34">
+    <animate attributeName="r" values="14.52;&#xA;26.52;&#xA;14.52" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_3" cx="34" cy="34">
+    <animate attributeName="r" values="14.78;&#xA;26.78;&#xA;14.78" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_4" cx="41" cy="34">
+    <animate attributeName="r" values="15.04;&#xA;27.04;&#xA;15.04" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="48" cy="34">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="55" cy="34">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="62" cy="34">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="69" cy="34">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="76" cy="34">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="83" cy="34">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="90" cy="34">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="97" cy="34">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="104" cy="34">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="111" cy="34">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="118" cy="34">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="125" cy="34">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="132" cy="34">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="139" cy="34">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="146" cy="34">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="153" cy="34">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="160" cy="34">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="167" cy="34">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="174" cy="34">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="181" cy="34">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="188" cy="34">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_4" cx="195" cy="34">
+    <animate attributeName="r" values="15.04;&#xA;27.04;&#xA;15.04" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_3" cx="202" cy="34">
+    <animate attributeName="r" values="14.78;&#xA;26.78;&#xA;14.78" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_2" cx="209" cy="34">
+    <animate attributeName="r" values="14.52;&#xA;26.52;&#xA;14.52" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_3" cx="27" cy="41">
+    <animate attributeName="r" values="14.78;&#xA;26.78;&#xA;14.78" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_4" cx="34" cy="41">
+    <animate attributeName="r" values="15.04;&#xA;27.04;&#xA;15.04" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="41" cy="41">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="48" cy="41">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="55" cy="41">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="62" cy="41">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="69" cy="41">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="76" cy="41">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="83" cy="41">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="90" cy="41">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="97" cy="41">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="104" cy="41">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="111" cy="41">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="118" cy="41">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="125" cy="41">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="132" cy="41">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="139" cy="41">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="146" cy="41">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="153" cy="41">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="160" cy="41">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="167" cy="41">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="174" cy="41">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="181" cy="41">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="188" cy="41">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="195" cy="41">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_4" cx="202" cy="41">
+    <animate attributeName="r" values="15.04;&#xA;27.04;&#xA;15.04" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_3" cx="209" cy="41">
+    <animate attributeName="r" values="14.78;&#xA;26.78;&#xA;14.78" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_4" cx="27" cy="48">
+    <animate attributeName="r" values="15.04;&#xA;27.04;&#xA;15.04" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="34" cy="48">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="41" cy="48">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="48" cy="48">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="55" cy="48">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="62" cy="48">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="69" cy="48">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="76" cy="48">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="83" cy="48">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="90" cy="48">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="97" cy="48">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="104" cy="48">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="111" cy="48">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="118" cy="48">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="125" cy="48">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="132" cy="48">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="139" cy="48">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="146" cy="48">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="153" cy="48">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="160" cy="48">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="167" cy="48">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="174" cy="48">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="181" cy="48">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="188" cy="48">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="195" cy="48">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="202" cy="48">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_4" cx="209" cy="48">
+    <animate attributeName="r" values="15.04;&#xA;27.04;&#xA;15.04" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="27" cy="55">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="34" cy="55">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="41" cy="55">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="48" cy="55">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="55" cy="55">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="62" cy="55">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="69" cy="55">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="76" cy="55">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="83" cy="55">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="90" cy="55">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="97" cy="55">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="104" cy="55">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="111" cy="55">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="118" cy="55">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="125" cy="55">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="132" cy="55">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="139" cy="55">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="146" cy="55">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="153" cy="55">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="160" cy="55">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="167" cy="55">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="174" cy="55">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="181" cy="55">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="188" cy="55">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="195" cy="55">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="202" cy="55">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="209" cy="55">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="27" cy="62">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="34" cy="62">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="41" cy="62">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="48" cy="62">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="55" cy="62">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="62" cy="62">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="69" cy="62">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="76" cy="62">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="83" cy="62">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="90" cy="62">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="97" cy="62">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="104" cy="62">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="111" cy="62">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="118" cy="62">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="125" cy="62">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="132" cy="62">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="139" cy="62">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="146" cy="62">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="153" cy="62">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="160" cy="62">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="167" cy="62">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="174" cy="62">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="181" cy="62">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="188" cy="62">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="195" cy="62">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="202" cy="62">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="209" cy="62">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="27" cy="69">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="34" cy="69">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="41" cy="69">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="48" cy="69">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="55" cy="69">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="62" cy="69">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="69" cy="69">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="76" cy="69">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="83" cy="69">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="90" cy="69">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="97" cy="69">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="104" cy="69">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="111" cy="69">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="118" cy="69">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="125" cy="69">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="132" cy="69">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="139" cy="69">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="146" cy="69">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="153" cy="69">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="160" cy="69">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="167" cy="69">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="174" cy="69">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="181" cy="69">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="188" cy="69">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="195" cy="69">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="202" cy="69">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="209" cy="69">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="27" cy="76">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="34" cy="76">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="41" cy="76">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="48" cy="76">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="55" cy="76">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="62" cy="76">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="69" cy="76">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="76" cy="76">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="83" cy="76">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="90" cy="76">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="97" cy="76">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="104" cy="76">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="111" cy="76">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="118" cy="76">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="125" cy="76">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="132" cy="76">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="139" cy="76">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="146" cy="76">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="153" cy="76">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="160" cy="76">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="167" cy="76">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="174" cy="76">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="181" cy="76">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="188" cy="76">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="195" cy="76">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="202" cy="76">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="209" cy="76">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="27" cy="83">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="34" cy="83">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="41" cy="83">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="48" cy="83">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="55" cy="83">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="62" cy="83">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="69" cy="83">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="76" cy="83">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="83" cy="83">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="90" cy="83">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="97" cy="83">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="104" cy="83">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="111" cy="83">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="118" cy="83">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="125" cy="83">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="132" cy="83">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="139" cy="83">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="146" cy="83">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="153" cy="83">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="160" cy="83">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="167" cy="83">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="174" cy="83">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="181" cy="83">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="188" cy="83">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="195" cy="83">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="202" cy="83">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="209" cy="83">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="27" cy="90">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="34" cy="90">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="41" cy="90">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="48" cy="90">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="55" cy="90">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="62" cy="90">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="69" cy="90">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="76" cy="90">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="83" cy="90">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="90" cy="90">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="97" cy="90">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="104" cy="90">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="111" cy="90">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_23" cx="118" cy="90">
+    <animate attributeName="r" values="19.98;&#xA;31.98;&#xA;19.98" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="125" cy="90">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="132" cy="90">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="139" cy="90">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="146" cy="90">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="153" cy="90">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="160" cy="90">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="167" cy="90">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="174" cy="90">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="181" cy="90">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="188" cy="90">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="195" cy="90">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="202" cy="90">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="209" cy="90">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="27" cy="97">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="34" cy="97">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="41" cy="97">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="48" cy="97">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="55" cy="97">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="62" cy="97">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="69" cy="97">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="76" cy="97">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="83" cy="97">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="90" cy="97">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="97" cy="97">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="104" cy="97">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_23" cx="111" cy="97">
+    <animate attributeName="r" values="19.98;&#xA;31.98;&#xA;19.98" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_24" cx="118" cy="97">
+    <animate attributeName="r" values="20.24;&#xA;32.24;&#xA;20.24" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_23" cx="125" cy="97">
+    <animate attributeName="r" values="19.98;&#xA;31.98;&#xA;19.98" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="132" cy="97">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="139" cy="97">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="146" cy="97">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="153" cy="97">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="160" cy="97">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="167" cy="97">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="174" cy="97">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="181" cy="97">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="188" cy="97">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="195" cy="97">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="202" cy="97">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="209" cy="97">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="27" cy="104">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="34" cy="104">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="41" cy="104">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="48" cy="104">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="55" cy="104">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="62" cy="104">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="69" cy="104">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="76" cy="104">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="83" cy="104">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="90" cy="104">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="97" cy="104">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_23" cx="104" cy="104">
+    <animate attributeName="r" values="19.98;&#xA;31.98;&#xA;19.98" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_24" cx="111" cy="104">
+    <animate attributeName="r" values="20.24;&#xA;32.24;&#xA;20.24" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_25" cx="118" cy="104">
+    <animate attributeName="r" values="20.5;&#xA;32.5;&#xA;20.5" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_24" cx="125" cy="104">
+    <animate attributeName="r" values="20.24;&#xA;32.24;&#xA;20.24" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_23" cx="132" cy="104">
+    <animate attributeName="r" values="19.98;&#xA;31.98;&#xA;19.98" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="139" cy="104">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="146" cy="104">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="153" cy="104">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="160" cy="104">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="167" cy="104">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="174" cy="104">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="181" cy="104">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="188" cy="104">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="195" cy="104">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="202" cy="104">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="209" cy="104">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="27" cy="111">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="34" cy="111">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="41" cy="111">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="48" cy="111">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="55" cy="111">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="62" cy="111">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="69" cy="111">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="76" cy="111">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="83" cy="111">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="90" cy="111">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_23" cx="97" cy="111">
+    <animate attributeName="r" values="19.98;&#xA;31.98;&#xA;19.98" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_24" cx="104" cy="111">
+    <animate attributeName="r" values="20.24;&#xA;32.24;&#xA;20.24" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_25" cx="111" cy="111">
+    <animate attributeName="r" values="20.5;&#xA;32.5;&#xA;20.5" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_26" cx="118" cy="111">
+    <animate attributeName="r" values="20.76;&#xA;32.76;&#xA;20.76" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_25" cx="125" cy="111">
+    <animate attributeName="r" values="20.5;&#xA;32.5;&#xA;20.5" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_24" cx="132" cy="111">
+    <animate attributeName="r" values="20.24;&#xA;32.24;&#xA;20.24" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_23" cx="139" cy="111">
+    <animate attributeName="r" values="19.98;&#xA;31.98;&#xA;19.98" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="146" cy="111">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="153" cy="111">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="160" cy="111">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="167" cy="111">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="174" cy="111">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="181" cy="111">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="188" cy="111">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="195" cy="111">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="202" cy="111">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="209" cy="111">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="27" cy="118">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="34" cy="118">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="41" cy="118">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="48" cy="118">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="55" cy="118">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="62" cy="118">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="69" cy="118">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="76" cy="118">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="83" cy="118">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_23" cx="90" cy="118">
+    <animate attributeName="r" values="19.98;&#xA;31.98;&#xA;19.98" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_24" cx="97" cy="118">
+    <animate attributeName="r" values="20.24;&#xA;32.24;&#xA;20.24" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_25" cx="104" cy="118">
+    <animate attributeName="r" values="20.5;&#xA;32.5;&#xA;20.5" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_26" cx="111" cy="118">
+    <animate attributeName="r" values="20.76;&#xA;32.76;&#xA;20.76" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_27" cx="118" cy="118">
+    <animate attributeName="r" values="21.02;&#xA;33.02;&#xA;21.02" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_26" cx="125" cy="118">
+    <animate attributeName="r" values="20.76;&#xA;32.76;&#xA;20.76" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_25" cx="132" cy="118">
+    <animate attributeName="r" values="20.5;&#xA;32.5;&#xA;20.5" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_24" cx="139" cy="118">
+    <animate attributeName="r" values="20.24;&#xA;32.24;&#xA;20.24" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_23" cx="146" cy="118">
+    <animate attributeName="r" values="19.98;&#xA;31.98;&#xA;19.98" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="153" cy="118">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="160" cy="118">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="167" cy="118">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="174" cy="118">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="181" cy="118">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="188" cy="118">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="195" cy="118">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="202" cy="118">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="209" cy="118">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="27" cy="125">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="34" cy="125">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="41" cy="125">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="48" cy="125">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="55" cy="125">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="62" cy="125">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="69" cy="125">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="76" cy="125">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="83" cy="125">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="90" cy="125">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_23" cx="97" cy="125">
+    <animate attributeName="r" values="19.98;&#xA;31.98;&#xA;19.98" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_24" cx="104" cy="125">
+    <animate attributeName="r" values="20.24;&#xA;32.24;&#xA;20.24" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_25" cx="111" cy="125">
+    <animate attributeName="r" values="20.5;&#xA;32.5;&#xA;20.5" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_26" cx="118" cy="125">
+    <animate attributeName="r" values="20.76;&#xA;32.76;&#xA;20.76" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_25" cx="125" cy="125">
+    <animate attributeName="r" values="20.5;&#xA;32.5;&#xA;20.5" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_24" cx="132" cy="125">
+    <animate attributeName="r" values="20.24;&#xA;32.24;&#xA;20.24" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_23" cx="139" cy="125">
+    <animate attributeName="r" values="19.98;&#xA;31.98;&#xA;19.98" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="146" cy="125">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="153" cy="125">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="160" cy="125">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="167" cy="125">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="174" cy="125">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="181" cy="125">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="188" cy="125">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="195" cy="125">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="202" cy="125">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="209" cy="125">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="27" cy="132">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="34" cy="132">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="41" cy="132">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="48" cy="132">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="55" cy="132">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="62" cy="132">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="69" cy="132">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="76" cy="132">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="83" cy="132">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="90" cy="132">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="97" cy="132">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_23" cx="104" cy="132">
+    <animate attributeName="r" values="19.98;&#xA;31.98;&#xA;19.98" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_24" cx="111" cy="132">
+    <animate attributeName="r" values="20.24;&#xA;32.24;&#xA;20.24" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_25" cx="118" cy="132">
+    <animate attributeName="r" values="20.5;&#xA;32.5;&#xA;20.5" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_24" cx="125" cy="132">
+    <animate attributeName="r" values="20.24;&#xA;32.24;&#xA;20.24" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_23" cx="132" cy="132">
+    <animate attributeName="r" values="19.98;&#xA;31.98;&#xA;19.98" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="139" cy="132">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="146" cy="132">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="153" cy="132">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="160" cy="132">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="167" cy="132">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="174" cy="132">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="181" cy="132">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="188" cy="132">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="195" cy="132">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="202" cy="132">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="209" cy="132">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="27" cy="139">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="34" cy="139">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="41" cy="139">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="48" cy="139">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="55" cy="139">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="62" cy="139">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="69" cy="139">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="76" cy="139">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="83" cy="139">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="90" cy="139">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="97" cy="139">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="104" cy="139">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_23" cx="111" cy="139">
+    <animate attributeName="r" values="19.98;&#xA;31.98;&#xA;19.98" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_24" cx="118" cy="139">
+    <animate attributeName="r" values="20.24;&#xA;32.24;&#xA;20.24" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_23" cx="125" cy="139">
+    <animate attributeName="r" values="19.98;&#xA;31.98;&#xA;19.98" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="132" cy="139">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="139" cy="139">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="146" cy="139">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="153" cy="139">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="160" cy="139">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="167" cy="139">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="174" cy="139">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="181" cy="139">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="188" cy="139">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="195" cy="139">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="202" cy="139">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="209" cy="139">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="27" cy="146">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="34" cy="146">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="41" cy="146">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="48" cy="146">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="55" cy="146">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="62" cy="146">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="69" cy="146">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="76" cy="146">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="83" cy="146">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="90" cy="146">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="97" cy="146">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="104" cy="146">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="111" cy="146">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_23" cx="118" cy="146">
+    <animate attributeName="r" values="19.98;&#xA;31.98;&#xA;19.98" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="125" cy="146">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="132" cy="146">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="139" cy="146">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="146" cy="146">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="153" cy="146">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="160" cy="146">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="167" cy="146">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="174" cy="146">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="181" cy="146">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="188" cy="146">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="195" cy="146">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="202" cy="146">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="209" cy="146">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="27" cy="153">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="34" cy="153">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="41" cy="153">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="48" cy="153">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="55" cy="153">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="62" cy="153">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="69" cy="153">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="76" cy="153">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="83" cy="153">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="90" cy="153">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="97" cy="153">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="104" cy="153">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="111" cy="153">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_22" cx="118" cy="153">
+    <animate attributeName="r" values="19.72;&#xA;31.72;&#xA;19.72" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="125" cy="153">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="132" cy="153">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="139" cy="153">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="146" cy="153">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="153" cy="153">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="160" cy="153">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="167" cy="153">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="174" cy="153">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="181" cy="153">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="188" cy="153">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="195" cy="153">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="202" cy="153">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="209" cy="153">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="27" cy="160">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="34" cy="160">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="41" cy="160">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="48" cy="160">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="55" cy="160">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="62" cy="160">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="69" cy="160">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="76" cy="160">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="83" cy="160">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="90" cy="160">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="97" cy="160">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="104" cy="160">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="111" cy="160">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_21" cx="118" cy="160">
+    <animate attributeName="r" values="19.46;&#xA;31.46;&#xA;19.46" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="125" cy="160">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="132" cy="160">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="139" cy="160">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="146" cy="160">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="153" cy="160">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="160" cy="160">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="167" cy="160">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="174" cy="160">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="181" cy="160">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="188" cy="160">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="195" cy="160">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="202" cy="160">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="209" cy="160">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="27" cy="167">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="34" cy="167">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="41" cy="167">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="48" cy="167">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="55" cy="167">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="62" cy="167">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="69" cy="167">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="76" cy="167">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="83" cy="167">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="90" cy="167">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="97" cy="167">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="104" cy="167">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="111" cy="167">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_20" cx="118" cy="167">
+    <animate attributeName="r" values="19.2;&#xA;31.2;&#xA;19.2" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="125" cy="167">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="132" cy="167">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="139" cy="167">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="146" cy="167">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="153" cy="167">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="160" cy="167">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="167" cy="167">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="174" cy="167">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="181" cy="167">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="188" cy="167">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="195" cy="167">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="202" cy="167">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="209" cy="167">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="27" cy="174">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="34" cy="174">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="41" cy="174">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="48" cy="174">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="55" cy="174">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="62" cy="174">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="69" cy="174">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="76" cy="174">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="83" cy="174">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="90" cy="174">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="97" cy="174">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="104" cy="174">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="111" cy="174">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_19" cx="118" cy="174">
+    <animate attributeName="r" values="18.94;&#xA;30.94;&#xA;18.94" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="125" cy="174">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="132" cy="174">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="139" cy="174">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="146" cy="174">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="153" cy="174">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="160" cy="174">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="167" cy="174">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="174" cy="174">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="181" cy="174">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="188" cy="174">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="195" cy="174">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="202" cy="174">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="209" cy="174">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="27" cy="181">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="34" cy="181">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="41" cy="181">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="48" cy="181">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="55" cy="181">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="62" cy="181">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="69" cy="181">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="76" cy="181">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="83" cy="181">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="90" cy="181">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="97" cy="181">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="104" cy="181">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="111" cy="181">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_18" cx="118" cy="181">
+    <animate attributeName="r" values="18.68;&#xA;30.68;&#xA;18.68" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="125" cy="181">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="132" cy="181">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="139" cy="181">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="146" cy="181">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="153" cy="181">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="160" cy="181">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="167" cy="181">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="174" cy="181">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="181" cy="181">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="188" cy="181">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="195" cy="181">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="202" cy="181">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="209" cy="181">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_4" cx="27" cy="188">
+    <animate attributeName="r" values="15.04;&#xA;27.04;&#xA;15.04" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="34" cy="188">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="41" cy="188">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="48" cy="188">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="55" cy="188">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="62" cy="188">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="69" cy="188">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="76" cy="188">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="83" cy="188">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="90" cy="188">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="97" cy="188">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="104" cy="188">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="111" cy="188">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_17" cx="118" cy="188">
+    <animate attributeName="r" values="18.42;&#xA;30.42;&#xA;18.42" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="125" cy="188">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="132" cy="188">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="139" cy="188">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="146" cy="188">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="153" cy="188">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="160" cy="188">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="167" cy="188">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="174" cy="188">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="181" cy="188">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="188" cy="188">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="195" cy="188">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="202" cy="188">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_4" cx="209" cy="188">
+    <animate attributeName="r" values="15.04;&#xA;27.04;&#xA;15.04" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_3" cx="27" cy="195">
+    <animate attributeName="r" values="14.78;&#xA;26.78;&#xA;14.78" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_4" cx="34" cy="195">
+    <animate attributeName="r" values="15.04;&#xA;27.04;&#xA;15.04" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="41" cy="195">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="48" cy="195">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="55" cy="195">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="62" cy="195">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="69" cy="195">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="76" cy="195">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="83" cy="195">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="90" cy="195">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="97" cy="195">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="104" cy="195">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="111" cy="195">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_16" cx="118" cy="195">
+    <animate attributeName="r" values="18.16;&#xA;30.16;&#xA;18.16" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="125" cy="195">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="132" cy="195">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="139" cy="195">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="146" cy="195">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="153" cy="195">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="160" cy="195">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="167" cy="195">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="174" cy="195">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="181" cy="195">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="188" cy="195">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="195" cy="195">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_4" cx="202" cy="195">
+    <animate attributeName="r" values="15.04;&#xA;27.04;&#xA;15.04" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_3" cx="209" cy="195">
+    <animate attributeName="r" values="14.78;&#xA;26.78;&#xA;14.78" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_2" cx="27" cy="202">
+    <animate attributeName="r" values="14.52;&#xA;26.52;&#xA;14.52" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_3" cx="34" cy="202">
+    <animate attributeName="r" values="14.78;&#xA;26.78;&#xA;14.78" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_4" cx="41" cy="202">
+    <animate attributeName="r" values="15.04;&#xA;27.04;&#xA;15.04" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="48" cy="202">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="55" cy="202">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="62" cy="202">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="69" cy="202">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="76" cy="202">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="83" cy="202">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="90" cy="202">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="97" cy="202">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="104" cy="202">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="111" cy="202">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_15" cx="118" cy="202">
+    <animate attributeName="r" values="17.9;&#xA;29.9;&#xA;17.9" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="125" cy="202">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="132" cy="202">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="139" cy="202">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="146" cy="202">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="153" cy="202">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="160" cy="202">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="167" cy="202">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="174" cy="202">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="181" cy="202">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="188" cy="202">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_4" cx="195" cy="202">
+    <animate attributeName="r" values="15.04;&#xA;27.04;&#xA;15.04" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_3" cx="202" cy="202">
+    <animate attributeName="r" values="14.78;&#xA;26.78;&#xA;14.78" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_2" cx="209" cy="202">
+    <animate attributeName="r" values="14.52;&#xA;26.52;&#xA;14.52" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_1" cx="27" cy="209">
+    <animate attributeName="r" values="14.26;&#xA;26.26;&#xA;14.26" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_2" cx="34" cy="209">
+    <animate attributeName="r" values="14.52;&#xA;26.52;&#xA;14.52" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_3" cx="41" cy="209">
+    <animate attributeName="r" values="14.78;&#xA;26.78;&#xA;14.78" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_4" cx="48" cy="209">
+    <animate attributeName="r" values="15.04;&#xA;27.04;&#xA;15.04" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="55" cy="209">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="62" cy="209">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="69" cy="209">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="76" cy="209">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="83" cy="209">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="90" cy="209">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="97" cy="209">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="104" cy="209">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="111" cy="209">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_14" cx="118" cy="209">
+    <animate attributeName="r" values="17.64;&#xA;29.64;&#xA;17.64" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_13" cx="125" cy="209">
+    <animate attributeName="r" values="17.38;&#xA;29.38;&#xA;17.38" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_12" cx="132" cy="209">
+    <animate attributeName="r" values="17.12;&#xA;29.12;&#xA;17.12" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_11" cx="139" cy="209">
+    <animate attributeName="r" values="16.86;&#xA;28.86;&#xA;16.86" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_10" cx="146" cy="209">
+    <animate attributeName="r" values="16.6;&#xA;28.6;&#xA;16.6" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_9" cx="153" cy="209">
+    <animate attributeName="r" values="16.34;&#xA;28.34;&#xA;16.34" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_8" cx="160" cy="209">
+    <animate attributeName="r" values="16.08;&#xA;28.08;&#xA;16.08" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_7" cx="167" cy="209">
+    <animate attributeName="r" values="15.82;&#xA;27.82;&#xA;15.82" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_6" cx="174" cy="209">
+    <animate attributeName="r" values="15.56;&#xA;27.56;&#xA;15.56" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_5" cx="181" cy="209">
+    <animate attributeName="r" values="15.3;&#xA;27.3;&#xA;15.3" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_4" cx="188" cy="209">
+    <animate attributeName="r" values="15.04;&#xA;27.04;&#xA;15.04" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_3" cx="195" cy="209">
+    <animate attributeName="r" values="14.78;&#xA;26.78;&#xA;14.78" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_2" cx="202" cy="209">
+    <animate attributeName="r" values="14.52;&#xA;26.52;&#xA;14.52" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <circle class="circle_1" cx="209" cy="209">
+    <animate attributeName="r" values="14.26;&#xA;26.26;&#xA;14.26" dur="30s" repeatCount="indefinite"/>
+  </circle>
+</svg>

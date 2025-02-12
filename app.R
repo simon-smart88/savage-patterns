@@ -32,6 +32,17 @@ ui <- page_navbar(
       ),
       div(class = "svg_container", uiOutput("svgout"))
     )),
+
+  nav_panel("Gallery",
+            layout_columns(
+              col_widths = breakpoints(
+                sm = c(12),
+                md = c(-2, 8, -2),
+                lg = c(-3, 6, -3)
+              ),
+              gallery_module_ui("gallery"),
+            )
+  ),
   nav_panel("About",
     layout_columns(
       col_widths = breakpoints(
@@ -57,6 +68,8 @@ server <- function(input, output, session){
     do.call(get(paste0(module, "_module_server")),
             args = list(module, patterns, reactive(input$module)))
   })
+
+  gallery_module_server("gallery")
 
   # send to UI
   output$svgout <- renderUI({

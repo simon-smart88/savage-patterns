@@ -34,14 +34,14 @@ ui <- page_navbar(
     )),
 
   nav_panel("Gallery",
-            layout_columns(
-              col_widths = breakpoints(
-                sm = c(12),
-                md = c(-2, 8, -2),
-                lg = c(-3, 6, -3)
-              ),
-              gallery_module_ui("gallery"),
-            )
+    layout_columns(
+      col_widths = breakpoints(
+        sm = c(12),
+        md = c(-2, 8, -2),
+        lg = c(-3, 6, -3)
+      ),
+      gallery_module_ui("gallery"),
+    )
   ),
   nav_panel("About",
     layout_columns(

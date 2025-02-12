@@ -29,16 +29,17 @@ tagList(
     img(src = "photoshop.png"),
     p("Untitled (2003)", class = "caption"),
   h2("Illustrator"),
-    markdown("Finding out about the vector-based Illustrator was a revelation! Now I could create huge pieces with sharp
-             lines to my hearts content! But I was still painstakingly drawing a lot of shapes by hand and copy and pasting
-             to create more complex pieces. Whilst the file sizes were smaller than in Photoshop, this one still contains
-             80,000 lines of code to generate it."),
+    markdown("After finishing school, I found out about the vector-based Illustrator and it was a revelation! Now I could
+             create huge pieces with sharp lines to my hearts content! But I was still painstakingly drawing a lot of shapes
+             by hand and copy and pasting to create more complex pieces. Whilst the file sizes were smaller than in Photoshop,
+             this piece still contains 80,000 lines of code to generate it."),
     img(src = "illustrator.svg"),
   h2("Flash"),
     markdown("At some point I learnt about Flash and for the first time could make animations which definitely took things to
              the next level. I can't remember much about how I created them any more but it was still laborious and
              since then Flash has been deprecated. Shout out to <a href=https://ruffle.rs/ target='_blank'>Ruffle</a>
-             for bringing this back from the dead!"),
+             for bringing this back from the dead! (You can earn a pint if you can show me how to make this the same size as
+             the other pieces.)"),
   tags$head(
     tags$script(src = "https://unpkg.com/@ruffle-rs/ruffle")
   ),
@@ -69,8 +70,18 @@ tagList(
              the output from the console."),
     img(src = "python.svg"),
     p("Shades of the rainbow (2014)", class = "caption"),
-  h2("Now")
-
+  h2("Now"),
+    markdown("I'd had a long hiatus where I hadn't done anything new for almost 10 years until 2024, when I noticed the
+             <a href=https://bsky.app/search?q=%23rtistry target='_blank'>Rtistry tag</a> on social media which got me thinking
+             about what it might be possible to achieve. The app is built with
+             <a href=https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/ target='_blank'>R shiny</a>
+             which is mainly used for data-centric applications, but the tools allow creating any html elements you like, including
+             svg. The basic principle is to create a matrix containing a pattern and then apply that to a function which generates
+             the svg. It uses css variables that are updated using javascript to adjust the colours on-the-fly and javascript to
+             capture the svg as presented to the user to download.
+             <a href=https://github.com/simon-smart88/savage-patterns target='_blank'>The source code is on GitHub.</a>"),
+  br(),
+  br(),
+  br()
 )
-
 }

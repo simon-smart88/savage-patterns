@@ -1,15 +1,15 @@
 about_module_ui <- function(id){
 tagList(
-  tags$head(tags$style(
-    '
-    .caption {
+  tags$head(
+    tags$style(
+    '.caption {
       margin-top: 0px;
       font-style: italic;
       color: #555;
       text-align: right;
-    }
-    '
-  )),
+    }'),
+    tags$script(src = "https://unpkg.com/@ruffle-rs/ruffle")
+    ),
   h1("About"),
     markdown("I have been making art for over 20 years now and this app is the latest iteration of many
              different methods that I've used over the years as my knowledge of different technologies has changed.
@@ -20,36 +20,49 @@ tagList(
             The difficulty with painting is that it is slow, expensive, messy and you need an army of technicians to do it well."),
     img(src = "painting.JPG"),
     p("Untitled (2003)", class = "caption"),
+  h2("Paint"),
+  markdown("Putting this together, I found this forgotten piece buried on my hard drive and I presumably made it in Paint based on it being
+           a bitmap. It must be one of the earliest pieces of digital art I ever made and at that point Paint was the best technology I had.
+           Paint was obviously not well-suited to the kinds of patterns I wanted to create though."),
+  img(src = "blue red yello.bmp"),
+  p("Blue red yello (2003)", class = "caption"),
   h2("Photoshop"),
-    markdown("Still at school I started using the only drawing technology I knew about to make patterns - Photoshop.
-              This was definitely an improvement on painting, but I was still drawing each shape by hand and a pixel-based
-              system was wholly inappropriate when I wanted sharp lines. This is a screenshot of part of a piece imitating
-              pieces like <a href=https://www.wikiart.org/en/victor-vasarely/vega-200-1968 target='_blank'>Victor Vasarely's Vega (1968)</a> to demonstrate
-              the problem."),
+    markdown("At school I started using the Photoshop which was definitely an improvement on both physical painting and digital Painting,
+              but I was still drawing each shape by hand and a pixel-based system was wholly inappropriate when I wanted sharp lines.
+              This is a screenshot of part of a piece imitating pieces like
+              <a href=https://www.wikiart.org/en/victor-vasarely/vega-200-1968 target='_blank'>Victor Vasarely's Vega (1968)</a>
+              to demonstrate the problem."),
     img(src = "photoshop.png"),
-    p("Untitled (2003)", class = "caption"),
+    p("2 (2007)", class = "caption"),
   h2("Illustrator"),
     markdown("After finishing school, I found out about the vector-based Illustrator and it was a revelation! Now I could
              create huge pieces with sharp lines to my hearts content! But I was still painstakingly drawing a lot of shapes
-             by hand and copy and pasting to create more complex pieces. Whilst the file sizes were smaller than in Photoshop,
-             this piece still contains 80,000 lines of code to generate it."),
-    img(src = "illustrator.svg"),
+             by hand and copy, pasting and transforming to create more complex pieces. Whilst the file sizes were smaller than
+             in Photoshop, I was mostly saving as pdfs which are brilliant as you can see below. I really wanted to animate them but
+             didn't know how (I actually screenshotted some to create videos that seem to have been lost)."),
+  tags$iframe(
+    src = "illustrator.pdf",
+    style = "width: 100%; height: 50vh; border: none;"
+  ),
+  p("Big2lines sq4 zoom3 (2008)", class = "caption"),
   h2("Flash"),
     markdown("At some point I learnt about Flash and for the first time could make animations which definitely took things to
              the next level. I can't remember much about how I created them any more but it was still laborious and
              since then Flash has been deprecated. Shout out to <a href=https://ruffle.rs/ target='_blank'>Ruffle</a>
              for bringing this back from the dead! (You can earn a pint if you can show me how to make this the same size as
              the other pieces.)"),
-  tags$head(
-    tags$script(src = "https://unpkg.com/@ruffle-rs/ruffle")
-  ),
     tags$object(id = "swf-container", data = "flash.swf", type = "application/x-shockwave-flash", width = "100%", height = "auto",
-                tags$param(name="allowScriptAccess", value = "always")
-  ),
+                tags$param(name="allowScriptAccess", value = "always")),
+    p("Oval waves of blue2 half (2008)", class = "caption"),
   h2("SVGs"),
     markdown("My web designer brother kindly pointed out to me that scalable vector graphics (.svg) would be a good format to use and
-             it turned out I could export them from Illustrator. Being able to see the files as code was another revelation and I
-             started to learn about the syntax for creating SVGs myself rather than using Illustator."),
+             it turned out I could export them from Illustrator. This piece still contains 80,000 lines of code to generate it through.
+             Being able to see the files as code was another revelation and I started to learn about the syntax for creating SVGs
+             myself rather than using Illustator."),
+
+    img(src = "illustrator.svg"),
+    p("Rotated grid (2011)", class = "caption"),
+
   h3("Animations"),
     markdown("Looking around the web I found some great resources made by
     <a href=https://www.petercollingridge.co.uk/ target='_blank'>Peter Collingridge</a>
@@ -72,7 +85,7 @@ tagList(
     p("Shades of the rainbow (2014)", class = "caption"),
   h2("Now"),
     markdown("I'd had a long hiatus where I hadn't done anything new for almost 10 years until 2024, when I noticed the
-             <a href=https://bsky.app/search?q=%23rtistry target='_blank'>Rtistry tag</a> on social media which got me thinking
+             <a href='https://bsky.app/search?q=%23rtistry' target='_blank'>#Rtistry tag</a> on social media which got me thinking
              about what it might be possible to achieve. The app is built with
              <a href=https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/ target='_blank'>R shiny</a>
              which is mainly used for data-centric applications, but the tools allow creating any html elements you like, including

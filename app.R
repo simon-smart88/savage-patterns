@@ -70,6 +70,7 @@ server <- function(input, output, session){
   })
 
   gallery_module_server("gallery")
+  about_module_server("about")
 
   # send to UI
   output$svgout <- renderUI({

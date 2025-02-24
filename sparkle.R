@@ -7,15 +7,20 @@ ui <- fluidPage(
     sidebarPanel(
       sliderInput("canvas_size", "Pixels per side", value = 100, min = 100, max = 1000, step = 5),
       sliderInput("pixel_percent", "Percentage of pixels to update", value = 1, min = 0.1, max = 100, step= 0.1),
-      sliderInput("r_range", "Red range", value = 256, min = 1, max = 256, step = 1),
-      sliderInput("g_range", "Green range", value = 256, min = 1, max = 256, step = 1),
-      sliderInput("b_range", "Blue range", value = 256, min = 1, max = 256, step = 1),
+      sliderInput("r_range", "Red range", value = 128, min = 1, max = 256, step = 1),
+      sliderInput("g_range", "Green range", value = 128, min = 1, max = 256, step = 1),
+      sliderInput("b_range", "Blue range", value = 128, min = 1, max = 256, step = 1),
+      sliderInput("alpha", "Transparency", value = 128, min = 1, max = 256, step = 1),
       sliderInput("colour_step", "Colour speed", value = 5, min = 1, max = 25, step = 1)
+
+      # have a prob of being affected by colour rules
+      # make rules to oscillate the colour ranges (and others)
+
     ),
     mainPanel(
       tags$div(
         id = "canvas-container",
-        style = "width: 100vh; height: 100vh; overflow: hidden; border: 1px solid black;",
+        style = "width: 95vh; height: 95vh; overflow: hidden; border: 1px solid black;",
         tags$canvas(
           id = "myCanvas",
           width = 100,
@@ -29,9 +34,10 @@ ui <- fluidPage(
 
         let width = 100;
         let height = 100;
-        let r_range = 256;
-        let g_range = 256;
-        let b_range = 256;
+        let r_range = 128;
+        let g_range = 128;
+        let b_range = 128;
+        let alpha = 128;
         let pixelUpdatePercent = 10;
         let imageData = ctx.createImageData(width, height);
 
@@ -41,7 +47,7 @@ ui <- fluidPage(
                 imageData.data[i] = Math.floor(Math.random() * r_range);
                 imageData.data[i + 1] = Math.floor(Math.random() * g_range);
                 imageData.data[i + 2] = Math.floor(Math.random() * b_range);
-                imageData.data[i + 3] = 255;
+                imageData.data[i + 3] = Math.floor(Math.random() * alpha);
             }
         }
 
@@ -75,7 +81,7 @@ ui <- fluidPage(
                 imageData.data[index] = Math.floor(Math.random() * r_range);
                 imageData.data[index + 1] = Math.floor(Math.random() * g_range);
                 imageData.data[index + 2] = Math.floor(Math.random() * b_range);
-                imageData.data[index + 3] = 255;
+                imageData.data[index + 3] = Math.floor(Math.random() * alpha);
             }
 
             ctx.putImageData(imageData, 0, 0);
@@ -107,55 +113,31 @@ ui <- fluidPage(
         $(document).on('input', '#b_range', function() {
             b_range = $('#b_range').val();
         });
+        $(document).on('input', '#alpha', function() {
+            alpha = $('#alpha').val();
+        });
 
+        // Track currently pressed keys
+        const pressedKeys = new Set();
 
+        // Add keys to the set on keydown
+        $(document).on('keydown', function(e) {
+            pressedKeys.add(e.key);
+        });
 
-// Track currently pressed keys
-const pressedKeys = new Set();
+        // Remove keys from the set on keyup
+        $(document).on('keyup', function(e) {
+            pressedKeys.delete(e.key);
+        });
 
-// Add keys to the set on keydown
-$(document).on('keydown', function(e) {
-    pressedKeys.add(e.key);
-});
-
-// Remove keys from the set on keyup
-$(document).on('keyup', function(e) {
-    pressedKeys.delete(e.key);
-});
-
-// Periodically check for pressed keys and trigger actions
-setInterval(function() {
-    if (pressedKeys.has('z')) {
-        Shiny.onInputChange('z_key', new Date().getTime());
-    }
-    if (pressedKeys.has('x')) {
-        Shiny.onInputChange('x_key', new Date().getTime());
-    }
-    if (pressedKeys.has('o')) {
-        Shiny.onInputChange('o_key', new Date().getTime());
-    }
-    if (pressedKeys.has('p')) {
-        Shiny.onInputChange('p_key', new Date().getTime());
-    }
-    if (pressedKeys.has('r')) {
-        Shiny.onInputChange('r_key', new Date().getTime());
-    }
-    if (pressedKeys.has('t')) {
-        Shiny.onInputChange('t_key', new Date().getTime());
-    }
-    if (pressedKeys.has('g')) {
-        Shiny.onInputChange('g_key', new Date().getTime());
-    }
-    if (pressedKeys.has('h')) {
-        Shiny.onInputChange('h_key', new Date().getTime());
-    }
-    if (pressedKeys.has('b')) {
-        Shiny.onInputChange('b_key', new Date().getTime());
-    }
-    if (pressedKeys.has('n')) {
-        Shiny.onInputChange('n_key', new Date().getTime());
-    }
-}, 50); // Check every 50ms
+        // Periodically check for pressed keys and trigger actions
+        setInterval(function() {
+          ['z', 'x', 'o', 'p', 'r', 't', 'g', 'h', 'b', 'n'].forEach(key => {
+            if (pressedKeys.has(key)) {
+              Shiny.onInputChange(`${key}_key`, new Date().getTime());
+            }
+          });
+        }, 50);
 
       "))
     )

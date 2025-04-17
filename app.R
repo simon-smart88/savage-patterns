@@ -53,6 +53,9 @@ ui <- page_navbar(
       about_module_ui("about"),
     )
   ),
+  nav_panel("In progress",
+    sparkle_module_ui("sparkle"),
+  ),
   theme = bs_theme(version = 5, "simplex",
                    primary = "#e4401b",
                    info = "#eae5e5"),
@@ -71,6 +74,7 @@ server <- function(input, output, session){
 
   gallery_module_server("gallery")
   about_module_server("about")
+  sparkle_module_server("sparkle")
 
   # send to UI
   output$svgout <- renderUI({

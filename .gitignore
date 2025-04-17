@@ -2,6 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-debug.Rmd
+debug*
 .Rproj
 .DS_Store

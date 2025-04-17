@@ -93,7 +93,7 @@ square_module_server <- function(id, patterns, module){
       accordion_panel_open("acc", c("Colour"))
     })
 
-    # function to generate svg circle
+    # function to generate svg rectangle
     svg_rect <- function(matrix, reps, bulge, internal, speed){
 
       # + 0.5 to avoid white lines

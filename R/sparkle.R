@@ -174,7 +174,57 @@ sparkle_module_ui <- function(id){
         });
 
 
+// Create an audio context (suspended by default)
+// let audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
+// Create oscillators for each channel
+let r_oscillator, g_oscillator, b_oscillator;
+let r_gainNode, g_gainNode, b_gainNode;
+
+// Function to initialize oscillators and gain nodes
+function initializeOscillators() {
+  // Create oscillators
+  r_oscillator = audioContext.createOscillator();
+  g_oscillator = audioContext.createOscillator();
+  b_oscillator = audioContext.createOscillator();
+
+  // Create gain nodes
+  r_gainNode = audioContext.createGain();
+  g_gainNode = audioContext.createGain();
+  b_gainNode = audioContext.createGain();
+
+  // Set oscillator types to sine wave
+  r_oscillator.type = 'sine';
+  g_oscillator.type = 'sine';
+  b_oscillator.type = 'sine';
+
+  // Connect oscillators to gain nodes and gain nodes to the audio context destination (speakers)
+  r_oscillator.connect(r_gainNode).connect(audioContext.destination);
+  g_oscillator.connect(g_gainNode).connect(audioContext.destination);
+  b_oscillator.connect(b_gainNode).connect(audioContext.destination);
+
+  // Start the oscillators
+  r_oscillator.start();
+  g_oscillator.start();
+  b_oscillator.start();
+}
+
+// Function to update oscillator frequencies and gains
+function updateOscillators() {
+  if (!r_oscillator || !g_oscillator || !b_oscillator) return; // Ensure oscillators are initialized
+
+  // Update red channel
+  r_oscillator.frequency.setValueAtTime(r_frequency, audioContext.currentTime);
+  r_gainNode.gain.setValueAtTime(r_amplitude / 256, audioContext.currentTime); // Normalize amplitude to [0, 1]
+
+  // Update green channel
+  g_oscillator.frequency.setValueAtTime(g_frequency, audioContext.currentTime);
+  g_gainNode.gain.setValueAtTime(g_amplitude / 256, audioContext.currentTime); // Normalize amplitude to [0, 1]
+
+  // Update blue channel
+  b_oscillator.frequency.setValueAtTime(b_frequency, audioContext.currentTime);
+  b_gainNode.gain.setValueAtTime(b_amplitude / 256, audioContext.currentTime); // Normalize amplitude to [0, 1]
+}
 
             initializeOscillators(); // Initialize oscillators after resuming
 
@@ -227,54 +277,4 @@ sparkle_module_server <- function(id, patterns, module){
 )}
 
 
-# // Create an audio context (suspended by default)
-# let audioContext = new (window.AudioContext || window.webkitAudioContext)();
-#
-# // Create oscillators for each channel
-# let r_oscillator, g_oscillator, b_oscillator;
-# let r_gainNode, g_gainNode, b_gainNode;
-#
-# // Function to initialize oscillators and gain nodes
-# function initializeOscillators() {
-#   // Create oscillators
-#   r_oscillator = audioContext.createOscillator();
-#   g_oscillator = audioContext.createOscillator();
-#   b_oscillator = audioContext.createOscillator();
-#
-#   // Create gain nodes
-#   r_gainNode = audioContext.createGain();
-#   g_gainNode = audioContext.createGain();
-#   b_gainNode = audioContext.createGain();
-#
-#   // Set oscillator types to sine wave
-#   r_oscillator.type = 'sine';
-#   g_oscillator.type = 'sine';
-#   b_oscillator.type = 'sine';
-#
-#   // Connect oscillators to gain nodes and gain nodes to the audio context destination (speakers)
-#   r_oscillator.connect(r_gainNode).connect(audioContext.destination);
-#   g_oscillator.connect(g_gainNode).connect(audioContext.destination);
-#   b_oscillator.connect(b_gainNode).connect(audioContext.destination);
-#
-#   // Start the oscillators
-#   r_oscillator.start();
-#   g_oscillator.start();
-#   b_oscillator.start();
-# }
-#
-# // Function to update oscillator frequencies and gains
-# function updateOscillators() {
-#   if (!r_oscillator || !g_oscillator || !b_oscillator) return; // Ensure oscillators are initialized
-#
-#   // Update red channel
-#   r_oscillator.frequency.setValueAtTime(r_frequency, audioContext.currentTime);
-#   r_gainNode.gain.setValueAtTime(r_amplitude / 256, audioContext.currentTime); // Normalize amplitude to [0, 1]
-#
-#   // Update green channel
-#   g_oscillator.frequency.setValueAtTime(g_frequency, audioContext.currentTime);
-#   g_gainNode.gain.setValueAtTime(g_amplitude / 256, audioContext.currentTime); // Normalize amplitude to [0, 1]
-#
-#   // Update blue channel
-#   b_oscillator.frequency.setValueAtTime(b_frequency, audioContext.currentTime);
-#   b_gainNode.gain.setValueAtTime(b_amplitude / 256, audioContext.currentTime); // Normalize amplitude to [0, 1]
-# }
+

@@ -185,6 +185,8 @@ line_module_server <- function(id, patterns, module){
 
     # apply to the function
     element_mat <- matrix(c(outer_x_set, inner_x1_set, outer_y_set, inner_y1_set, inner_x2_set, inner_y2_set, side_index), ncol = 7)
+    # randomly arrange to avoid layering
+    element_mat <- element_mat[sample(nrow(element_mat)),]
     elements <- apply(element_mat, 1, svg_line,
                       speed = input$speed)
 

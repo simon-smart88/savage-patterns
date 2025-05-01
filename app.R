@@ -15,10 +15,11 @@ ui <- page_navbar(
       sidebar = sidebar(
 
         # buttons for selecting module
-        radioGroupButtons("module", "Choose a pattern",
-                          choices = modules, justified = TRUE,
-                          size = "lg", status = "info"),
-
+        div(class = "title",
+          radioGroupButtons("module", "Choose a pattern",
+                            choices = modules, justified = TRUE,
+                            size = "lg", status = "info")
+        ),
         # call all the module UI inside conditional panels
         do.call(tagList, lapply(modules, function(module) {
           conditionalPanel(
@@ -32,7 +33,6 @@ ui <- page_navbar(
       ),
       div(class = "svg_container", uiOutput("svgout"))
     )),
-
   nav_panel("Gallery",
     layout_columns(
       col_widths = breakpoints(

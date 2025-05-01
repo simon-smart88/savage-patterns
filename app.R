@@ -14,12 +14,11 @@ ui <- page_navbar(
     shinyjs::useShinyjs(),
     layout_sidebar(
       sidebar = sidebar(
-
         # buttons for selecting module
         div(class = "title",
-          radioGroupButtons("module", "Choose a pattern",
-                            choices = modules, justified = TRUE,
-                            size = "lg", status = "info")
+            radioGroupButtons("module", "Choose a pattern",
+                              choices = modules, justified = TRUE,
+                              size = "lg", status = "info")
         ),
         # call all the module UI inside conditional panels
         do.call(tagList, lapply(modules, function(module) {
@@ -33,37 +32,38 @@ ui <- page_navbar(
         width = "400px",
       ),
       div(class = "svg_container", uiOutput("svgout"))
-    )),
-  nav_panel("Gallery",
-    layout_columns(
-      col_widths = breakpoints(
-        sm = c(12),
-        md = c(-2, 8, -2),
-        lg = c(-3, 6, -3)
-      ),
-      gallery_module_ui("gallery"),
     )
+  ),
+  nav_panel("Gallery",
+            layout_columns(
+              col_widths = breakpoints(
+                sm = c(12),
+                md = c(-2, 8, -2),
+                lg = c(-3, 6, -3)
+              ),
+              gallery_module_ui("gallery"),
+            )
   ),
   nav_panel("About",
-    layout_columns(
-      col_widths = breakpoints(
-        sm = c(12),
-        md = c(-2, 8, -2),
-        lg = c(-3, 6, -3)
-      ),
-      about_module_ui("about"),
-    )
+            layout_columns(
+              col_widths = breakpoints(
+                sm = c(12),
+                md = c(-2, 8, -2),
+                lg = c(-3, 6, -3)
+              ),
+              about_module_ui("about"),
+            )
   ),
   nav_panel("In progress",
-    sparkle_module_ui("sparkle"),
+            sparkle_module_ui("sparkle"),
   ),
+  # Theme, title, and head tags as parameters to page_navbar
   theme = bs_theme(version = 5, "simplex",
                    primary = "#e4401b",
                    info = "#eae5e5"),
   title = "Savage patterns",
-  tags$head(tags$link(href = "styles.css", rel = "stylesheet"))
+  header = tags$head(tags$link(href = "styles.css", rel = "stylesheet"))
 )
-
 server <- function(input, output, session){
 
   patterns <- reactiveValues()

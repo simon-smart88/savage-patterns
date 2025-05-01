@@ -22,7 +22,7 @@ ring_module_ui <- function(id){
         sliderInput(ns("space"),
                     span("Distance between circles",
                          tooltip(icon("info-circle"), "The distance between each circle")),
-                    value = 10, step = 1, min = 1, max = 30, ticks = FALSE)
+                    value = 10, step = 1, min = 5, max = 30, ticks = FALSE)
       ),
       accordion_panel("Animation",
         sliderInput(ns("breath"),
@@ -63,7 +63,7 @@ ring_module_server <- function(id, patterns, module){
       updateSliderInput(session, "radius", value = 9 + sample.int(41, size = 1))
       updateSliderInput(session, "bulge", value = sample.int(100, size = 1))
       updateSliderInput(session, "reps", value = 1 + sample.int(22, size = 1) * 2)
-      updateSliderInput(session, "space", value = sample.int(30, size = 1))
+      updateSliderInput(session, "space", value = 4 + sample.int(26, size = 1))
       updateSliderInput(session, "breath", value = 9 + sample.int(21, size = 1))
       updateSliderInput(session, "speed", value = 4 + sample.int(56, size = 1))
       updateSliderInput(session, "stroke", value = sample.int(10, size = 1)/10)

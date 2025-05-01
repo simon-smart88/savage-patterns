@@ -67,8 +67,8 @@ about_module_ui <- function(id){
     h3("Animations"),
       markdown("Looking around the web I found some great resources made by
       <a href=https://www.petercollingridge.co.uk/ target='_blank'>Peter Collingridge</a>
-      for animating SVGs using javascript. I had no idea what I was doing, but not I could copy some code into the file and make things
-      spin. The possibities were endless!"),
+      for animating SVGs using javascript. I had no idea what I was doing, but now I could copy some code into the file and make things
+      spin. The possibilities were endless!"),
       tags$object(type="image/svg+xml", data="scripting.svg"),
       p("Circle grid2 col (copy) script (2012)", class = "caption"),
     h3("Hand-coded"),

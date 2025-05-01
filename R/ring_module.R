@@ -50,7 +50,7 @@ ring_module_server <- function(id, patterns, module){
 
     init <- observe({
       if (module() == "ring"){
-        shinyjs::runjs("document.getElementById('ring_module-ring-random').click();")
+        shinyjs::runjs("document.getElementById('ring-ring-random').click();")
         init$destroy()
       }
     })

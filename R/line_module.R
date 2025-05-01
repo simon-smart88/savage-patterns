@@ -55,7 +55,7 @@ line_module_server <- function(id, patterns, module){
 
     init <- observe({
       if (module() == "line"){
-        shinyjs::runjs("document.getElementById('line_module-line-random').click();")
+        shinyjs::runjs("document.getElementById('line-line-random').click();")
         init$destroy()
       }
     })

@@ -51,7 +51,7 @@ square_module_server <- function(id, patterns, module){
 
     init <- observe({
       if (module() == "square"){
-        shinyjs::runjs("document.getElementById('square_module-square-random').click();")
+        shinyjs::runjs("document.getElementById('square-square-random').click();")
         init$destroy()
       }
     })

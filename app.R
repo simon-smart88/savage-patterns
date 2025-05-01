@@ -6,6 +6,7 @@ library(glue)
 library(shinyjs)
 
 modules <- gsub("_module.R", "", list.files("R/", "*module*"))
+modules <- sample(modules, length(modules))
 names(modules) <- paste0("<img src='", modules, "_icon.svg'>")
 
 ui <- page_navbar(
@@ -72,6 +73,11 @@ server <- function(input, output, session){
             args = list(module, patterns, reactive(input$module)))
   })
 
+  # randomise when a new pattern is selected
+  observeEvent(input$module, {
+    runjs(glue("document.getElementById('{input$module}-random').click();"))
+  })
+
   gallery_module_server("gallery")
   about_module_server("about")
   sparkle_module_server("sparkle")
@@ -89,7 +95,7 @@ server <- function(input, output, session){
       Shiny.setInputValue('svg', svgHTML, {priority: 'event', raw: true});
       setTimeout(function() {
         document.getElementById('download_h').click();
-      }, 50);
+      }, 100);
     ")
   })
 

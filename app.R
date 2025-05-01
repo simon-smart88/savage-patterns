@@ -87,7 +87,9 @@ server <- function(input, output, session){
       var elements = document.getElementsByTagName('svg')[0];
       var svgHTML = new XMLSerializer().serializeToString(elements);
       Shiny.setInputValue('svg', svgHTML, {priority: 'event', raw: true});
-      document.getElementById('download_h').click();
+      setTimeout(function() {
+        document.getElementById('download_h').click();
+      }, 50);
     ")
   })
 

@@ -95,7 +95,7 @@ server <- function(input, output, session){
       Shiny.setInputValue('svg', svgHTML, {priority: 'event', raw: true});
       setTimeout(function() {
         document.getElementById('download_h').click();
-      }, 100);
+      }, 1000);
     ")
   })
 

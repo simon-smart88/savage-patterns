@@ -7,7 +7,8 @@ sparkle_module_ui <- function(id){
       layout_sidebar(
         sidebar = sidebar(
         markdown("This is a work in progress, inspired by a <a href= http://www.timhead.net/art/art2000/81sce.htm target='_blank'>Tim Head piece</a> that was created by
-                 <a href= https://glowinthedark.co.uk/ target='_blank'>Paul Harter</a>. It uses Javascript to draw randomly-coloured squares on an HTML canvas."),
+                 <a href= https://glowinthedark.co.uk/ target='_blank'>Paul Harter</a>. It uses Javascript to draw randomly-coloured squares on an HTML canvas. You can
+                 change the probability of new pixels RGB values and make those changes oscillate."),
         accordion(
           multiple = FALSE,
           open = c("Pattern"),

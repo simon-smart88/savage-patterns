@@ -5,9 +5,9 @@ account: simonsmart
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11336375
-bundleId: 9119017
+bundleId: 10214336
 url: https://simonsmart.shinyapps.io/savage-patterns/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: debug.Rmd|output_file_filtered.wav
+ignoredFiles: debug.Rmd

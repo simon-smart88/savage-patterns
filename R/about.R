@@ -41,19 +41,22 @@ about_module_ui <- function(id){
                by hand and copy, pasting and transforming to create more complex pieces. Whilst the file sizes were smaller than
                in Photoshop, I was mostly saving as pdfs which are brilliant as you can see below. I really wanted to animate them but
                didn't know how (I actually screenshotted some to create videos that seem to have been lost)."),
-    tags$iframe(
-      src = "illustrator.pdf",
-      style = "width: 100%; height: 50vh; border: none;"
+    tags$div(class = "square_container",
+      tags$iframe(
+        src = "illustrator.pdf",
+        style = "width: 100%; height: 100%; border: none;"
+      )
     ),
     p("Big2lines sq4 zoom3 (2008)", class = "caption"),
     h2("Flash"),
       markdown("At some point I learnt about Flash and for the first time could make animations which definitely took things to
                the next level. I can't remember much about how I created them any more but it was still laborious and
                since then Flash has been deprecated. Shout out to <a href=https://ruffle.rs/ target='_blank'>Ruffle</a>
-               for bringing this back from the dead! (You can earn a pint if you can show me how to make this the same size as
-               the other pieces.)"),
-      tags$object(id = "swf-container", data = "flash.swf", type = "application/x-shockwave-flash", width = "100%", height = "auto",
-                  tags$param(name="allowScriptAccess", value = "always")),
+               for bringing this back from the dead!"),
+    tags$div(class = "square_container",
+      tags$object(id = "swf-container", data = "flash.swf", type = "application/x-shockwave-flash", width = "100%", height = "100%",
+                  tags$param(name="allowScriptAccess", value = "always"))
+    ),
       p("Oval waves of blue2 half (2008)", class = "caption"),
     h2("SVGs"),
       markdown("My web designer brother kindly pointed out to me that scalable vector graphics (.svg) would be a good format to use and

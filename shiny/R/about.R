@@ -19,13 +19,13 @@ about_module_ui <- function(id){
       markdown("Starting at school I did a lot of painting, this one is a pretty blatant imitation of
               <a href= https://www.tate.org.uk/art/artworks/riley-nataraja-t06859 target='_blank'>Bridget Riley\'s Nataraja (1993)</a>.
               The difficulty with painting is that it is slow, expensive, messy and you need an army of technicians to do it well."),
-      img(src = "painting.JPG"),
+      img(src = "https://raw.githubusercontent.com/simon-smart88/savage-patterns/main/images/painting.JPG"),
       p("Untitled (2003)", class = "caption"),
     h2("Paint"),
     markdown("Putting this together, I found this forgotten piece buried on my hard drive and I presumably made it in Paint based on it being
              a bitmap. It must be one of the earliest pieces of digital art I ever made and at that point Paint was the best technology I had.
              Paint was obviously not well-suited to the kinds of patterns I wanted to create though."),
-    img(src = "blue red yello.bmp"),
+    img(src = "https://raw.githubusercontent.com/simon-smart88/savage-patterns/main/images/blue red yello.bmp"),
     p("Blue red yello (2003)", class = "caption"),
     h2("Photoshop"),
       markdown("At school I started using the Photoshop which was definitely an improvement on both physical painting and digital Painting,
@@ -33,7 +33,7 @@ about_module_ui <- function(id){
                 This is a screenshot of part of a piece imitating pieces like
                 <a href=https://www.wikiart.org/en/victor-vasarely/vega-200-1968 target='_blank'>Victor Vasarely's Vega (1968)</a>
                 to demonstrate the problem."),
-      img(src = "photoshop.png"),
+      img(src = "https://raw.githubusercontent.com/simon-smart88/savage-patterns/main/images/photoshop.png"),
       p("2 (2007)", class = "caption"),
     h2("Illustrator"),
       markdown("After finishing school, I found out about the vector-based Illustrator and it was a revelation! Now I could
@@ -54,7 +54,7 @@ about_module_ui <- function(id){
                since then Flash has been deprecated. Shout out to <a href=https://ruffle.rs/ target='_blank'>Ruffle</a>
                for bringing this back from the dead!"),
     tags$div(class = "square_container",
-      tags$object(id = "swf-container", data = "flash.swf", type = "application/x-shockwave-flash", width = "100%", height = "100%",
+      tags$object(id = "swf-container", data = "https://raw.githubusercontent.com/simon-smart88/savage-patterns/main/images/flash.swf", type = "application/x-shockwave-flash", width = "100%", height = "100%",
                   tags$param(name="allowScriptAccess", value = "always"))
     ),
       p("Oval waves of blue2 half (2008)", class = "caption"),
@@ -64,7 +64,7 @@ about_module_ui <- function(id){
                Being able to see the files as code was another revelation and I started to learn about the syntax for creating SVGs
                myself rather than using Illustator."),
 
-      img(src = "illustrator.svg"),
+      img(src = "https://raw.githubusercontent.com/simon-smart88/savage-patterns/main/images/illustrator.svg"),
       p("Rotated grid (2011)", class = "caption"),
 
     h3("Animations"),
@@ -78,7 +78,7 @@ about_module_ui <- function(id){
       markdown("Next up I started creating SVGs from scratch in a text editor which was quite laborious but easier than drawing
                lines by hand. I also started to learn about styling SVGs using cascading style sheets (CSS) and using animations
                in SVGs directly rather than using javascript."),
-      img(src = "hand_coded.svg"),
+      img(src = "https://raw.githubusercontent.com/simon-smart88/savage-patterns/main/images/hand_coded.svg"),
       p("Old school (2012)", class = "caption"),
     h3("Python"),
       markdown("By this point I'd been writing scripts to analyse experimental data for a few years and was beginning to use python to
@@ -86,7 +86,7 @@ about_module_ui <- function(id){
                attempts are hilariously basic as I wasn't using any libraries and not even writing the results to a file, but copying
                the output from the console."),
       uiOutput(ns("python")),
-      img(src = "python.svg"),
+      img(src = "https://raw.githubusercontent.com/simon-smart88/savage-patterns/main/images/python.svg"),
       p("Shades of the rainbow (2014)", class = "caption"),
     h2("Now"),
       markdown("I'd had a long hiatus where I hadn't done anything new for almost 10 years until 2024, when I noticed the

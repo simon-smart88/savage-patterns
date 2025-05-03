@@ -4,6 +4,7 @@ library(shinyWidgets)
 library(htmltools)
 library(glue)
 library(shinyjs)
+library(colourpicker)
 
 modules <- gsub("_module.R", "", list.files("R/", "*module*"))
 modules <- sample(modules, length(modules))

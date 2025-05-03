@@ -13,7 +13,18 @@ gallery_module_ui <- function(id){
 gallery_module_server <- function(id) {
   moduleServer(id, function(input, output, session) {
 
-    files <- sample(list.files("www/gallery/"))
+    files <- sample(c("square_2025-02-05 20_24_22.svg", "ring_2025-02-05 20_09_42.svg",
+                      "square_2025-02-05 20_21_02.svg", "ring_2025-02-05 20_11_14.svg",
+                      "line_2025-02-05 20_45_09.svg", "square_2025-02-05 20_23_24.svg",
+                      "square_2025-02-05 20_27_13.svg", "square_2025-02-05 20_34_07.svg",
+                      "line_2025-02-05 20_45_36.svg", "line_2025-02-05 20_48_27.svg",
+                      "square_2025-02-05 20_19_41.svg", "line_2025-02-05 20_39_50.svg",
+                      "ring_2025-02-05 20_05_02.svg", "line_2025-02-05 20_44_31.svg",
+                      "line_2025-02-11 21_46_48.svg", "ring_2025-02-05 20_13_34.svg",
+                      "line_2025-02-05 20_37_19.svg", "line_2025-02-11 21_43_55.svg",
+                      "square_2025-02-05 20_32_54.svg", "line_2025-02-05 20_38_18.svg",
+                      "square_2025-02-05 20_30_27.svg", "line_2025-02-11 21_45_06.svg",
+                      "line_2025-02-05 20_50_03.svg"))
 
     index <- reactiveVal(1)
 
@@ -34,7 +45,7 @@ gallery_module_server <- function(id) {
     })
 
     output$gallery <- renderUI({
-      tags$img(src = paste0("gallery/", files[index()]))})
+      tags$img(src = paste0("https://raw.githubusercontent.com/simon-smart88/savage-patterns/main/images/gallery/", files[index()]))})
     })
 
 }

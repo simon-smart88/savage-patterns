@@ -1,5 +1,5 @@
 line_module_ui <- function(id){
-  ns <- shiny::NS(id)
+  ns <- NS(id)
   tagList(
     random_ui(ns("line")),
     accordion(
@@ -23,10 +23,10 @@ line_module_ui <- function(id){
                     span("Inner point offset",
                         tooltip(icon("info-circle"), "Move the lines to the inner points away from each other towards the nearest outer edge")),
                     value = 50, step = 1, min = 0, max = 80, ticks = FALSE),
-        shinyWidgets::materialSwitch(ns("zoom"),
-                                     span("Only view inner points",
-                                        tooltip(icon("info-circle"), "Toggle this to crop the pattern so that only the inner points are visible")),
-                                     value = FALSE)
+        materialSwitch(ns("zoom"),
+                       span("Only view inner points",
+                          tooltip(icon("info-circle"), "Toggle this to crop the pattern so that only the inner points are visible")),
+                       value = FALSE)
       ),
       accordion_panel("Animation",
         sliderInput(ns("breath"),
@@ -55,7 +55,7 @@ line_module_server <- function(id, patterns, module){
 
     init <- observe({
       if (module() == "line"){
-        shinyjs::runjs("document.getElementById('line-line-random').click();")
+        runjs("document.getElementById('line-line-random').click();")
         init$destroy()
       }
     })
@@ -96,33 +96,33 @@ line_module_server <- function(id, patterns, module){
     })
 
     observe({
-      shinyjs::runjs(glue("
+      runjs(glue("
       document.getElementById('pattern').style.setProperty('--stroke', '{input$stroke / 100}');"))
     })
 
     observe({
-      shinyjs::runjs(glue("
+      runjs(glue("
       document.getElementById('pattern').style.setProperty('--colour_1', '{colour$colour_1()}');
       document.getElementById('pattern').style.setProperty('--colour_2', '{colour$colour_2()}');
       document.getElementById('pattern').style.setProperty('--colour_3', '{colour$colour_3()}');"))
     })
 
     observe({
-      shinyjs::runjs(glue("
+      runjs(glue("
       document.getElementById('pattern').style.setProperty('--opacity_start', '{input$opacity[1] / 100}');
       document.getElementById('pattern').style.setProperty('--opacity_mid', '{mean(input$opacity) / 100}');
       document.getElementById('pattern').style.setProperty('--opacity_end', '{input$opacity[2] / 100}');"))
     })
 
     observe({
-      shinyjs::runjs(glue("
+      runjs(glue("
       document.getElementById('pattern').style.setProperty('--stroke', '{input$stroke / 100}');"))
     })
 
     svg_line <- function(x, speed){
       tags$line(
         x1 = x[1], x2 = x[2], y1 = x[3], y2 = x[4],
-        stroke = glue::glue("url(#gradient-opacity{x[7]})"),
+        stroke = glue("url(#gradient-opacity{x[7]})"),
         tags$animate(
           attributeName = "x2",
           values = glue("{x[2]}; {x[5]}; {x[2]}"),

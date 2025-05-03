@@ -1,3 +1,5 @@
+library(colourpicker)
+
 random_color <- function(count = 1,
                          hue = c(" ", "random", "red", "orange", "yellow",
                                  "green", "blue", "purple", "pink", "monochrome"),
@@ -77,10 +79,10 @@ colour_ui <- function(id) {
                 c("Random" = "random", "Light" = "light",
                   "Bright" = "bright", "Dark" = "dark")),
     layout_columns(
-      colourpicker::colourInput(ns("colour_1"), "", showColour = "background", closeOnClick = TRUE),
-      colourpicker::colourInput(ns("colour_2"), "", showColour = "background", closeOnClick = TRUE),
+      colourInput(ns("colour_1"), "", showColour = "background", closeOnClick = TRUE),
+      colourInput(ns("colour_2"), "", showColour = "background", closeOnClick = TRUE),
       div(class = "custom-left-picker",
-        colourpicker::colourInput(ns("colour_3"), "", showColour = "background", closeOnClick = TRUE)
+        colourInput(ns("colour_3"), "", showColour = "background", closeOnClick = TRUE)
       )
     )
   )
@@ -92,9 +94,9 @@ colour_server <- function(id, invalidate_color) {
     observe({
       invalidate_color()
       random <- random_color(count = 3, hue = input$hue, luminosity = input$lumin)
-      colourpicker::updateColourInput(session, "colour_1", value = random[1])
-      colourpicker::updateColourInput(session, "colour_2", value = random[2])
-      colourpicker::updateColourInput(session, "colour_3", value = random[3])
+      updateColourInput(session, "colour_1", value = random[1])
+      updateColourInput(session, "colour_2", value = random[2])
+      updateColourInput(session, "colour_3", value = random[3])
     })
 
     list(

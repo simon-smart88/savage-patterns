@@ -11,7 +11,7 @@ names(modules) <- paste0("<img src='", modules, "_icon.svg'>")
 
 ui <- page_navbar(
   nav_panel("Create",
-    shinyjs::useShinyjs(),
+    useShinyjs(),
     layout_sidebar(
       sidebar = sidebar(
         # buttons for selecting module

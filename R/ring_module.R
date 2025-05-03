@@ -1,5 +1,5 @@
 ring_module_ui <- function(id){
-  ns <- shiny::NS(id)
+  ns <- NS(id)
   tagList(
     random_ui(ns("ring")),
     accordion(
@@ -50,7 +50,7 @@ ring_module_server <- function(id, patterns, module){
 
     init <- observe({
       if (module() == "ring"){
-        shinyjs::runjs("document.getElementById('ring-ring-random').click();")
+        runjs("document.getElementById('ring-ring-random').click();")
         init$destroy()
       }
     })
@@ -91,14 +91,14 @@ ring_module_server <- function(id, patterns, module){
     })
 
     observe({
-      shinyjs::runjs(glue("
+      runjs(glue("
       document.getElementById('pattern').style.setProperty('--colour_1', '{colour$colour_1()}');
       document.getElementById('pattern').style.setProperty('--colour_2', '{colour$colour_2()}');
       document.getElementById('pattern').style.setProperty('--colour_3', '{colour$colour_3()}');"))
     })
 
     observe({
-      shinyjs::runjs(glue("
+      runjs(glue("
       document.getElementById('pattern').style.setProperty('--stroke', '{input$stroke}');"))
     })
 

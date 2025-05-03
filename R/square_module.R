@@ -1,5 +1,5 @@
 square_module_ui <- function(id){
-  ns <- shiny::NS(id)
+  ns <- NS(id)
   tagList(
     random_ui(ns("square")),
     accordion(
@@ -19,13 +19,12 @@ square_module_ui <- function(id){
                     span("Internal square size",
                          tooltip(icon("info-circle"), "The size of the squares inside the squares")),
                     value = c(10, 50), step = 1, min = 10, max = 90, ticks = FALSE),
-        shinyWidgets::materialSwitch(ns("switch"),
-                                     span("Activate checkerboard",
-                                          tooltip(icon("info-circle"), "If this is toggled, the colours of the squares are swapped round in adjacent squares creating a checkerboard effect")),
-                                     value = FALSE, status = "success"),
+        materialSwitch(ns("switch"),
+                       span("Activate checkerboard",
+                            tooltip(icon("info-circle"), "If this is toggled, the colours of the squares are swapped round in adjacent squares creating a checkerboard effect")),
+                       value = FALSE, status = "success"),
       ),
       accordion_panel("Animation",
-        #sliderInput(ns("lag_offset"), "Maximum internal", value = 20, step = 1, min = 10, max = 30),
         sliderInput(ns("speed"),
                     span("Animation duration",
                          tooltip(icon("info-circle"), "How long in seconds the animation takes to go through one cycle")),
@@ -51,7 +50,7 @@ square_module_server <- function(id, patterns, module){
 
     init <- observe({
       if (module() == "square"){
-        shinyjs::runjs("document.getElementById('square-square-random').click();")
+        runjs("document.getElementById('square-square-random').click();")
         init$destroy()
       }
     })
@@ -154,12 +153,12 @@ square_module_server <- function(id, patterns, module){
     }
 
     observe({
-      shinyjs::runjs(glue("
+      runjs(glue("
       document.getElementById('pattern').style.setProperty('--colour_speed', '{input$colour_speed}s');"))
     })
 
     observe({
-      shinyjs::runjs(glue("
+      runjs(glue("
       document.getElementById('pattern').style.setProperty('--colour_1', '{colour$colour_1()}');
       document.getElementById('pattern').style.setProperty('--colour_2', '{colour$colour_2()}');
       document.getElementById('pattern').style.setProperty('--colour_3', '{colour$colour_3()}');"))
@@ -169,7 +168,7 @@ square_module_server <- function(id, patterns, module){
       n_cols <- 3
       ids <- paste0("colour_", 1:n_cols)
       steps <- seq(0, 100, length.out = (2*n_cols)-1)
-      paste(lapply(seq_along(ids), function(i) {glue::glue("{steps[i]}% {{fill: input[['{ids[i]}']] }}")}), collapse= ' ')
+      paste(lapply(seq_along(ids), function(i) {glue("{steps[i]}% {{fill: input[['{ids[i]}']] }}")}), collapse= ' ')
     })
 
     # generates css of colour sequence

@@ -41,10 +41,10 @@ sparkle_module_ui <- function(id){
       # https://www.bbc.co.uk/opensource/projects/project/peaks-js
 
     ),
-    mainPanel(
-      tags$div(
-        id = "canvas-container",
-        style = "width: 90vh; height: 90vh; overflow: hidden; border: 1px solid black;",
+    tags$div(
+      class = "canvas_parent",
+    tags$div(
+        class = "canvas_container",
         tags$canvas(
           id = "myCanvas",
           width = 100,
@@ -253,7 +253,7 @@ function updateOscillators() {
       "))
     )
   )
-)
+  )
 }
 
 sparkle_module_server <- function(id, patterns, module){

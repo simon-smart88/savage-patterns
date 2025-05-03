@@ -37,8 +37,8 @@
 }
 
 .square_container {
-  width: 90vh;
-  height: 90vh;
+  width: 100%;
+  aspect-ratio: 1/1;
 }
 
 .custom-left-picker .colourpicker-panel {

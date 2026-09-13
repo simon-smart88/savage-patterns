@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1000 1000" height="100%" id="pattern">
+  <style>
+                                :root{--colour_1: #727272 ; --colour_2: #878787 ; --colour_3: #FCFCFC ;
+                                 --stroke: 0.5px
+                                }
+
+                                rect {animation: col 40s linear infinite;
+                                      fill: none;
+                                      stroke-width: var(--stroke)}
+
+                                @keyframes col {0% {fill: var(--colour_1)} 25% {fill: var(--colour_2)} 50% {fill: var(--colour_3)} 75% {fill: var(--colour_2)} 100% {fill: var(--colour_1)}
+                                }
+                       </style>
+  <style>.rect_1_out {animation-delay: -13.3333333333333s;}
+.rect_1_in {animation-delay: -33.3333333333333s;} .rect_2_out {animation-delay: -26.6666666666667s;}
+.rect_2_in {animation-delay: -46.6666666666667s;} .rect_3_out {animation-delay: -13.3333333333333s;}
+.rect_3_in {animation-delay: -33.3333333333333s;}</style>
+  <g>
+    <rect class="rect_1_out" x="0" y="0" width="284.937" height="284.937"/>
+    <rect class="rect_1_in">
+      <animate attributeName="x" values="38.467;&#10;89.755;&#10;38.467" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="38.467;&#10;89.755;&#10;38.467" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g>
+    <rect class="rect_2_out" x="284.437" y="0" width="431.626" height="284.937"/>
+    <rect class="rect_2_in">
+      <animate attributeName="x" values="342.706;&#10;420.399;&#10;342.706" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="38.467;&#10;89.755;&#10;38.467" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="315.087;&#10;159.702;&#10;315.087" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g>
+    <rect class="rect_1_out" x="715.563" y="0" width="284.937" height="284.937"/>
+    <rect class="rect_1_in">
+      <animate attributeName="x" values="754.03;&#10;805.318;&#10;754.03" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="38.467;&#10;89.755;&#10;38.467" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g>
+    <rect class="rect_2_out" x="0" y="284.437" width="284.937" height="431.626"/>
+    <rect class="rect_2_in">
+      <animate attributeName="x" values="38.467;&#10;89.755;&#10;38.467" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="342.706;&#10;420.399;&#10;342.706" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="315.087;&#10;159.702;&#10;315.087" dur="20s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g>
+    <rect class="rect_3_out" x="284.437" y="284.437" width="431.626" height="431.626"/>
+    <rect class="rect_3_in">
+      <animate attributeName="x" values="342.706;&#10;420.399;&#10;342.706" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="342.706;&#10;420.399;&#10;342.706" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="315.087;&#10;159.702;&#10;315.087" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="315.087;&#10;159.702;&#10;315.087" dur="20s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g>
+    <rect class="rect_2_out" x="715.563" y="284.437" width="284.937" height="431.626"/>
+    <rect class="rect_2_in">
+      <animate attributeName="x" values="754.03;&#10;805.318;&#10;754.03" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="342.706;&#10;420.399;&#10;342.706" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="315.087;&#10;159.702;&#10;315.087" dur="20s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g>
+    <rect class="rect_1_out" x="0" y="715.563" width="284.937" height="284.937"/>
+    <rect class="rect_1_in">
+      <animate attributeName="x" values="38.467;&#10;89.755;&#10;38.467" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="754.03;&#10;805.318;&#10;754.03" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g>
+    <rect class="rect_2_out" x="284.437" y="715.563" width="431.626" height="284.937"/>
+    <rect class="rect_2_in">
+      <animate attributeName="x" values="342.706;&#10;420.399;&#10;342.706" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="754.03;&#10;805.318;&#10;754.03" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="315.087;&#10;159.702;&#10;315.087" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g>
+    <rect class="rect_1_out" x="715.563" y="715.563" width="284.937" height="284.937"/>
+    <rect class="rect_1_in">
+      <animate attributeName="x" values="754.03;&#10;805.318;&#10;754.03" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="754.03;&#10;805.318;&#10;754.03" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="208.004;&#10;105.427;&#10;208.004" dur="20s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

@@ -1,28 +1,330 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shiny App</title>
-    <script
-      src="./shinylive/load-shinylive-sw.js"
-      type="module"
-    ></script>
-    <script type="module">
-      import { runExportedApp } from "./shinylive/shinylive.js";
-      runExportedApp({
-        id: "root",
-        appEngine: "r",
-        relPath: "",
-      });
-    </script>
-    <link rel="stylesheet" href="./shinylive/style-resets.css" />
-    <link rel="stylesheet" href="./shinylive/shinylive.css" />
-    
-  </head>
-  <body>
-    
-    <div style="height: 100vh; width: 100vw" id="root"></div>
-    
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Savage patterns</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/simplex/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <span class="navbar-brand">Savage patterns</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navcontent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navcontent">
+      <ul class="nav nav-tabs" id="main-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="tab-btn-create" data-bs-toggle="tab" data-bs-target="#tab-create" type="button" role="tab">Create</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-btn-gallery" data-bs-toggle="tab" data-bs-target="#tab-gallery" type="button" role="tab">Gallery</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-btn-about" data-bs-toggle="tab" data-bs-target="#tab-about" type="button" role="tab">About</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="tab-content">
+
+<!-- ================= CREATE ================= -->
+<div class="tab-pane fade show active" id="tab-create" role="tabpanel">
+  <div class="create-layout">
+    <div class="sidebar">
+
+      <div class="title"><div id="module-picker" class="btn-group w-100" role="group" aria-label="Choose a pattern"></div></div>
+
+      <!-- ---- line panel ---- -->
+      <div class="module-panel" id="panel-line" hidden>
+        <div class="title"><label class="form-label mb-1">Randomise</label></div>
+        <button type="button" class="btn btn-info btn-lg w-100 mb-2" id="line-random-all"><i class="fa-solid fa-shuffle"></i> Everything</button>
+        <div class="row g-2 mb-2">
+          <div class="col-4"><button type="button" class="btn btn-outline-secondary w-100" id="line-random-pattern">Pattern</button></div>
+          <div class="col-4"><button type="button" class="btn btn-outline-secondary w-100" id="line-random-animation">Animation</button></div>
+          <div class="col-4"><button type="button" class="btn btn-outline-secondary w-100" id="line-random-colour">Colour</button></div>
+        </div>
+        <div class="title"><label class="form-label mb-1">Adjust</label></div>
+
+        <div class="accordion" id="line-acc">
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#line-acc-pattern">Pattern</button></h2>
+            <div id="line-acc-pattern" class="accordion-collapse collapse show" data-bs-parent="#line-acc"><div class="accordion-body">
+              <div class="param"><label for="line-outer">Number of outer points <i class="fa-solid fa-circle-info" title="Determines the number of points on each edge of the square"></i></label>
+                <div class="range-row"><input type="range" id="line-outer" min="4" max="20" step="1" value="9" class="form-range"><output id="line-outer-out"></output></div></div>
+              <div class="param"><label for="line-inner">Number of inner points <i class="fa-solid fa-circle-info" title="Determines the number of points inside the square"></i></label>
+                <div class="range-row"><input type="range" id="line-inner" min="2" max="15" step="1" value="3" class="form-range"><output id="line-inner-out"></output></div></div>
+              <div class="param"><label for="line-innerSize">Size of inner points <i class="fa-solid fa-circle-info" title="Adjust the position of the inner points - lower numbers move them closer to the centre and high numbers move them closer to the edge"></i></label>
+                <div class="range-row"><input type="range" id="line-innerSize" min="10" max="80" step="1" value="50" class="form-range"><output id="line-innerSize-out"></output></div></div>
+              <div class="param"><label for="line-innerOffset">Inner point offset <i class="fa-solid fa-circle-info" title="Move the lines to the inner points away from each other towards the nearest outer edge"></i></label>
+                <div class="range-row"><input type="range" id="line-innerOffset" min="0" max="80" step="1" value="50" class="form-range"><output id="line-innerOffset-out"></output></div></div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="line-zoom">
+                <label class="form-check-label" for="line-zoom">Only view inner points <i class="fa-solid fa-circle-info" title="Toggle this to crop the pattern so that only the inner points are visible"></i></label>
+              </div>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#line-acc-animation">Animation</button></h2>
+            <div id="line-acc-animation" class="accordion-collapse collapse" data-bs-parent="#line-acc"><div class="accordion-body">
+              <div class="param"><label for="line-breath">Change in size <i class="fa-solid fa-circle-info" title="Controls how much the inner point offset increases"></i></label>
+                <div class="range-row"><input type="range" id="line-breath" min="10" max="50" step="1" value="20" class="form-range"><output id="line-breath-out"></output></div></div>
+              <div class="param"><label for="line-speed">Animation duration <i class="fa-solid fa-circle-info" title="How long in seconds the animation takes to go through one cycle"></i></label>
+                <div class="range-row"><input type="range" id="line-speed" min="5" max="60" step="1" value="30" class="form-range"><output id="line-speed-out"></output></div></div>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#line-acc-colour">Colour</button></h2>
+            <div id="line-acc-colour" class="accordion-collapse collapse" data-bs-parent="#line-acc"><div class="accordion-body">
+              <div class="param"><label for="line-stroke">Line thickness</label>
+                <div class="range-row"><input type="range" id="line-stroke" min="0.1" max="2" step="0.05" value="1" class="form-range"><output id="line-stroke-out"></output></div></div>
+              <div class="param"><label>Opacity <i class="fa-solid fa-circle-info" title="Move the lines to the inner points away from each other towards the nearest outer edge"></i></label>
+                <div class="dual-range" id="line-opacity-widget">
+                  <div class="dual-range-track"><div class="dual-range-fill"></div></div>
+                  <input type="range" id="line-opacity-low" min="0" max="100" step="1" value="25">
+                  <input type="range" id="line-opacity-high" min="0" max="100" step="1" value="75">
+                </div>
+                <output id="line-opacity-out"></output>
+              </div>
+              <div id="line-colour"></div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- ring panel ---- -->
+      <div class="module-panel" id="panel-ring" hidden>
+        <div class="title"><label class="form-label mb-1">Randomise</label></div>
+        <button type="button" class="btn btn-info btn-lg w-100 mb-2" id="ring-random-all"><i class="fa-solid fa-shuffle"></i> Everything</button>
+        <div class="row g-2 mb-2">
+          <div class="col-4"><button type="button" class="btn btn-outline-secondary w-100" id="ring-random-pattern">Pattern</button></div>
+          <div class="col-4"><button type="button" class="btn btn-outline-secondary w-100" id="ring-random-animation">Animation</button></div>
+          <div class="col-4"><button type="button" class="btn btn-outline-secondary w-100" id="ring-random-colour">Colour</button></div>
+        </div>
+        <div class="title"><label class="form-label mb-1">Adjust</label></div>
+
+        <div class="accordion" id="ring-acc">
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ring-acc-pattern">Pattern</button></h2>
+            <div id="ring-acc-pattern" class="accordion-collapse collapse show" data-bs-parent="#ring-acc"><div class="accordion-body">
+              <div class="param"><label for="ring-reps">Number of circles <i class="fa-solid fa-circle-info" title="The number of circles on each side of the pattern"></i></label>
+                <div class="range-row"><input type="range" id="ring-reps" min="7" max="45" step="2" value="25" class="form-range"><output id="ring-reps-out"></output></div></div>
+              <div class="param"><label for="ring-radius">Circle size <i class="fa-solid fa-circle-info" title="The size of each circle"></i></label>
+                <div class="range-row"><input type="range" id="ring-radius" min="10" max="50" step="1" value="30" class="form-range"><output id="ring-radius-out"></output></div></div>
+              <div class="param"><label for="ring-bulge">Circle size bulge <i class="fa-solid fa-circle-info" title="Determines how much bigger the circles in the centre are compared to the outside"></i></label>
+                <div class="range-row"><input type="range" id="ring-bulge" min="0.1" max="100" step="0.1" value="1" class="form-range"><output id="ring-bulge-out"></output></div></div>
+              <div class="param"><label for="ring-space">Distance between circles <i class="fa-solid fa-circle-info" title="The distance between each circle"></i></label>
+                <div class="range-row"><input type="range" id="ring-space" min="5" max="30" step="1" value="10" class="form-range"><output id="ring-space-out"></output></div></div>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ring-acc-animation">Animation</button></h2>
+            <div id="ring-acc-animation" class="accordion-collapse collapse" data-bs-parent="#ring-acc"><div class="accordion-body">
+              <div class="param"><label for="ring-breath">Change in size <i class="fa-solid fa-circle-info" title="How much the circles change in size during the animation"></i></label>
+                <div class="range-row"><input type="range" id="ring-breath" min="10" max="30" step="1" value="20" class="form-range"><output id="ring-breath-out"></output></div></div>
+              <div class="param"><label for="ring-speed">Animation duration <i class="fa-solid fa-circle-info" title="How long in seconds the animation takes to go through one cycle"></i></label>
+                <div class="range-row"><input type="range" id="ring-speed" min="5" max="60" step="1" value="30" class="form-range"><output id="ring-speed-out"></output></div></div>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ring-acc-colour">Colour</button></h2>
+            <div id="ring-acc-colour" class="accordion-collapse collapse" data-bs-parent="#ring-acc"><div class="accordion-body">
+              <div class="param"><label for="ring-stroke">Line thickness <i class="fa-solid fa-circle-info" title="Adjust the thickness of the lines"></i></label>
+                <div class="range-row"><input type="range" id="ring-stroke" min="0.1" max="1" step="0.05" value="0.5" class="form-range"><output id="ring-stroke-out"></output></div></div>
+              <div id="ring-colour"></div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- square panel ---- -->
+      <div class="module-panel" id="panel-square" hidden>
+        <div class="title"><label class="form-label mb-1">Randomise</label></div>
+        <button type="button" class="btn btn-info btn-lg w-100 mb-2" id="square-random-all"><i class="fa-solid fa-shuffle"></i> Everything</button>
+        <div class="row g-2 mb-2">
+          <div class="col-4"><button type="button" class="btn btn-outline-secondary w-100" id="square-random-pattern">Pattern</button></div>
+          <div class="col-4"><button type="button" class="btn btn-outline-secondary w-100" id="square-random-animation">Animation</button></div>
+          <div class="col-4"><button type="button" class="btn btn-outline-secondary w-100" id="square-random-colour">Colour</button></div>
+        </div>
+        <div class="title"><label class="form-label mb-1">Adjust</label></div>
+
+        <div class="accordion" id="square-acc">
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#square-acc-pattern">Pattern</button></h2>
+            <div id="square-acc-pattern" class="accordion-collapse collapse show" data-bs-parent="#square-acc"><div class="accordion-body">
+              <div class="param"><label for="square-reps">Number of squares <i class="fa-solid fa-circle-info" title="The number of squares on each side of the pattern"></i></label>
+                <div class="range-row"><input type="range" id="square-reps" min="7" max="31" step="2" value="19" class="form-range"><output id="square-reps-out"></output></div></div>
+              <div class="param"><label for="square-bulge">Bulge <i class="fa-solid fa-circle-info" title="How much the pattern bulges - negative values make the corners bulge, positive values make the centre bulge"></i></label>
+                <div class="range-row"><input type="range" id="square-bulge" min="-10" max="10" step="0.5" value="5" class="form-range"><output id="square-bulge-out"></output></div></div>
+              <div class="param"><label>Internal square size <i class="fa-solid fa-circle-info" title="The size of the squares inside the squares"></i></label>
+                <div class="dual-range" id="square-internal-widget">
+                  <div class="dual-range-track"><div class="dual-range-fill"></div></div>
+                  <input type="range" id="square-internal-low" min="10" max="90" step="1" value="10">
+                  <input type="range" id="square-internal-high" min="10" max="90" step="1" value="50">
+                </div>
+                <output id="square-internal-out"></output>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="square-switch">
+                <label class="form-check-label" for="square-switch">Activate checkerboard <i class="fa-solid fa-circle-info" title="If this is toggled, the colours of the squares are swapped round in adjacent squares creating a checkerboard effect"></i></label>
+              </div>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#square-acc-animation">Animation</button></h2>
+            <div id="square-acc-animation" class="accordion-collapse collapse" data-bs-parent="#square-acc"><div class="accordion-body">
+              <div class="param"><label for="square-speed">Animation duration <i class="fa-solid fa-circle-info" title="How long in seconds the animation takes to go through one cycle"></i></label>
+                <div class="range-row"><input type="range" id="square-speed" min="5" max="60" step="1" value="30" class="form-range"><output id="square-speed-out"></output></div></div>
+              <div class="param"><label for="square-colourSpeed">Colour change duration <i class="fa-solid fa-circle-info" title="How long in seconds the colour animation takes to go through one cycle"></i></label>
+                <div class="range-row"><input type="range" id="square-colourSpeed" min="5" max="60" step="1" value="30" class="form-range"><output id="square-colourSpeed-out"></output></div></div>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#square-acc-colour">Colour</button></h2>
+            <div id="square-acc-colour" class="accordion-collapse collapse" data-bs-parent="#square-acc"><div class="accordion-body">
+              <div class="param"><label for="square-colourDif">Inner and outer colour difference <i class="fa-solid fa-circle-info" title="How contrasting the colour difference is between the inner and outer squares"></i></label>
+                <div class="range-row"><input type="range" id="square-colourDif" min="5" max="95" step="1" value="50" class="form-range"><output id="square-colourDif-out"></output></div></div>
+              <div id="square-colour"></div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary w-100 download-btn" id="download-btn"><i class="fa-solid fa-download"></i> Download</button>
+    </div>
+
+    <div class="svg_container" id="svg_container"></div>
+  </div>
+</div>
+
+<!-- ================= GALLERY ================= -->
+<div class="tab-pane fade" id="tab-gallery" role="tabpanel">
+  <div class="centred-col">
+    <h3 class="text-center">Here you can find some examples of patterns I've created</h3>
+    <div class="row g-2 mb-2">
+      <div class="col-6"><button type="button" class="btn btn-outline-secondary w-100" id="gallery-previous">Previous</button></div>
+      <div class="col-6"><button type="button" class="btn btn-outline-secondary w-100" id="gallery-next">Next</button></div>
+    </div>
+    <div class="svg_container"><img id="gallery-image" alt="Example pattern"></div>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<div class="tab-pane fade" id="tab-about" role="tabpanel">
+  <div class="centred-col about-content">
+    <h1>About</h1>
+    <p>I have been making art for over 20 years now and this app is the latest iteration of many
+       different methods that I've used over the years as my knowledge of different technologies has changed.
+       This is a brief summary of the methods used and then at the end a basic explanation of how this works.</p>
+
+    <h2>Painting</h2>
+    <p>Starting at school I did a lot of painting, this one is a pretty blatant imitation of
+       <a href="https://www.tate.org.uk/art/artworks/riley-nataraja-t06859" target="_blank">Bridget Riley's Nataraja (1993)</a>.
+       The difficulty with painting is that it is slow, expensive, messy and you need an army of technicians to do it well.</p>
+    <img src="https://raw.githubusercontent.com/simon-smart88/savage-patterns/main/images/painting.JPG">
+    <p class="caption">Untitled (2003)</p>
+
+    <h2>Paint</h2>
+    <p>Putting this together, I found this forgotten piece buried on my hard drive and I presumably made it in Paint based on it being
+       a bitmap. It must be one of the earliest pieces of digital art I ever made and at that point Paint was the best technology I had.
+       Paint was obviously not well-suited to the kinds of patterns I wanted to create though.</p>
+    <img src="https://raw.githubusercontent.com/simon-smart88/savage-patterns/main/images/blue red yello.bmp">
+    <p class="caption">Blue red yello (2003)</p>
+
+    <h2>Photoshop</h2>
+    <p>At school I started using the Photoshop which was definitely an improvement on both physical painting and digital Painting,
+       but I was still drawing each shape by hand and a pixel-based system was wholly inappropriate when I wanted sharp lines.
+       This is a screenshot of part of a piece imitating pieces like
+       <a href="https://www.wikiart.org/en/victor-vasarely/vega-200-1968" target="_blank">Victor Vasarely's Vega (1968)</a>
+       to demonstrate the problem.</p>
+    <img src="https://raw.githubusercontent.com/simon-smart88/savage-patterns/main/images/photoshop.png">
+    <p class="caption">2 (2007)</p>
+
+    <h2>Illustrator</h2>
+    <p>After finishing school, I found out about the vector-based Illustrator and it was a revelation! Now I could
+       create huge pieces with sharp lines to my hearts content! But I was still painstakingly drawing a lot of shapes
+       by hand and copy, pasting and transforming to create more complex pieces. Whilst the file sizes were smaller than
+       in Photoshop, I was mostly saving as pdfs which are brilliant as you can see below. I really wanted to animate them but
+       didn't know how (I actually screenshotted some to create videos that seem to have been lost).</p>
+    <div class="square_container"><iframe src="assets/illustrator.pdf" style="width:100%;height:100%;border:none;"></iframe></div>
+    <p class="caption">Big2lines sq4 zoom3 (2008)</p>
+
+    <h2>Flash</h2>
+    <p>At some point I learnt about Flash and for the first time could make animations which definitely took things to
+       the next level. I can't remember much about how I created them any more but it was still laborious and
+       since then Flash has been deprecated. Shout out to <a href="https://ruffle.rs/" target="_blank">Ruffle</a>
+       for bringing this back from the dead!</p>
+    <div class="square_container">
+      <object id="swf-container" data="https://raw.githubusercontent.com/simon-smart88/savage-patterns/main/images/flash.swf" type="application/x-shockwave-flash" width="100%" height="100%">
+        <param name="allowScriptAccess" value="always">
+      </object>
+    </div>
+    <p class="caption">Oval waves of blue2 half (2008)</p>
+
+    <h2>SVGs</h2>
+    <p>My web designer brother kindly pointed out to me that scalable vector graphics (.svg) would be a good format to use and
+       it turned out I could export them from Illustrator. This piece still contains 80,000 lines of code to generate it through.
+       Being able to see the files as code was another revelation and I started to learn about the syntax for creating SVGs
+       myself rather than using Illustator.</p>
+    <img src="https://raw.githubusercontent.com/simon-smart88/savage-patterns/main/images/illustrator.svg">
+    <p class="caption">Rotated grid (2011)</p>
+
+    <h3>Animations</h3>
+    <p>Looking around the web I found some great resources made by
+       <a href="https://www.petercollingridge.co.uk/" target="_blank">Peter Collingridge</a>
+       for animating SVGs using javascript. I had no idea what I was doing, but now I could copy some code into the file and make things
+       spin. The possibilities were endless!</p>
+    <object type="image/svg+xml" data="https://raw.githubusercontent.com/simon-smart88/savage-patterns/main/images/scripting.svg"></object>
+    <p class="caption">Circle grid2 col (copy) script (2012)</p>
+
+    <h3>Hand-coded</h3>
+    <p>Next up I started creating SVGs from scratch in a text editor which was quite laborious but easier than drawing
+       lines by hand. I also started to learn about styling SVGs using cascading style sheets (CSS) and using animations
+       in SVGs directly rather than using javascript.</p>
+    <img src="https://raw.githubusercontent.com/simon-smart88/savage-patterns/main/images/hand_coded.svg">
+    <p class="caption">Old school (2012)</p>
+
+    <h3>Python</h3>
+    <p>By this point I'd been writing scripts to analyse experimental data for a few years and was beginning to use python to
+       create graphs. I figured that I could speed up creating SVGs by writing python scripts. Looking back 10 years later, my
+       attempts are hilariously basic as I wasn't using any libraries and not even writing the results to a file, but copying
+       the output from the console.</p>
+    <details>
+      <summary>Click to see the horrors for yourself</summary>
+      <pre><code id="python-code"></code></pre>
+    </details>
+    <img src="https://raw.githubusercontent.com/simon-smart88/savage-patterns/main/images/python.svg">
+    <p class="caption">Shades of the rainbow (2014)</p>
+
+    <h2>Now</h2>
+    <p>I'd had a long hiatus where I hadn't done anything new for almost 10 years until 2024, when I noticed the
+       <a href="https://bsky.app/search?q=%23rtistry" target="_blank">#Rtistry tag</a> on social media which got me thinking
+       about what it might be possible to achieve. The app was originally built with
+       <a href="https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/" target="_blank">R shiny</a>,
+       which is mainly used for data-centric applications, but the tools allowed creating any html elements including
+       svg, and has since been rewritten as a native HTML/CSS/JavaScript page for speed. The basic principle is to create
+       a matrix containing a pattern and then apply that to a function which generates
+       the svg. It uses css variables that are updated using javascript to adjust the colours on-the-fly and javascript to
+       capture the svg as presented to the user to download.
+       <a href="https://github.com/simon-smart88/savage-patterns" target="_blank">The source code is on GitHub.</a></p>
+    <br><br><br>
+  </div>
+</div>
+
+</div>
+
+<script src="js/rcompat.js"></script>
+<script src="js/colors.js"></script>
+<script src="js/patterns/line.js"></script>
+<script src="js/patterns/ring.js"></script>
+<script src="js/patterns/square.js"></script>
+<script src="js/app.js"></script>
+</body>
 </html>

@@ -25,9 +25,13 @@
 //    angle around the centre.
 //  - "spiral": fan + ring, so each fan's rainbow starts where its point sits.
 //  - "direction": hue from the line's current direction, so parallel lines
-//    match and colours shift as the pattern breathes.
+//    match and colours shift as the pattern breathes (and spins).
 // Rainbow hues are generated in OKLCH so they're perceptually even, and
 // opacity fades from opacity[0] at the outer point to opacity[1] at the inner.
+//
+// Spin: each line can also rotate about its own (breathing) midpoint, at
+// style.spin rpm, with style.spinStagger offsetting each line's angle by its
+// outer point's position around the centre so the rotation travels as a wave.
 //
 // Lines thinner than one device pixel are drawn 1px wide with alpha scaled by
 // their true width, approximating SVG's antialiased hairlines.
@@ -51,6 +55,8 @@ function createLineRenderer(container) {
     uniform float uHueRange;  // 0..1 of the colour wheel
     uniform float uLightness; // OKLCH L
     uniform float uChroma;    // OKLCH C
+    uniform float uSpin;      // rotation about each line's midpoint, radians
+    uniform float uSpinStagger; // extra rotation per turn around the ring, 0..1
     varying float vT;         // gradient mode: position along the gradient
     varying float vAlong;     // 0 at the outer point, 1 at the inner point
     varying vec3 vRgb;        // rainbow modes: line colour
@@ -73,6 +79,16 @@ function createLineRenderer(container) {
     void main() {
       vec2 a = aStart;
       vec2 b = mix(aEnd, aEndAnim, uF);
+
+      float theta = uSpin + uSpinStagger * aHue.y * TAU;
+      if (theta != 0.0) {
+        vec2 mid = 0.5 * (a + b);
+        vec2 hv = 0.5 * (b - a);
+        float c = cos(theta), s = sin(theta);
+        hv = vec2(c * hv.x - s * hv.y, s * hv.x + c * hv.y);
+        a = mid - hv;
+        b = mid + hv;
+      }
       vec2 d = b - a;
       float side = aCorner.z;
       vAlong = aCorner.x;
@@ -134,7 +150,7 @@ function createLineRenderer(container) {
   const ATTRIBUTES = [["aStart", 2], ["aEnd", 2], ["aEndAnim", 2], ["aCorner", 3], ["aHue", 2]];
   const FLOATS_PER_VERTEX = ATTRIBUTES.reduce((n, [, size]) => n + size, 0);
   const UNIFORMS = ["uF", "uTop", "uScale", "uHalfWidth", "uRes", "uMode", "uHueStart", "uHueRange",
-    "uLightness", "uChroma", "uStop0", "uStop1", "uStop2", "uCoverage"];
+    "uLightness", "uChroma", "uSpin", "uSpinStagger", "uStop0", "uStop1", "uStop2", "uCoverage"];
 
   const canvas = document.createElement("canvas");
   container.appendChild(canvas);
@@ -160,7 +176,7 @@ function createLineRenderer(container) {
   gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
 
   let top = 0, span = 1, vertexCount = 0, style = null;
-  let phase = 0, huePhase = 0, lastNow = null, rafId = null, snapshotRequests = [];
+  let phase = 0, huePhase = 0, spinPhase = 0, lastNow = null, rafId = null, snapshotRequests = [];
 
   function compile(type, src) {
     const s = gl.createShader(type);
@@ -240,7 +256,8 @@ function createLineRenderer(container) {
   // Style, in the Create app's line control units:
   // { speed, stroke, opacity: [start, end], colour1, colour2, colour3,
   //   colourMode, hueStart (deg), hueRange (deg), hueCycle (s, 0 = off),
-  //   lightness (%), chroma (% of 0.4) }. Uniforms only.
+  //   lightness (%), chroma (% of 0.4), spin (rpm, signed), spinStagger (%) }.
+  // Uniforms only.
   function setStyle(s) {
     style = s;
     const rgb = (hex) => {
@@ -255,6 +272,7 @@ function createLineRenderer(container) {
     gl.uniform1f(loc.uHueRange, s.hueRange / 360);
     gl.uniform1f(loc.uLightness, s.lightness / 100);
     gl.uniform1f(loc.uChroma, (s.chroma / 100) * 0.4);
+    gl.uniform1f(loc.uSpinStagger, s.spinStagger / 100);
   }
 
   function draw(now) {
@@ -264,6 +282,7 @@ function createLineRenderer(container) {
     lastNow = now;
     phase = (phase + dt / style.speed) % 1;
     if (style.hueCycle > 0) huePhase = (huePhase + dt / style.hueCycle) % 1;
+    spinPhase = (spinPhase + (dt * style.spin) / 60) % 1;
     const scale = canvas.width / span;
     const widthPx = (style.stroke / 100) * scale;
 
@@ -273,6 +292,7 @@ function createLineRenderer(container) {
     // SMIL's values="x2; x2Anim; x2": a 0 -> 1 -> 0 triangle wave.
     gl.uniform1f(loc.uF, 1 - Math.abs(2 * phase - 1));
     gl.uniform1f(loc.uHueStart, style.hueStart / 360 + huePhase);
+    gl.uniform1f(loc.uSpin, spinPhase * 2 * Math.PI);
     gl.uniform1f(loc.uTop, top);
     gl.uniform1f(loc.uScale, scale);
     gl.uniform1f(loc.uHalfWidth, Math.max(widthPx, 1) / 2);

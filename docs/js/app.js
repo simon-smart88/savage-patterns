@@ -199,6 +199,8 @@
       hueCycle: Number($("line-hueCycle").value),
       lightness: Number($("line-lightness").value),
       chroma: Number($("line-chroma").value),
+      spin: lineRenderer ? Number($("line-spin").value) : 0,
+      spinStagger: Number($("line-spinStagger").value),
     };
   }
 
@@ -207,6 +209,7 @@
   function updateLineColourControls() {
     const mode = lineParams().colourMode;
     $("line-colourMode").closest(".param").hidden = !lineRenderer;
+    $("line-spin-controls").hidden = !lineRenderer;
     $("line-rainbow").hidden = mode === "gradient";
     $("line-colour").hidden = mode !== "gradient";
   }
@@ -267,7 +270,7 @@
     // uniform for WebGL, so only the SVG fallback needs a rebuild.
     $("line-speed").addEventListener("input", () => (lineRenderer ? updateLineStyleVars() : updateLineStructure()));
     $("line-stroke").addEventListener("input", updateLineStyleVars);
-    ["line-hueStart", "line-hueRange", "line-hueCycle", "line-lightness", "line-chroma"].forEach((id) =>
+    ["line-hueStart", "line-hueRange", "line-hueCycle", "line-lightness", "line-chroma", "line-spin", "line-spinStagger"].forEach((id) =>
       $(id).addEventListener("input", updateLineStyleVars)
     );
     $("line-colourMode").addEventListener("change", () => {
@@ -521,8 +524,9 @@
   function setupDownload() {
     $("download-btn").addEventListener("click", async () => {
       let blob, ext = "svg";
-      if (currentModule === "line" && lineParams().colourMode !== "gradient") {
-        // Rainbow modes have no SVG equivalent: save the current frame.
+      const lp = currentModule === "line" ? lineParams() : null;
+      if (lp && (lp.colourMode !== "gradient" || lp.spin !== 0 || lp.spinStagger !== 0)) {
+        // Rainbow modes and spin have no SVG equivalent: save the current frame.
         blob = await lineRenderer.snapshot();
         ext = "png";
       } else if (currentModule === "line") {

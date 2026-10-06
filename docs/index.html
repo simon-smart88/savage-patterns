@@ -78,6 +78,12 @@
                 <div class="range-row"><input type="range" id="line-breath" min="10" max="50" step="1" value="20" class="form-range"><output id="line-breath-out"></output></div></div>
               <div class="param"><label for="line-speed">Animation duration <i class="fa-solid fa-circle-info" title="How long in seconds the animation takes to go through one cycle"></i></label>
                 <div class="range-row"><input type="range" id="line-speed" min="5" max="60" step="1" value="30" class="form-range"><output id="line-speed-out"></output></div></div>
+              <div id="line-spin-controls">
+                <div class="param"><label for="line-spin">Spin (rpm) <i class="fa-solid fa-circle-info" title="Rotate each line around its centre, in turns per minute; negative spins anticlockwise, 0 is off"></i></label>
+                  <div class="range-row"><input type="range" id="line-spin" min="-30" max="30" step="0.5" value="0" class="form-range"><output id="line-spin-out"></output></div></div>
+                <div class="param"><label for="line-spinStagger">Spin stagger <i class="fa-solid fa-circle-info" title="Offset each line's rotation by its position around the pattern, so the spin travels as a wave"></i></label>
+                  <div class="range-row"><input type="range" id="line-spinStagger" min="0" max="100" step="1" value="0" class="form-range"><output id="line-spinStagger-out"></output></div></div>
+              </div>
             </div></div>
           </div>
           <div class="accordion-item">

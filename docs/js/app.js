@@ -2,7 +2,8 @@
 // lives in js/patterns/*.js (parity-tested against shiny/R/*_module.R via
 // tests/testthat) - this file only reproduces the original Shiny app's
 // interactive behaviour: module switching, sliders/accordion/randomize
-// buttons, colour pickers, SVG download, and the gallery/about tabs.
+// buttons, colour pickers, SVG download, and the gallery/about tabs. The line
+// module is drawn on screen with WebGL (js/line-webgl.js).
 (function () {
   "use strict";
 
@@ -195,14 +196,43 @@
     };
   }
 
+  // The line pattern is drawn with WebGL (js/line-webgl.js) because the SVG
+  // version slows down badly at thousands of lines. Falls back to SVG if
+  // WebGL isn't available. Downloads always use renderLineSVG().
+  let lineRenderer = null;
+
+  function getLineRenderer() {
+    const container = $("svg_container");
+    if (lineRenderer && lineRenderer.canvas.isConnected) return lineRenderer;
+    container.innerHTML = "";
+    try {
+      lineRenderer = createLineRenderer(container);
+    } catch (e) {
+      console.warn("WebGL unavailable, falling back to SVG:", e);
+      lineRenderer = null;
+    }
+    return lineRenderer;
+  }
+
   function updateLineStructure() {
-    $("svg_container").innerHTML = renderLineSVG(lineParams());
+    const p = lineParams();
+    const renderer = getLineRenderer();
+    if (!renderer) {
+      $("svg_container").innerHTML = renderLineSVG(p);
+      return;
+    }
+    renderer.setData(generateLineData(p));
+    renderer.setStyle(p);
   }
 
   function updateLineStyleVars() {
+    const p = lineParams();
+    if (lineRenderer && lineRenderer.canvas.isConnected) {
+      lineRenderer.setStyle(p);
+      return;
+    }
     const svg = $("pattern");
     if (!svg) return;
-    const p = lineParams();
     svg.style.setProperty("--stroke", p.stroke / 100);
     svg.style.setProperty("--opacity_start", p.opacity[0] / 100);
     svg.style.setProperty("--opacity_mid", (p.opacity[0] + p.opacity[1]) / 2 / 100);
@@ -213,10 +243,13 @@
   }
 
   function setupLine() {
-    ["line-outer", "line-inner", "line-innerSize", "line-innerOffset", "line-breath", "line-speed"].forEach((id) =>
+    ["line-outer", "line-inner", "line-innerSize", "line-innerOffset", "line-breath"].forEach((id) =>
       $(id).addEventListener("input", updateLineStructure)
     );
     $("line-zoom").addEventListener("change", updateLineStructure);
+    // Speed is baked into the SVG's <animate> elements but is just a
+    // uniform for WebGL, so only the SVG fallback needs a rebuild.
+    $("line-speed").addEventListener("input", () => (lineRenderer ? updateLineStyleVars() : updateLineStructure()));
     $("line-stroke").addEventListener("input", updateLineStyleVars);
     setupDualRange("line-opacity-low", "line-opacity-high", "line-opacity-widget", "line-opacity-out", updateLineStyleVars);
     buildColourWidget("line", updateLineStyleVars);
@@ -462,9 +495,15 @@
   // ---------------- download ----------------
   function setupDownload() {
     $("download-btn").addEventListener("click", () => {
-      const svg = document.querySelector("#svg_container svg");
-      if (!svg) return;
-      const serialized = new XMLSerializer().serializeToString(svg);
+      let serialized;
+      if (currentModule === "line") {
+        // On screen it's a WebGL canvas; the download is the equivalent SVG.
+        serialized = renderLineSVG(lineParams());
+      } else {
+        const svg = document.querySelector("#svg_container svg");
+        if (!svg) return;
+        serialized = new XMLSerializer().serializeToString(svg);
+      }
       const blob = new Blob([serialized], { type: "image/svg+xml" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");

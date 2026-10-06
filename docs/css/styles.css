@@ -51,6 +51,13 @@ body { background: #fff; }
   overflow: hidden;
 }
 
+.svg_container canvas {
+  display: block;
+  width: 100%;
+  max-width: 90vh;
+  aspect-ratio: 1;
+}
+
 .svg_container img { max-width: 100%; max-height: 90vh; }
 
 .title label { font-size: 1.5em; }

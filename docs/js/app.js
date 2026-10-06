@@ -193,7 +193,22 @@
       stroke: Number($("line-stroke").value),
       opacity: [Number($("line-opacity-low").value), Number($("line-opacity-high").value)],
       ...getColours("line"),
+      colourMode: lineRenderer ? $("line-colourMode").value : "gradient",
+      hueStart: Number($("line-hueStart").value),
+      hueRange: Number($("line-hueRange").value),
+      hueCycle: Number($("line-hueCycle").value),
+      lightness: Number($("line-lightness").value),
+      chroma: Number($("line-chroma").value),
     };
+  }
+
+  // Rainbow modes are WebGL-only; the palette controls only apply to the
+  // gradient mode.
+  function updateLineColourControls() {
+    const mode = lineParams().colourMode;
+    $("line-colourMode").closest(".param").hidden = !lineRenderer;
+    $("line-rainbow").hidden = mode === "gradient";
+    $("line-colour").hidden = mode !== "gradient";
   }
 
   // The line pattern is drawn with WebGL (js/line-webgl.js) because the SVG
@@ -215,8 +230,9 @@
   }
 
   function updateLineStructure() {
-    const p = lineParams();
     const renderer = getLineRenderer();
+    const p = lineParams();
+    updateLineColourControls();
     if (!renderer) {
       $("svg_container").innerHTML = renderLineSVG(p);
       return;
@@ -251,6 +267,13 @@
     // uniform for WebGL, so only the SVG fallback needs a rebuild.
     $("line-speed").addEventListener("input", () => (lineRenderer ? updateLineStyleVars() : updateLineStructure()));
     $("line-stroke").addEventListener("input", updateLineStyleVars);
+    ["line-hueStart", "line-hueRange", "line-hueCycle", "line-lightness", "line-chroma"].forEach((id) =>
+      $(id).addEventListener("input", updateLineStyleVars)
+    );
+    $("line-colourMode").addEventListener("change", () => {
+      updateLineColourControls();
+      updateLineStyleVars();
+    });
     setupDualRange("line-opacity-low", "line-opacity-high", "line-opacity-widget", "line-opacity-out", updateLineStyleVars);
     buildColourWidget("line", updateLineStyleVars);
 
@@ -268,6 +291,7 @@
     }
     function randomColour() {
       $("line-stroke").value = sampleInt(20) / 20;
+      $("line-hueStart").value = sampleInt(360);
       colourWidgets.line.randomize();
       openAccordion("line", "colour");
     }
@@ -275,6 +299,7 @@
       randomPattern();
       randomAnimation();
       $("line-stroke").value = sampleInt(20) / 20;
+      $("line-hueStart").value = sampleInt(360);
       colourWidgets.line.randomize();
       refreshOutputs();
       updateLineStructure();
@@ -494,17 +519,20 @@
 
   // ---------------- download ----------------
   function setupDownload() {
-    $("download-btn").addEventListener("click", () => {
-      let serialized;
-      if (currentModule === "line") {
+    $("download-btn").addEventListener("click", async () => {
+      let blob, ext = "svg";
+      if (currentModule === "line" && lineParams().colourMode !== "gradient") {
+        // Rainbow modes have no SVG equivalent: save the current frame.
+        blob = await lineRenderer.snapshot();
+        ext = "png";
+      } else if (currentModule === "line") {
         // On screen it's a WebGL canvas; the download is the equivalent SVG.
-        serialized = renderLineSVG(lineParams());
+        blob = new Blob([renderLineSVG(lineParams())], { type: "image/svg+xml" });
       } else {
         const svg = document.querySelector("#svg_container svg");
         if (!svg) return;
-        serialized = new XMLSerializer().serializeToString(svg);
+        blob = new Blob([new XMLSerializer().serializeToString(svg)], { type: "image/svg+xml" });
       }
-      const blob = new Blob([serialized], { type: "image/svg+xml" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       const now = new Date();
@@ -513,7 +541,7 @@
         now.getMinutes()
       )}_${pad(now.getSeconds())}`;
       a.href = url;
-      a.download = `${currentModule}_${stamp}.svg`;
+      a.download = `${currentModule}_${stamp}.${ext}`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);

@@ -93,6 +93,27 @@
                 </div>
                 <output id="line-opacity-out"></output>
               </div>
+              <div class="param"><label for="line-colourMode">Colour mode <i class="fa-solid fa-circle-info" title="How colours are assigned to the lines"></i></label>
+                <select class="form-select" id="line-colourMode">
+                  <option value="fan" selected>Rainbow fan</option>
+                  <option value="ring">Rainbow ring</option>
+                  <option value="spiral">Rainbow spiral</option>
+                  <option value="direction">Rainbow direction</option>
+                  <option value="gradient">Palette gradient</option>
+                </select>
+              </div>
+              <div id="line-rainbow">
+                <div class="param"><label for="line-hueStart">Starting hue <i class="fa-solid fa-circle-info" title="Where on the colour wheel the rainbow starts"></i></label>
+                  <div class="range-row"><input type="range" id="line-hueStart" min="0" max="360" step="1" value="0" class="form-range"><output id="line-hueStart-out"></output></div></div>
+                <div class="param"><label for="line-hueRange">Hue range <i class="fa-solid fa-circle-info" title="How much of the colour wheel the rainbow covers"></i></label>
+                  <div class="range-row"><input type="range" id="line-hueRange" min="0" max="720" step="5" value="360" class="form-range"><output id="line-hueRange-out"></output></div></div>
+                <div class="param"><label for="line-hueCycle">Hue cycle (s) <i class="fa-solid fa-circle-info" title="Time for the colours to rotate once around the wheel; 0 to stop"></i></label>
+                  <div class="range-row"><input type="range" id="line-hueCycle" min="0" max="120" step="1" value="0" class="form-range"><output id="line-hueCycle-out"></output></div></div>
+                <div class="param"><label for="line-lightness">Lightness</label>
+                  <div class="range-row"><input type="range" id="line-lightness" min="20" max="95" step="1" value="62" class="form-range"><output id="line-lightness-out"></output></div></div>
+                <div class="param"><label for="line-chroma">Saturation</label>
+                  <div class="range-row"><input type="range" id="line-chroma" min="0" max="100" step="1" value="50" class="form-range"><output id="line-chroma-out"></output></div></div>
+              </div>
               <div id="line-colour"></div>
             </div></div>
           </div>
